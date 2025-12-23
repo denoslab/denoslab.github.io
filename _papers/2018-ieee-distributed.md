@@ -1,7 +1,7 @@
 ---
 
 title: "Distributed Data Vending on Blockchain."
-authors: "Jiayu Zhou, Fengyi Tang, He Zhu, Ning Nan, and Ziheng Zhou"
+authors: "Jiayu Zhou, Fengyi Tang, Steve Drew, Ning Nan, and Ziheng Zhou"
 venue: "IEEE Blockchain"
 year: 2018
 paper_url: "https://arxiv.org/abs/1803.05871"
