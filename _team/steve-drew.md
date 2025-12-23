@@ -1,8 +1,8 @@
 ---
 layout: team-member
-name: Steve Zhu
+name: Steve Drew
 title: Lab Head, Professor, University of Calgary
-picture: /images/profile/he-zhu.jpg
+picture: /images/profile/drew-steve.jpg
 email: zhuheec@gmail.com
 category: 0
 ---
