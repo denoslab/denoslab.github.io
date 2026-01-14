@@ -8,7 +8,7 @@ The **Distributed Edge LearNing and Orchestration Systems (DENOS)** Lab was foun
 ### Research Priorities
 
 #### 1. Secure Transactable Agentic Research Framework for Interoperable Sharing of Health Data
-![STARFISH logo]({{ '/images/starfish-logo.png' | relative_url }})
+<!-- ![STARFISH logo]({{ '/images/starfish-logo.png' | relative_url }}) -->
 
 **STARFISH** is a secure and interoperable framework for global health data sharing that empowers individuals to control their data while enabling compliant research access. 
 It introduces an agentic AI protocol for autonomous, privacy-preserving data exchange between personal and institutional agents, using verifiable consent, blockchain auditability, and automated compliance mechanisms. 
