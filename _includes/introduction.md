@@ -1,7 +1,4 @@
 [//]: # (At the Intelligent Data Analytics &#40;<font color="#173d74"><b>DENOS</b></font>&#41; Lab @ [University of Calgary]&#40;https://umich.edu/&#41;, we are at the forefront of advancing data science and AI to tackle some of the most critical real-world challenges, commonly known as <font color="#173d74"><b>AI+X</b></font>, with a special emphasis on health informatics. Our research is anchored in the vision of <font color="#173d74"><b>Unified Knowledge Integration</b></font> - an innovative approach that harnesses AI to unify insights from large-scale, noisy, multimodal, and heterogeneous datasets. By seamlessly integrating <em>domain knowledge</em> with novel machine learning and generative AI techniques, we aim to transform various real-world domains, enhance decision making for data science through establishing the closed-loop flow of informatics among key components of <em>human</em>, <em>data</em>, and <em>analytics</em>. In the domain of health informatics, we develop novel tools and systems for improving the understanding, diagnosis, and intervention of diseases, especially Alzheimer’s.)
-## DENOS Lab @ University of Calgary
-
-**DENOS Lab** stands for **Department of Electrical and Software Engineering**, University of Calgary.  
 
 The **Distributed Edge LearNing and Orchestration Systems (DENOS)** Lab was founded in 2021 by **Dr. Steve Drew**. Our research focuses on building intelligent, sustainable, and privacy-preserving systems that advance distributed and federated learning across cloud–edge infrastructures.
 
