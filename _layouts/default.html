@@ -123,14 +123,14 @@
             <h2 class="section-title">Team</h2>
           </div>
 
-          {% assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "name" %}
-          {% assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "name" %}
-          {% assign phds      = site.team | where_exp: "m", "m.category == 1" | sort: "name" %}
-          {% assign mscs      = site.team | where_exp: "m", "m.category == 2" | sort: "name" %}
-          {% assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "name" %}
-          {% assign visitors  = site.team | where_exp: "m", "m.category == 3" | sort: "name" %}
-          {% assign alumni    = site.team | where_exp: "m", "m.category == 8" | sort: "name" %}
-          {% assign friends   = site.team | where_exp: "m", "m.category == 9" | sort: "name" %}
+          {% assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "last_name" %}
+          {% assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "last_name" %}
+          {% assign phds      = site.team | where_exp: "m", "m.category == 1" | sort: "last_name" %}
+          {% assign mscs      = site.team | where_exp: "m", "m.category == 2" | sort: "last_name" %}
+          {% assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "last_name" %}
+          {% assign visitors  = site.team | where_exp: "m", "m.category == 3" | sort: "last_name" %}
+          {% assign alumni    = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" %}
+          {% assign friends   = site.team | where_exp: "m", "m.category == 9" | sort: "last_name" %}
 
           {% if director.size > 0 %}
             <h3 class="subhead">Director</h3>
