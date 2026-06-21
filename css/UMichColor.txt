@@ -1,8 +1,0 @@
-UMich Color
-Lightest blue #839cc0
-Lighter blue #224780
-Light blue #173d74
-Dark blue #0c2649
-Bright Yellow #f8cd47
-Bright Yellow Logo #ebc545
-
