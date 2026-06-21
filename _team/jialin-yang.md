@@ -8,5 +8,5 @@ category: 1
 ---
 
 <br/>
-Areas of Study: Large language Model Application, Knowledge Distillation, Federated Learning
+Large Language Model Application, Knowledge Distillation, Federated Learning
 <br/>

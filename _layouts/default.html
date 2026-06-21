@@ -1,678 +1,208 @@
 <!DOCTYPE html>
-<!-- use jekyll -->
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DENOS Lab @ University of Calgary</title>
-    <meta name="author" content="Jiayu Zhou" />
-    <meta name="description" content="Homepage of DENOS Lab @ University of Calgary. Lab head is Professor Jiayu Zhou. DENOS lab designs scalable machine learning algorithms, creates open source machine learning software, and develops powerful machine learning for applications in health informatics, big traffic analytics, and other scientific areas." />
-    <meta name="keywords" content="Jiayu Zhou, Data Mining, Machine Learning, University of Calgary, UMich, DENOSlab, DENOS" />
+    <title>DENOS Lab | Distributed Learning and Orchestration | University of Calgary</title>
+    <meta name="author" content="Steve Drew" />
+    <meta name="description" content="The Distributed Learning and Orchestration (DENOS) Lab at the University of Calgary, led by Dr. Steve Drew, builds intelligent, sustainable, and privacy-preserving systems for distributed learning, agentic simulation and reasoning across cloud-edge infrastructures, with applications in health informatics and trustworthy AI." />
+    <meta name="keywords" content="DENOS Lab, Steve Drew, University of Calgary, distributed learning, agentic simulation, reasoning, edge computing, federated learning, blockchain, health informatics, trustworthy AI" />
 
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DENOS Lab at the University of Calgary" />
+    <meta property="og:description" content="Distributed Learning and Orchestration (DENOS) Lab, led by Dr. Steve Drew at the University of Calgary." />
+    <meta property="og:url" content="https://denoslab.com" />
+
+    <!-- Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- FONT
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- CSS -->
     <link rel="stylesheet" href="dist/css/normalize.css">
     <link rel="stylesheet" href="dist/css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
 
-    <!-- Scripts
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <link rel="stylesheet" href="css/github-prettify-theme.css">
     <script src="js/site.js"></script>
 
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Favicon -->
     <link href="/images/DenosLabLabel.png" rel="icon" type="image/png"/>
-
-
   </head>
 
-<body class="code-snippets-visible">
+  <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-
-    <section class="header">
-      <div class="row">
-        <div class="four columns">
-          <img class="value-img" width="450px" src="images/DenosLab.png">
+    <!-- Hero -->
+    <header class="hero">
+      <div class="wrap">
+        <img class="hero-logo" src="images/DenosLab.png" alt="Distributed Learning and Orchestration (DENOS) Lab, University of Calgary">
+        <p class="hero-tagline">
+          We build intelligent, sustainable, and privacy-preserving systems for
+          <strong>distributed learning, agentic simulation and reasoning</strong> across cloud-edge infrastructures.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#research">Our research</a>
+          <a class="btn btn--ghost" href="#news">Join the lab</a>
+          <a class="btn btn--ghost" href="https://github.com/DENOSlab/" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <div class="navbar-spacer"></div>
+    <!-- Navigation -->
     <nav class="navbar">
-      <div class="container">
+      <div class="wrap">
         <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="#about">About DENOS</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
           <li class="navbar-item"><a class="navbar-link" href="#research">Research</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#members">Members</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#publication">Publication</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#news">News</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#team">Team</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#publications">Publications</a></li>
           <li class="navbar-item"><a class="navbar-link" href="#calendar">Calendar</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="https://github.com/DENOSlab/" target="_blank"><font color="#173d74">Software</font></a></li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#" data-popover="#moreNavPopover">Links</a>
+          <li class="navbar-item"><a class="navbar-link" href="https://github.com/DENOSlab/" target="_blank" rel="noopener">Software</a></li>
+          <li class="navbar-item navbar-item--right">
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">Links ▾</a>
             <div id="moreNavPopover" class="popover">
               <ul class="popover-list">
-                <li class="popover-item">
-                  <a class="popover-link" href="http://DENOSlab.slack.com" target="blank">Slack</a>
-        </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/DENOSlab/labinfo" target="blank">Lab Docs</a>
-        </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/DENOSlab/labinfo/tree/master/seminars" target="blank">Seminar</a>
-        </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="http://docs.google.com/" target="blank">G-Doc</a>
-        </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://docs.google.com/spreadsheets/" target="blank">G-Sheet</a>
-        </li>
+                <li class="popover-item"><a class="popover-link" href="https://github.com/DENOSlab/labinfo" target="_blank" rel="noopener">Lab Docs</a></li>
+                <li class="popover-item"><a class="popover-link" href="https://github.com/DENOSlab/labinfo/tree/master/seminars" target="_blank" rel="noopener">Seminars</a></li>
+                <li class="popover-item"><a class="popover-link" href="https://scholar.google.com/citations?user=mGMBNN4AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a></li>
+                <li class="popover-item"><a class="popover-link" href="https://profiles.ucalgary.ca/steve-drew" target="_blank" rel="noopener">UCalgary</a></li>
               </ul>
             </div>
-        </li>
+          </li>
         </ul>
       </div>
     </nav>
 
+    <main>
 
-    <div class="docs-section" id="about">
-      <h6 data-magellan-destination="about" class="docs-header">About DENOS Lab</h6>
-      {% capture introduction %}{% include introduction.md %}{% endcapture %}
-      {{ introduction | markdownify }}
-
-      <h6 class="docs-header">News</h6>
-      {% capture news %}{% include news.md %}{% endcapture %}
-      {{ news | markdownify }}
-    </div>
-
-
-    <div class="docs-section" id="research">
-      <h6 class="docs-header">Research Highlights</h6>
-
-<!--      <p>DENOS lab designs scalable, distributed, robust and privacy-preserving machine learning algorithms, creates open source machine learning software, and develops powerful machine learning for applications in health informatics and other scientific areas.</p>-->
-
-      <!--
-      <div class="row example">
-        <div class="one-half offset-by-one-half column">
-          <h6 class="example-header">Multi-task and Transfer Learning</h6>
-          <p class="example-description">Design learning formulations and optimization algorithms to learn multiple related machine learning tasks, performing inductive knowledge transfer among the tasks and improving generalization performance.</p>
-          <a class="button" href="http://www.malsar.org" target="_blank"><font color="#ebc545">MALSAR</font> Software</a>
-          <a class="button" href="https://www.siam.org/meetings/sdm12/zhou_chen_ye.pdf" target="_blank">Tutorial</a>
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="section-title">About the lab</h2>
+          </div>
+          <div class="copy">
+            {% capture introduction %}{% include introduction.md %}{% endcapture %}
+            {{ introduction | markdownify }}
+          </div>
         </div>
-      </div>
-      <div class="row example">
-        <div class="one-half offset-by-one-half column">
-          <h6 class="example-header">Progression of Alzheimer's Disease</h6>
-          <p class="example-description">Build machine learning models that understand disease progression and identify signaling biomarkers, from multiple data sources, including medical imaging, genotypes, and other clinical information.</p>
-          <a class="button" href="http://DENOSlab.github.io/" target="_blank">More Info</a>
+      </section>
+
+      <!-- Research -->
+      <section class="section section--alt" id="research">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="section-title">Research</h2>
+          </div>
+          {% include research.html %}
         </div>
-      </div>
-      <div class="row example">
-        <div class="one-half offset-by-one-half column">
-          <h6 class="example-header">Drug Repurposing</h6>
-          <p class="example-description">Develop data-driven molecular fingerprints, molecular generation models, and predictive models for predicting molecular properties and gene regulation, which lead to drug discovery and repurposing. </p>
-          <a class="button" href="https://github.com/DENOSlab/MoCL-DK" target="_blank">Data-Driven Fingerprint</a>
+      </section>
+
+      <!-- News -->
+      <section class="section" id="news">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="section-title">News</h2>
+          </div>
+          {% include news.html %}
         </div>
-      </div>
-      <br/>
-      -->
-
-
-      <h7 class="docs-header">Active Projects</h7>
-      <!--
-      <ul>
-        <li><em><a href="#" target="blank">Virtual Compound Screening using Gene Expression</a></em>,
-                  National Institute of General Medical Sciences (<a href="#" target="_blank">1R01GM145700</a>), PI, 2022-2025.
-                  </li>
-        <li><em><a href="#" target="blank">Identification of Mild Cognitive Impairment using Machine Learning from Language and Behavior Markers</a></em>,
-                  National Institute of Aging (<a href="#" target="_blank">1RF1AG072449</a>), Leading PI, 2021-2026.
-                  Media Coverage: <a href="https://msutoday.msu.edu/news/2021/dementia-screening-with-artificial-intelligence" target="_blank">MSU Today</a></li>
-        <li><em><a href="#" target="blank">A Consolidated Framework of Computational Privacy and Machine Learning</a></em>,
-                  NSF IIS Core Program / Medium (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2212174" target="_blank">IIS-2212174</a>), PI, 2022-2026.
-                   </li>
-        <li><em><a href="#" target="blank">Repurpose open data to discover therapeutics for understudied diseases</a></em>,
-                  National Institute of General Medical Sciences (<a href="#" target="_blank">1R01GM134307</a>), Co-PI, PI: Bin Chen, 2019-2024. </li>
-      </ul>
-      -->
-
-      <h6 class="docs-header">Completed Projects</h6>
-      <!--
-      <ul>
-        <li><em>Privacy-Preserving and Robust Federated Learning</em>,
-                  Office of Naval Research (N00014-24-1-2168), Co-PI, PI: Anil K. Jain, 2024-2027. </li>
-        <li><em>Intelligent Closed-Loop Neural Interface System for Studying Mechanisms of Somatosensory Feedback in Control of Functional and Stable Locomotion</em>,
-          NSF NCS Program (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2024270">ECCS-2024270</a>), Co-PI, PI: Wen Li, 2020-2023.
-        </li>
-        <li><em><a href="http://jiayuzhou.github.io/projects/career" target="blank">Career: Harness the Big Data via Large-Scale Lifelong Learning</a></em>,
-                  NSF CAREER Program (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1749940" target="_blank">IIS-1749940</a>), PI, 2018-2023. Media Coverage: <a href="http://msutoday.msu.edu/news/2018/jiayu-zhou-to-use-nsf-career-award-to-enable-computers-to-perform-lifelong-learning-in-big-data/" target="_blank">MSU Today</a>, <a href="https://www.fox47news.com/we-are-spartans/jiayu-zhou-to-use-nsf-career-award-to-enable-computers-to-perform-lifelong-learning-in-big-data" target="_blank">Fox News</a>
-                   </li>
-        <li><em><a href="http://lagoslakes.org/" target="blank">A Macrosystems Ecology Framework for Continental-Scale Prediction and Understanding of Lakes</a></em>,
-                  NSF MSB Program (MSU Site: <a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1638679" target="_blank">EF-1638679</a>), Co-PI, PI: Patricia Soranno, 2016-2021. Media Coverage: <a href="http://msutoday.msu.edu/news/2016/harnessing-big-data-to-see-the-big-picture-in-ecology">MSU Today</a></li>
-        <li><em>Deep Learning: Integrating Domain Knowledge and Interpreting the Network Decisions</em>,
-                  Office of Naval Research (N00014-20-1-2382), Co-PI, PI: Anil K. Jain, 2020-2023. </li>
-        <li><em>Unsupervised Feature Selection in the Era of Big Data</em>,
-                  NSF IIS Core Program (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1714741" target="_blank">IIS-1714741</a>), Co-PI, 2017-2020. </li>
-        <li><em>Large-Scale Information Fusion from Multiple Modalities</em>,
-                  Office of Naval Research (N00014-17-1-2265), Co-PI, 2017-2020. </li>
-        <li><em>Structured Methods for Multi-Task Learning</em>,
-                  NSF IIS Core Program (MSU Site: <a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1615597" target="_blank">IIS-1615597</a>), Leading PI, 2016-2019. </li>
-        <li><em>Integrating Domain Knowledge via Interactive Multi-Task Learning</em>,
-                  NSF CRII (<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1565596" target="_blank">IIS-1565596</a>), PI, 2016-2018. </li>
-        <li><em>Large-Scale Metric Learning</em>,
-                  Office of Naval Research (N00014-14-1-0631), Co-PI, 2014-2017. </li>
-      </ul>
-      -->
-
-    </div>
-
-    <div class="docs-section" id="members">
-      <h6 class="docs-header">Investigator</h6>
-      {% assign groups = site.team | group_by: "category" | sort: "name" | reverse %}
-      {% for group in groups %}
-        {% if group.name == "0" %}
-          {% for member in group.items %}
-            {% if member.year == null %}
-                {{ member.output }}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-      <br/>
-      <h6 class="docs-header">Lab Members</h6>
-      {% assign groups = site.team | group_by: "category" | sort: "name" | reverse %}
-      {% for group in groups %}
-        {% if group.name == "1" %}
-          {% for member in group.items %}
-            {% if member.year == null %}
-                {{ member.output }}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-
-      {% assign groups = site.team | group_by: "category" | sort: "name" | reverse %}
-      {% for group in groups %}
-        {% if group.name == "2" %}
-          {% for member in group.items %}
-            {% if member.year == null %}
-                {{ member.output }}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-      <br/>
-      <h6 class="docs-header">Visitor</h6>
-      {% for group in groups %}
-        {% if group.name == "3" %}
-            <!-- <h4>{{ group.name }}</h4> -->
-          {% for member in group.items %}
-              {{ member.output }}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-      <br/>
-            <h6 class="docs-header">Undergraduate</h6>
-      {% for group in groups %}
-        {% if group.name == "4" %}
-            <!-- <h4>{{ group.name }}</h4> -->
-          {% for member in group.items %}
-              {{ member.output }}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-      <br/>
-      <h6 class="docs-header">Alumni</h6>
-      {% for group in groups %}
-        {% if group.name == "8" %}
-            <!-- <h4>{{ group.name }}</h4> -->
-          {% for member in group.items %}
-              {{ member.output }}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-      <br/>
-      <h6 class="docs-header">Friends</h6>
-      {% for group in groups %}
-        {% if group.name == "9" %}
-            <!-- <h4>{{ group.name }}</h4> -->
-          {% for member in group.items %}
-              {{ member.output }}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-    </div>
-
-
-    <div class="docs-section" id="publication">
-      {% include publications.html %}
-      <!-- Hardcoded publications removed: keeping for history -->
-      <!--
-
-        <li><i>Federated Adversarial Debiasing for Fair and Transferable Representations. </i><br>
-            Junyuan Hong, Zhuangdi Zhu, Shuyang Yu, Zhangyang Wang, Hiroko Dodge, and Jiayu Zhou. <br>
-            <b>KDD</b> 2021 <a href="https://dl.acm.org/doi/10.1145/3447548.3467281" target="_blank">[paper]</a><a href="https://github.com/DENOSlab/FADE" target="_blank">[code]</a>
-        </li>
-
-        <li><i>MoCL: Contrastive Learning on Molecular Graphs with Multi-level Domain Knowledge. </i><br>
-            Mengying Sun, Jing Xing, Huijun Wang, Bin Chen, and Jiayu Zhou. <br>
-            <b>KDD</b> 2021 <a href="https://dl.acm.org/doi/10.1145/3447548.3467186" target="_blank">[paper]</a><a href="https://github.com/DENOSlab/MoCL-DK" target="_blank">[code]</a>
-        </li>
-
-        <li><i>Data-Free Knowledge Distillation for Heterogeneous Federated Learning. </i><br>
-            Zhuangdi Zhu, Junyuan Hong, and Jiayu Zhou. <br>
-            <b>ICML</b> 2021 <a href="https://arxiv.org/abs/2105.10056" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Learning Deep Neural Networks under Agnostic Corrupted Supervision. </i><br>
-            Boyang Liu, Mengying Sun, Ding Wang, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>ICML</b> 2021 <a href="https://arxiv.org/abs/2102.06735" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Federated Learning's Blessing: FedAvg has Linear Speedup. </i><br>
-            Zhaonan Qu, Kaixiang Lin, Jayant Kalagnanam, Zhaojian Li, and Jiayu Zhou. <br>
-            DPML 2021, ICLR 2021 Workshop <a href="https://arxiv.org/abs/2007.05690" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>RCA: A Deep Collaborative Autoencoder Approach for Anomaly Detection. </i><br>
-            Boyang Liu, Ding Wang, Kaixiang Lin, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>IJCAI</b> 2021. <a href="https://www.ijcai.org/proceedings/2021/0208.pdf" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>ClusterFL: A Similarity-Aware Federated Learning System for Human Activity Recognition. </i><br>
-            Xiaomin Ouyang, Zhiyuan Xie, Jiayu Zhou, Jianwei Huang, and Guoliang Xing. <br>
-            <b>MobiSys</b> 2021. <a href="https://dl.acm.org/doi/10.1145/3458864.3467681" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Learning Model-Based Privacy Protection under Budget Constraints. </i><br>
-            Junyuan Hong, Haotao Wang, Zhangyang Wang, and Jiayu Zhou. <br>
-            <b>AAAI</b> 2021. <a href="https://www.aaai.org/AAAI21Papers/AAAI-7394.HongJ.pdf" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Off-Policy Imitation Learning from Observations. </i><br>
-            Zhuangdi Zhu, Kaixiang Lin, Bo Dai, and Jiayu Zhou. <br>
-            <b>NeurIPS.</b> 2020 <a href="https://proceedings.neurips.cc/paper/2020/file/92977ae4d2ba21425a59afb269c2a14e-Paper.pdf" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Model-Protected Multi-Task Learning. </i><br>
-            Jian Liang, Ziqi Liu, Jiayu Zhou, Xiaoqian Jiang, Changshui Zhang, and Fei Wang. <br>
-            <b>IEEE TPAMI</b> 2020 <a href="https://pubmed.ncbi.nlm.nih.gov/32780696/" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Adversarial Precision Sensing with Healthcare Applications. </i><br>
-            Fengyi Tang, Lifan Zeng, Fei Wang, and Jiayu Zhou. <br>
-            <b>ICDM</b> 2020.
-        </li>
-
-        <li><i>Robust Collaborative Learning with Noisy Labels. </i><br>
-            Mengying Sun, Jing Xing, Bin Chen, and Jiayu Zhou. <br>
-            <b>ICDM</b> 2020.
-        </li>
-
-        <li><i>Multimodal Learning with Incomplete Modalities by Knowledge Distillation. </i><br>
-            Qi Wang, Liang Zhan, Paul Thompson, and Jiayu Zhou. <br>
-            <b>KDD</b> 2020.
-        </li>
-
-        <li><i>Scalable Diagnostic Screening of Mild Cognitive Impairment using AI Dialogue Agent. </i><br>
-            Fengyi Tang, Ikechukwu Uchendu, Fei Wang, Hiroko H. Dodge, and Jiayu Zhou. <br>
-            <b>Nature - Scientific Reports</b>, 2020 <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7109153/" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Ranking Policy Gradient. </i><br>
-            Kaixiang Lin and Jiayu Zhou. <br>
-            <b>ICLR</b> 2020. <a href="https://arxiv.org/pdf/1906.09674.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Shoreline: Data-Driven Threshold Estimation of the Online Reserves of Cryptocurrency Trading Platforms. </i><br>
-            Xitong Zhang, Steve Drew, and Jiayu Zhou. <br>
-            <b>AAAI</b> 2020. <a href="https://ojs.aaai.org/index.php/AAAI/article/view/5472" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Boosted Trajectory Calibration for Traffic State Estimation. </i><br>
-            Xitong Zhang, Liyang Xie, Zheng Wang, and Jiayu Zhou. <br>
-            <b>ICDM</b> 2019.
-        </li>
-
-        <li><i>Retaining Privileged Information for Multi-Task Learning. </i><br>
-            Fengyi Tang, Cao Xiao, Fei Wang, Jiayu Zhou, and Li-Wei Lehman. <br>
-            <b>KDD</b> 2019.
-        </li>
-
-        <li><i>MetaPred: Meta-Learning for Clinical Risk Prediction with Limited Patient Electronic Health Records. </i><br>
-            Xi Zhang, Andy Tang, Hiroko Dodge, Jiayu Zhou and Fei Wang. <br>
-            <b>KDD</b> 2019.
-        </li>
-
-        <li><i>GCN-MF: Disease-Gene Association Identification By Graph Convolutional Networks and Matrix Factorzation. </i><br>
-            Peng Han, Peng Yang, Peilin Zhao, Shuo Shang, Yong Liu, Jiayu Zhou, Xin Gao, and Panos Kalnis. <br>
-            <b>KDD</b> 2019.
-        </li>
-
-        <li><i>Augmented Multi-Task Learning by Optimal Transport. </i><br>
-            Boyang Liu, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>SDM</b> 2019.
-        </li>
-
-        <li><i>Deep Multi-view Information Bottleneck. </i><br>
-            Qi Wang, Claire Boudreau, Qixing Luo, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>SDM</b> 2019.
-        </li>
-
-        <li><i>Online Active Learning cross Multiple Tasks. </i><br>
-            Peng Yang, Peilin Zhao, Jiayu Zhou, and Xin Gao. <br>
-            <b>AAAI</b> 2019.
-        </li>
-
-        <li><i>Differentially Private Generative Adversarial Network. </i><br>
-            Liyang Xie, Kaixiang Lin, Shu Wang, Fei Wang, and Jiayu Zhou. <br>
-            Preprint, 2018 <a href="https://arxiv.org/abs/1802.06739" target="_blank">[arXiv]</a>
-        </li>
-
-        <li><i>Boosted Sparse and Low-Rank Tensor Regression. </i><br>
-            Lifang He, Kun Chen, Wanwan Xu, Jiayu Zhou, and Fei Wang. <br>
-            <b>NIPS</b> 2018. <a href="https://papers.nips.cc/paper/7379-boosted-sparse-and-low-rank-tensor-regression.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>HHNE: Heterogeneous Hyper-Network Embedding. </i><br>
-            Inci M Baytas, Cao Xiao, Fei Wang, Anil K. Jain, and Jiayu Zhou. <br>
-            <b>ICDM</b> 2018.
-            <a href="https://ieeexplore.ieee.org/document/8594913" target="_blank">[Paper]</a>
-            <a href="https://github.com/DENOSlab/HHNE" target="_blank">[Code]</a>
-        </li>
-
-        <li><i>Imputing Structured Missing Values in Spatial Data with Clustered Adversarial Matrix Factorization. </i><br>
-            Qi Wang, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>ICDM</b> 2018.
-            <a href="https://ieeexplore.ieee.org/document/8594982" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Distributed Data Vending on Blockchain. </i><br>
-            Jiayu Zhou, Fengyi Tang, Steve Drew, Ning Nan, and Ziheng Zhou. <br>
-            <b>IEEE Blockchain</b> 2018 <a href="https://arxiv.org/abs/1803.05871" target="_blank">[arXiv]</a>
-        </li>
-
-        <li><i>Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning. </i><br>
-            Kaixiang Lin, Renyu Zhao, Zhe Xu, and Jiayu Zhou. <br>
-            <b>KDD</b> 2018. <a href="https://dl.acm.org/doi/10.1145/3219819.3219993" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Identify Susceptible Locations in Medical Records via Adversarial Attacks on Deep Predictive Models. </i><br>
-            Mengying Sun, Fengyi Tang, Jinfeng Yi, Fei Wang, and Jiayu Zhou. <br>
-            <b>KDD</b> 2018. <a href="https://dl.acm.org/doi/10.1145/3219819.3219909" target="_blank">[paper]</a>
-        </li>
-
-        <li><i>Subspace Network: Deep Multi-Task Censored Regression for Modeling Neurodegenerative Diseases. </i><br>
-            Mengying Sun, Inci M. Baytas, Liang Zhan, Zhangyang Wang, and Jiayu Zhou. <br>
-            <b>KDD</b> 2018, Accepted. <a href="https://arxiv.org/abs/1802.06516" target="_blank">[Preprint]</a>
-        </li>
-
-        <li><i>Enhancing Predictive Modeling of Nested Spatial Data through Group-Level Feature Disaggregation. </i><br>
-            Boyang Liu, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>KDD</b> 2018, Accepted.
-        </li>
-
-        <li><i>Drug Similarity Integration Through Attentive Multi-view Graph Auto-Encoders</i><br>
-          Tengfei Ma, Cao Xiao, Jiayu Zhou, and Fei Wang. <br>
-          <b>IJCAI</b> 2018, Accepted.
-        </li>
-
-        <li><i>The added value of diffusion MRI in evaluating mild cognitive impairment: a multi-cohort validation. </i><br>
-            Qi Wang, Lei Guo, Paul M. Thompson, Clifford R. Jack Jr., Hiroko Dodge, Liang Zhan, and Jiayu Zhou. <br>
-            <b>Journal of Alzheimer's Disease</b> (JAD), 2018. <a href="https://content.iospress.com/articles/journal-of-alzheimers-disease/jad171048" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Predictive Modeling in Urgent Care: A Comparative Study of Machine Learning Approaches</i><br>
-            Fengyi Tang, Cao Xiao, Fei Wang, and Jiayu Zhou. <br>
-            Journal of the American Medical Informatics Association <b>JAMIA Open</b> 2018.
-            <a href="https://academic.oup.com/jamiaopen/article/1/1/87/5032901" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>EdgeChain: Blockchain-based Multi-vendor Mobile Edge Application Placement. </i><br>
-            Steve Drew, Changcheng Huang, and Jiayu Zhou. <br>
-            Accepted by NetSoft 2018 <a href="https://arxiv.org/abs/1801.04035" target="_blank">[arXiv]</a>
-        </li>
-
-        <li><i>An MCEM Framework for Drug Safety Signal Detection and Combination from Heterogeneous Real World Evidence. </i><br>
-            Cao Xiao, Ying Li, Inci Baytas, Jiayu Zhou, and Fei Wang<br>
-            <b>Nature - Scientific Reports</b> 2018 <a href="https://www.nature.com/articles/s41598-018-19979-7" target="_blank">[Paper]</a>
-            <a href="https://github.com/DENOSlab/urgent-care-comparative">[Code]</a>
-        </li>
-
-        <li><i>Multi-Task Learning based Survival Analysis for Predicting Alzheimer’s Disease Progression with Multi-Source Block-wise Missing Data.</i>
-            Yan Li, Tao Yang, Jiayu Zhou, and Jieping Ye.<br>
-            <b>SDM</b> 2018 <a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611975321.33" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Collaborative Deep Reinforcement Learning. </i><br>
-            Kaixiang Lin, Shu Wang, and Jiayu Zhou. <br>
-            Preprint, 2017 <a href="https://arxiv.org/pdf/1702.05796.pdf" target="_blank">[PDF]</a>
-        </li>
-
-        <li><i>Recurrent Encoder-Decoder Networks for Time-Varying Dense Prediction.</i><br>
-            Tao Zeng, Bian Wu, Jiayu Zhou, Ian Davidson, and Shuiwang Ji.<br>
-            <b>ICDM</b> 2017 <a href="https://www.computer.org/csdl/proceedings/icdm/2017/3835/00/3835b165.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Multi-Level Multi-Task Learning for Modeling Cross-Scale Interactions in Nested Geospatial Data.</i><br>
-            Shuai Yuan, Jiayu Zhou, Pang-Ning Tan, Emi Fergus, Tyler Wagner, and Patricia Soranno.<br>
-            <b>ICDM</b> 2017 <a href="https://www.computer.org/csdl/proceedings/icdm/2017/3835/00/3835b153.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Multi-task Survival Analysis.</i><br>
-            Lu Wang, Yan Li, Jiayu Zhou, Dongxiao Zhu, and Jieping Ye.<br>
-            <b>ICDM</b> 2017 <a href="http://ieeexplore.ieee.org/document/8215521/" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Multi-Modality Disease Modeling via Collective Deep Matrix Factorization. </i><br>
-            Qi Wang, Mengying Sun, Liang Zhan, Paul Thompson, Shuiwang Ji, and Jiayu Zhou. <br>
-            <b>KDD</b> 2017 <a href="http://www.kdd.org/kdd2017/papers/view/multi-modality-disease-modeling-via-collective-deep-matrix-factorization" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Privacy-Preserving Distributed Multi-Task Learning with Asynchronous Updates. </i><br>
-            Liyang Xie, Inci Baytas, Kaixiang Lin, and Jiayu Zhou. <br>
-            <b>KDD</b> 2017 <a href="http://www.kdd.org/kdd2017/papers/view/privacy-preserving-distributed-multi-task-learning-with-asynchronous-update" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Patient Subtyping via Time-Aware LSTM Networks. </i><br>
-            Inci Baytas, Cao Xiao, Xi Zhang, Fei Wang, Anil Jain, and Jiayu Zhou. <br>
-            <b>KDD</b> 2017 <a href="http://www.kdd.org/kdd2017/papers/view/patient-subtyping-via-time-aware-lstm-networks" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Missing Modalities Imputation via Cascaded Residual Autoencoder. </i><br/>
-            Luan Tran, Xiaoming Liu, Jiayu Zhou, and Rong Jin. <br/>
-            <b>CVPR</b> 2017 <a href="http://cse.msu.edu/~tranluan/publication/allPublication/2017/CVPR_CRA.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>An RNN Architecture with Dynamic Temporal Matching for Personalized Predictions of Parkinson's Disease. </i><br>
-            Chao Che, Cao Xiao, Jian Liang, Bo Jin, Jiayu Zhou, and Fei Wang. <br>
-            <b>SDM</b> 2017 <a href="papers/xcaoSDM17.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>WISDOM: Weighted Incremental Spatio-Temporal Multi-Task Learning via Tensor Decomposition.</i><br>
-            Jianpeng Xu, Jiayu Zhou, Pang-Ning Tan, Xi Liu, and Lifeng Luo.<br>
-            <b>IEEE Big Data</b> 2016 <a href="http://www.cse.msu.edu/~ptan/papers/wisdom.pdf" target="_blank">[Paper]</a>
-            <strong>Best Paper Award</strong>
-        </li>
-        <li><i>PhenoTree: Interactive Visual Analytics for Hierarchical Phenotyping from Large-Scale Electronic Health Records.</i><br>
-            Inci M. Baytas, Kaixiang Lin, Fei Wang, Anil K. Jain, and Jiayu Zhou.<br>
-            <b>IEEE Transaction on Multimedia</b> 2016 <a href="http://ieeexplore.ieee.org/document/7577842/" target="_blank">[Paper]</a>
-        </li>
-        <li><i>Interactive Multi-Task Relationship Learning.</i><br>
-            Kaixiang Lin and Jiayu Zhou.<br>
-            <b>ICDM</b> 2016 <a href="papers/klinICDM16.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Asynchronous Multi-Task Learning.</i><br>
-            Inci M. Baytas, Ming Yan, Anil K. Jain, and Jiayu Zhou.<br>
-            <b>ICDM</b> 2016 <a href="papers/ibaytasICDM16.pdf" target="_blank">[Paper]</a><a href="https://github.com/DENOSlab/AMTL" target="_blank">[Code]</a>
-        </li>
-
-        <li><i>Robust Convex Clustering Analysis.</i><br>
-            Qi Wang, Pinghua Gong, Shiyu Chang, Thomas S. Huang, and Jiayu Zhou.<br>
-            <b>ICDM</b> 2016 <a href="papers/qwangICDM16.pdf" target="_blank">[Paper]</a><a href="https://github.com/DENOSlab/ConvexClustering" target="_blank">[Code]</a>
-        </li>
-
-        <li><i>Stochastic Convex Sparse Principal Component Analysis.</i><br>
-            Inci M. Baytas, Kaixiang Lin, Fei Wang, Anil K. Jain, and Jiayu Zhou.<br>
-            EURASIP Journal on Bioinformatics and Systems Biology, 2016 <a href="http://www.bsb.eurasipjournals.com/content/2016/1/15" target="blank">[Paper]</a>
-        </li>
-
-        <li><i>Multi-Task Feature Interaction Learning.</i><br>
-            Kaixiang Lin, Jianpeng Xu, Inci M. Baytas, Shuiwang Ji, and Jiayu Zhou.<br>
-            <b>KDD</b> 2016 <a href="papers/klinKDD16.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Discriminative Fusion of Multiple Brain Networks for Early Mild Cognitive Impairment Detection.</i><br>
-            Qi Wang, Liang Zhan, Paul M. Thompson, Hiroko H. Dodge, and Jiayu Zhou. <br>
-            <b>ISBI</b> 2016 <a href="papers/qwangISBI16.pdf" target="_blank">[Paper]</a>
-            <strong>Best Student Paper Award</strong>
-        </li>
-
-        <li><i>Synergies that Matter: Efficient Interaction Selection via Sparse Factorization Machine.</i><br>
-            Jianpeng Xu, Kaixiang Lin, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>SDM</b> 2016 <a href="papers/jxuSDM16b.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>GSpartan: a Geospatio-Temporal Multi-task Learning Framework for Multi-location.</i><br>
-            Jianpeng Xu, Lifeng Luo, Pang-Ning Tan, and Jiayu Zhou. <br>
-            <b>SDM</b> 2016 <a href="papers/jxuSDM16a.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Learning A Task-Specific Deep Architecture for Clustering.</i><br>
-            Zhangyang Wang, Shiyu Chang, Jiayu Zhou, Meng Wang, and Thomas Huang. <br>
-            <b>SDM</b> 2016 <a href="papers/zwangSDM16.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>A Space Alignment Method for Cold-Start TV Show Recommendations.</i><br>
-            *Shiyu Chang, Jiayu Zhou, Pirooz Chubak, Junling Hu, and Thomas Huang.<br>
-            <b>IJCAI</b> 2015 <a href="http://dl.acm.org/citation.cfm?id=2832581.2832719" target="_blank">[Paper]</a>  <strong>Samsung Best Paper Award 2014 </strong> finalist
-        </li>
-
-        <li><i>Who, What, When, and Where: Multi-Dimensional Collaborative Recommendations
-               using Tensor Factorization on Sparse User-Generated Data.</i><br>
-            *Preeti Bhargava, Thomas Phan, Jiayu Zhou, and Juhan Lee.<br>
-            <b>WWW</b> 2015 <a href="papers/jzhouWWW15.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Factorized Bilinear Similarity for Cold-Start Item Recommendations.</i> <br>
-              *Mohit Sharma, Jiayu Zhou, George Karypis, and Junling Hu. <br>
-              <b>SDM</b> 2015 <a href="papers/jzhouSDM15a.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Formula: FactORized MUlti-task LeArning for Task Discovery in Personalized Medical Models. </i><br>
-              *Jianpeng Xu, Jiayu Zhou, and Pang-Ning Tan.<br>
-              <b>SDM</b> 2015 <a href="papers/jzhouSDM15b.pdf" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Factorized Similarity Learning in Networks. </i><br>
-              *Shiyu Chang, Guo-Jun Qi, Charu Aggarwal, Jiayu Zhou, Meng Wang, and Thomas Huang. <br>
-              <b>ICDM</b> 2014 <a href="http://charuaggarwal.net/fsl.pdf" target="blank" target="_blank">[Paper]</a>
-              <strong>Best Student Paper Award</strong>
-        </li>
-
-        <li><i>A Safe Screening Rule for Sparse Logistic Regression. </i><br>
-            Jie Wang, Jiayu Zhou, Jun Liu, Peter Wonka, and Jieping Ye. <br>
-            <b>NIPS</b> 2014 <a href="http://arxiv.org/abs/1307.4145" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>From Micro to Macro: Data Driven Phenotyping by Densification of Longitudinal Electronic Medical Records.</i><br>
-            Jiayu Zhou, Fei Wang, Jianying Hu, and Jieping Ye.  <br>
-            <b>KDD</b> 2014 <a href="papers/jzhouKDD14.pdf" target="_blank">[Paper]</a>
-            <a href="http://www.MALSAR.org" target="_blank">[Code]</a>.
-        </li>
-
-        <li><i>Efficient Multi-Task Feature Learning with Calibration.</i><br>
-        Pinghua Gong, Jiayu Zhou, and Jieping Ye. <br>
-            <b>KDD</b> 2014 <a href="http://www.public.asu.edu/~pgong5/papers/KDD2014_MTLFC.pdf" target="_blank">[Paper]</a>
-            <a href="http://www.MALSAR.org" target="_blank">[Code]</a>
-        </li>
-
-        <li><i>Analysis of Sampling Techniques for Imbalanced Data: An N=648 ADNI Study.</i><br>
-        Rashmi Dubey, Jiayu Zhou, Yalin Wang, Paul M. Thompson, and Jieping Ye.  <br>
-            <b>NeuroImage</b> 2014 <em>5-Year Impact Factor: 7.063</em>.
-            <a href="http://www.sciencedirect.com/science/article/pii/S1053811913010161" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Active Matrix Completion.</i><br>
-        Shayok Chakraborty, Jiayu Zhou, Vineeth Balasubr., Sethuraman Panch., Ian Davidson, and Jieping Ye <br>
-            <b>ICDM</b> 2013
-            <a href="http://dx.doi.org/10.1109/ICDM.2013.69" target="_blank">[Paper]</a>
-        </li>
-
-        <li><i>Lasso Screening Rules via Dual Polytope Projection. </i><br>
-        Jie Wang, Jiayu Zhou, Peter Wonka, and Jieping Ye. <br>
-            <b>NIPS</b> 2013 <a href="http://papers.nips.cc/paper/4892-lasso-screening-rules-via-dual-polytope-projection" target="_blank">[Paper]</a>
-            <strong>Spotlight</strong>
-        </li>
-
-        <li><i>FeaFiner: Biomarker Identification from Medical Data through Feature Generalization and Selection.</i><br>
-        Jiayu Zhou, Zhaosong Lu, Jimeng Sun, Lei Yuan, Fei Wang, and Jieping Ye. <br>
-            <b>KDD</b> 2013 <a href="papers/jzhouKDD13.pdf" target="_blank">[Paper]</a>
-            <a href="papers/jzhouKDD13_supp.pdf" target="_blank">[Supplemental]</a>
-        </li>
-
-        <li><i>Modeling Disease Progression via Multi-task Learning.</i><br>
-        Jiayu Zhou, Jun Liu, Vaibhav A. Narayan, and Jieping Ye. <br>
-        <b>NeuroImage</b> 2013 <em>5-Year Impact Factor: 7.063</em>.
-            <a href="http://www.ncbi.nlm.nih.gov/pubmed/23583359" target="_blank">[Paper]</a>
-            <a href="http://www.MALSAR.org" target="_blank">[Code]</a>
-        </li>
-
-        <li><i>Patient Risk Prediction Model via Top-k Stability Selection.</i><br>
-        Jiayu Zhou, Jimeng Sun, Yashu Liu, Jianying Hu, and Jieping Ye. <br>
-        <b>SDM</b> 2013 <a href="papers/jzhouSDM13.pdf" target="_blank">[Paper]</a> <a href="papers/jzhouSDM13_appendix.pdf" target="_blank">[Supplimental]</a>
-        </li>
-
-        <li><i>Modeling Disease Progression via Fused Sparse Group Lasso. </i><br>
-        Jiayu Zhou, Jun Liu, Vaibhav A. Narayan, and Jieping Ye. <br>
-        <b>KDD</b> 2012 <a href="papers/jzhouKDD12.pdf" target="_blank">[Paper]</a>
-        <a href="http://www.MALSAR.org" target="_blank">[Code]</a> <strong>Best Video Award</strong> <a href="http://kdd2012.sigkdd.org/best_video_award.shtml" target="_blank">[Info]</a> </li>
-
-        <li><i>Clustered Multi-Task Learning via Alternating Structure Optimization.</i> <br>
-        Jiayu Zhou, Jianhui Chen, and Jieping Ye. <br>
-        <b>NIPS</b> 2011 <a href="papers/jzhouNIPS11.pdf" target="_blank">[Paper]</a>
-        <a href="http://www.MALSAR.org" target="_blank">[Code]</a>
-        </li>
-
-        <li><i>Integrating Low-Rank and Group-Sparse Structures for Robust Multi-Task Learning. </i><br>
-        Jianhui Chen, Jiayu Zhou, and Jieping Ye. <br>
-        <b>KDD</b> 2011 <a href="papers/jchenKDD11.pdf" target="_blank">[Paper]</a>
-        <a href="http://www.MALSAR.org" target="_blank">[Code]</a>
-        </li>
-
-        <li><i>A Multi-Task Learning Formulation for Predicting Disease Progression. </i><br>
-        Jiayu Zhou, Lei Yuan, Jun Liu, and Jieping Ye. <br>
-        <b>KDD</b> 2011 <a href="papers/jzhouKDD11.pdf" target="_blank">[Paper]</a>
-        <a href="http://www.MALSAR.org" target="_blank">[Code]</a>
-        </li>
-      </ul>
-      -->
-
-    </div>
-
-    <div class="docs-section" id="calendar">
-      <h6 class="docs-header">Calendar</h6>
-      {% include calendar.html %}
-    </div>
-
-    <div align="center">
-    &copy 2015-2024 DENOS Lab. All rights reserved.
-    <br />
-    <br />
-    </div>
-  </div>
-
-</body>
+      </section>
+
+      <!-- Team -->
+      <section class="section section--alt" id="team">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="section-title">Team</h2>
+          </div>
+
+          {% assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "name" %}
+          {% assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "name" %}
+          {% assign grads     = site.team | where_exp: "m", "m.category == 1 or m.category == 2" | sort: "name" %}
+          {% assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "name" %}
+          {% assign visitors  = site.team | where_exp: "m", "m.category == 3" | sort: "name" %}
+          {% assign alumni    = site.team | where_exp: "m", "m.category == 8" | sort: "name" %}
+          {% assign friends   = site.team | where_exp: "m", "m.category == 9" | sort: "name" %}
+
+          {% if director.size > 0 %}
+            <h3 class="subhead">Director</h3>
+            <div class="team-grid team-grid--lead">
+              {% for member in director %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+
+          {% if postdocs.size > 0 %}
+            <h3 class="subhead">Postdoctoral Researchers</h3>
+            <div class="team-grid team-grid--lead">
+              {% for member in postdocs %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+
+          {% if grads.size > 0 %}
+            <h3 class="subhead">Graduate Researchers</h3>
+            <div class="team-grid">
+              {% for member in grads %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+
+          {% if undergrad.size > 0 %}
+            <h3 class="subhead">Undergraduate &amp; Interns</h3>
+            <div class="alum-grid">
+              {% for member in undergrad %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+
+          {% if visitors.size > 0 %}
+            <h3 class="subhead">Visitors</h3>
+            <div class="alum-grid">
+              {% for member in visitors %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+
+          {% if alumni.size > 0 %}
+            <h3 class="subhead">Alumni</h3>
+            <div class="alum-grid">
+              {% for member in alumni %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+
+          {% if friends.size > 0 %}
+            <h3 class="subhead">Friends</h3>
+            <div class="alum-grid">
+              {% for member in friends %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section class="section" id="publications">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="section-title">Publications</h2>
+          </div>
+          {% include publications.html %}
+        </div>
+      </section>
+
+      <!-- Calendar -->
+      <section class="section section--alt" id="calendar">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="section-title">Calendar</h2>
+          </div>
+          {% include calendar.html %}
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    {% include footer.html %}
+
+  </body>
 </html>

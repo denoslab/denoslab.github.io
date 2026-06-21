@@ -1,13 +1,13 @@
 ---
 layout: team-member
 name: Steve Drew
-title: Lab Head, Professor, University of Calgary
+title: Lab Director · Assistant Professor, Department of Electrical and Software Engineering, University of Calgary
 picture: /images/profile/drew-steve.jpg
-email: zhuheec@gmail.com
+email: steve.drew@ucalgary.ca
 category: 0
 ---
 
+Dr. Steve Drew leads the DENOS Lab. His research spans federated learning, edge computing, distributed systems, blockchain, and AI for health. He serves as an Associate Editor of the IEEE Internet of Things Journal and Neurocomputing.
 <br/>
-Areas of Study: computer networks, optimization, blockchain
 <br/>
-Links: [Website](#), [Google Scholar](https://scholar.google.com/citations?user=mGMBNN4AAAAJ&hl=en)
+Find Dr. Drew on [Google Scholar](https://scholar.google.com/citations?user=mGMBNN4AAAAJ&hl=en) and his [UCalgary Profile](https://profiles.ucalgary.ca/steve-drew).
