@@ -1,4 +1,8 @@
-<div class="alum-item">
-  <span class="alum-name"><a href="mailto:{{ page.email }}">{{ page.name }}</a></span>
-  <span class="alum-role">{{ page.title }}</span>
-</div>
+<article class="member-card">
+  <img class="member-photo" src="{{ page.picture | relative_url }}" alt="{{ page.name }}">
+  <div class="member-info">
+    <h3 class="member-name"><a href="mailto:{{ page.email }}">{{ page.name }}</a></h3>
+    <p class="member-role">{{ page.title }}</p>
+    <div class="member-tags">{{ content }}</div>
+  </div>
+</article>

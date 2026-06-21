@@ -472,21 +472,6 @@ strong, b { font-weight: 600; }
 .member-bio p { margin: 0 0 1rem; }
 .member-bio a { font-weight: 600; }
 
-/* Alumni / interns / visitors */
-.alum-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.2rem;
-}
-.alum-item {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 1.4rem 1.8rem;
-}
-.alum-name { display: block; font-weight: 700; font-size: 1.55rem; }
-.alum-name a { color: var(--navy-900); }
-.alum-role { display: block; font-size: 1.3rem; color: var(--muted); margin-top: .3rem; line-height: 1.45; }
 
 /* Publications ------------------------------------------------------------ */
 .pub-actions { margin: 0 0 3rem; }
@@ -623,7 +608,6 @@ strong, b { font-weight: 600; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 1.4rem; }
   .team-grid--lead { grid-template-columns: 1fr; }
   .member-card { padding: 1.4rem; }
-  .alum-grid { grid-template-columns: 1fr; }
   .research-grid { gap: 1.8rem; }
   .news-item { grid-template-columns: 1fr; gap: .4rem; }
   .news-date { padding-top: 0; }
