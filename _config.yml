@@ -2,8 +2,6 @@ url: https://denoslab.com
 collections:
   team:
     output: false
-  papers:
-    output: false
 exclude:
   - venv
   - .idea
