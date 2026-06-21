@@ -553,6 +553,22 @@ strong, b { font-weight: 600; }
 }
 .partner-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #d6deea; }
 .partner-logo { max-width: 100%; max-height: 60px; width: auto; height: auto; display: block; }
+.partner-card--text { flex-direction: column; gap: .6rem; text-align: center; }
+.partner-name {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--navy-900);
+}
+.partner-sub {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+}
+.partner-card:hover .partner-name { color: var(--gold-deep); }
 
 /* Footer ------------------------------------------------------------------ */
 .site-footer { background: var(--navy-900); color: #b9c4d8; }
