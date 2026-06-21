@@ -149,28 +149,28 @@
 
           {% if undergrad.size > 0 %}
             <h3 class="subhead">Undergraduate &amp; Interns</h3>
-            <div class="alum-grid">
+            <div class="team-grid">
               {% for member in undergrad %}{{ member.output }}{% endfor %}
             </div>
           {% endif %}
 
           {% if visitors.size > 0 %}
             <h3 class="subhead">Visitors</h3>
-            <div class="alum-grid">
+            <div class="team-grid">
               {% for member in visitors %}{{ member.output }}{% endfor %}
             </div>
           {% endif %}
 
           {% if alumni.size > 0 %}
             <h3 class="subhead">Alumni</h3>
-            <div class="alum-grid">
+            <div class="team-grid">
               {% for member in alumni %}{{ member.output }}{% endfor %}
             </div>
           {% endif %}
 
           {% if friends.size > 0 %}
             <h3 class="subhead">Friends</h3>
-            <div class="alum-grid">
+            <div class="team-grid">
               {% for member in friends %}{{ member.output }}{% endfor %}
             </div>
           {% endif %}
