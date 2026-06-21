@@ -586,6 +586,7 @@ strong, b { font-weight: 600; }
   .member-card--lead .member-photo { width: 160px; margin: 0 auto; }
   .member-bio { text-align: left; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+  .team-grid--lead { grid-template-columns: 1fr; }
   .member-card { padding: 1.4rem; }
   .alum-grid { grid-template-columns: 1fr; }
   .research-grid { gap: 1.8rem; }
