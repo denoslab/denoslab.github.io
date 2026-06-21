@@ -125,9 +125,8 @@
 
           {% assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "name" %}
           {% assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "name" %}
-          {% assign grads1    = site.team | where_exp: "m", "m.category == 1" %}
-          {% assign grads2    = site.team | where_exp: "m", "m.category == 2" %}
-          {% assign grads     = grads1 | concat: grads2 | sort: "name" %}
+          {% assign phds      = site.team | where_exp: "m", "m.category == 1" | sort: "name" %}
+          {% assign mscs      = site.team | where_exp: "m", "m.category == 2" | sort: "name" %}
           {% assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "name" %}
           {% assign visitors  = site.team | where_exp: "m", "m.category == 3" | sort: "name" %}
           {% assign alumni    = site.team | where_exp: "m", "m.category == 8" | sort: "name" %}
@@ -147,10 +146,17 @@
             </div>
           {% endif %}
 
-          {% if grads.size > 0 %}
-            <h3 class="subhead">Graduate Researchers</h3>
+          {% if phds.size > 0 %}
+            <h3 class="subhead">PhD Students</h3>
             <div class="team-grid">
-              {% for member in grads %}{{ member.output }}{% endfor %}
+              {% for member in phds %}{{ member.output }}{% endfor %}
+            </div>
+          {% endif %}
+
+          {% if mscs.size > 0 %}
+            <h3 class="subhead">MSc Students</h3>
+            <div class="team-grid">
+              {% for member in mscs %}{{ member.output }}{% endfor %}
             </div>
           {% endif %}
 
