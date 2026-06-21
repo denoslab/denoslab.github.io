@@ -1,6 +1,7 @@
 ---
 layout: team-member
 name: Vincent Michalski
+last_name: Michalski
 title: Postdoctoral Researcher, University of Calgary
 picture: /images/profile/vincent-michalski.jpg
 email: vincent.michalski@ucalgary.ca
