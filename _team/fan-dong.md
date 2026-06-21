@@ -4,7 +4,6 @@ name: Fan Dong
 last_name: Dong
 title: Master Student 2022 - 2024.
 picture: /images/profile/fan-dong.jpg
-email: fan.dong@ucalgary.ca
 category: 8
 ---
 
