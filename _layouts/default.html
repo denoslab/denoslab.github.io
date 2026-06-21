@@ -122,7 +122,9 @@
 
           {% assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "name" %}
           {% assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "name" %}
-          {% assign grads     = site.team | where_exp: "m", "m.category == 1 or m.category == 2" | sort: "name" %}
+          {% assign grads1    = site.team | where_exp: "m", "m.category == 1" %}
+          {% assign grads2    = site.team | where_exp: "m", "m.category == 2" %}
+          {% assign grads     = grads1 | concat: grads2 | sort: "name" %}
           {% assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "name" %}
           {% assign visitors  = site.team | where_exp: "m", "m.category == 3" | sort: "name" %}
           {% assign alumni    = site.team | where_exp: "m", "m.category == 8" | sort: "name" %}
