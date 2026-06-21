@@ -288,6 +288,14 @@ strong, b { font-weight: 600; }
   border: 1px solid var(--line);
   padding: 3rem 3.4rem;
 }
+.research-logo--badge {
+  height: 140px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.8rem;
+}
 .research-title {
   font-size: 1.95rem;
   font-weight: 700;
