@@ -399,6 +399,7 @@ strong, b { font-weight: 600; }
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-900) 100%);
   color: #eaf0fb;
 }
+.callout--join { margin-top: 3.6rem; scroll-margin-top: 8rem; }
 .callout-title {
   font-family: var(--font-serif);
   font-size: 2.4rem;
