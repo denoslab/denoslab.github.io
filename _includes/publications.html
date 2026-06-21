@@ -1,53 +1,97 @@
-{%- comment -%}
-Renders the publications section from the `_papers` collection.
-Expected front matter fields per paper:
-- title (string)
-- authors (string)
-- year (number)
-- venue (string, optional)
-- paper_url (string, optional)
-- code_url (string, optional)
-- award (string, optional)
-- type (string: "preprint" or "selected")
-{%- endcomment -%}
+<p class="section-lead">
+  Selected work from DENOS Lab on federated learning, edge computing, trustworthy AI, and
+  health informatics. The full and up-to-date list is on Google Scholar.
+</p>
 
-{%- if site.papers -%}
-{%- assign preprints = site.papers | where: 'type', 'preprint' | sort: 'year' | reverse -%}
-{%- assign selected = site.papers | where: 'type', 'selected' | sort: 'year' | reverse -%}
+<p class="pub-actions">
+  <a class="btn" href="https://scholar.google.com/citations?user=mGMBNN4AAAAJ&hl=en" target="_blank" rel="noopener">View all publications on Google Scholar</a>
+</p>
 
-{%- if preprints and preprints.size > 0 -%}
-  <h6 class="docs-header">Recent Preprints</h6>
-  <!--
-  <ul>
-  {%- for p in preprints -%}
-    <li>
-      <i>{{ p.title }}</i><br>
-      {{ p.authors }}.<br>
-      {%- if p.venue -%}<b>{{ p.venue }}&nbsp;</b> {%- endif -%}{{ p.year }}&nbsp;
-      {%- if p.paper_url -%} <a href="{{ p.paper_url }}" target="_blank">[{{ p.paper_label | default: 'paper' }}]</a>&nbsp;{%- endif -%}
-      {%- if p.code_url -%} <a href="{{ p.code_url }}" target="_blank">[Code]</a>&nbsp;{%- endif -%}
-      {%- if p.award -%} <strong>{{ p.award }}</strong>{%- endif -%}
-    </li>
-  {%- endfor -%}
-  </ul>
-  -->
-{%- endif -%}
+<ul class="pub-list">
 
-{%- if selected and selected.size > 0 -%}
-  <h6 class="docs-header">Selected Publications</h6>
-  <!--
-  <ul>
-  {%- for p in selected -%}
-    <li>
-      <i>{{ p.title }}</i><br>
-      {{ p.authors }}.<br>
-      {%- if p.venue -%}<b>{{ p.venue }}&nbsp;</b> {%- endif -%}{{ p.year }}&nbsp;
-      {%- if p.paper_url -%} <a href="{{ p.paper_url }}" target="_blank">[{{ p.paper_label | default: 'paper' }}]</a>&nbsp;{%- endif -%}
-      {%- if p.code_url -%} <a href="{{ p.code_url }}" target="_blank">[Code]</a>&nbsp;{%- endif -%}
-      {%- if p.award -%} <strong>{{ p.award }}</strong>{%- endif -%}
-    </li>
-  {%- endfor -%}
-  </ul>
-  -->
-{%- endif -%}
-{%- endif -%}
+  <li class="pub-item">
+    <span class="pub-venue">npj Digital Medicine</span>
+    <span class="pub-year">2025</span>
+    <p class="pub-title">COLA-GLM: Collaborative one-shot and lossless algorithms of generalized linear models for decentralized observational healthcare data</p>
+    <p class="pub-authors">Qiong Wu, Jenna M. Reps, Lu Li, …, Guojun Tang, …, <strong>Steve Drew</strong>, Jiayu Zhou, David A. Asch, Yong Chen. <span class="pub-note">In press</span></p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">ACM CSUR</span>
+    <span class="pub-year">2024</span>
+    <p class="pub-title">Topology-aware Federated Learning in Edge Computing: A Comprehensive Survey</p>
+    <p class="pub-authors">Jiajun Wu, Fan Dong, Henry Leung, Zhuangdi Zhu, Jiayu Zhou, and <strong>Steve Drew</strong>. <span class="pub-venue-full">ACM Computing Surveys</span></p>
+    <p class="pub-links">
+      <a href="https://dl.acm.org/doi/10.1145/3659205" target="_blank" rel="noopener">paper</a>
+      <a href="https://www.growkudos.com/publications/10.1145%25252F3659205/reader" target="_blank" rel="noopener">ACM Showcase</a>
+    </p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">IEEE ICC-W</span>
+    <span class="pub-year">2024</span>
+    <p class="pub-title">FedGreen: Carbon-aware Federated Learning with Model Size Adaptation</p>
+    <p class="pub-authors">Ali Abbasi, Fan Dong, Xin Wang, Henry Leung, Jiayu Zhou, and <strong>Steve Drew</strong>. <span class="pub-venue-full">IEEE International Conference on Communications Workshops</span></p>
+    <p class="pub-links">
+      <a href="https://arxiv.org/abs/2404.15503" target="_blank" rel="noopener">arXiv</a>
+    </p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">IEEE ICC</span>
+    <span class="pub-year">2023</span>
+    <p class="pub-title">FedLE: Federated Learning Client Selection with Lifespan Extension for Edge IoT Networks</p>
+    <p class="pub-authors">Jiajun Wu, <strong>Steve Drew</strong>, and Jiayu Zhou. <span class="pub-venue-full">IEEE International Conference on Communications</span></p>
+    <p class="pub-links">
+      <a href="https://arxiv.org/abs/2302.07305" target="_blank" rel="noopener">arXiv</a>
+    </p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">AAAI</span>
+    <span class="pub-year">2023</span>
+    <p class="pub-title">USDNL: Uncertainty-based Single Dropout in Noisy Label Learning</p>
+    <p class="pub-authors">Yuanzhuo Xu, Xiaoguang Niu, Jie Yang, <strong>Steve Drew</strong>, Jiayu Zhou, and Ruizhi Chen. <span class="pub-venue-full">AAAI Conference on Artificial Intelligence</span></p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">ICML</span>
+    <span class="pub-year">2022</span>
+    <p class="pub-title">Resilient and Communication Efficient Learning for Heterogeneous Federated Systems</p>
+    <p class="pub-authors">Zhuangdi Zhu, Junyuan Hong, <strong>Steve Drew</strong>, and Jiayu Zhou. <span class="pub-venue-full">International Conference on Machine Learning</span></p>
+    <p class="pub-links">
+      <a href="https://proceedings.mlr.press/v162/zhu22e.html" target="_blank" rel="noopener">paper</a>
+    </p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">AAAI</span>
+    <span class="pub-year">2020</span>
+    <p class="pub-title">Shoreline: Data-Driven Threshold Estimation of the Online Reserves of Cryptocurrency Trading Platforms</p>
+    <p class="pub-authors">Xitong Zhang, <strong>Steve Drew</strong>, and Jiayu Zhou. <span class="pub-venue-full">AAAI Conference on Artificial Intelligence</span></p>
+    <p class="pub-links">
+      <a href="https://ojs.aaai.org/index.php/AAAI/article/view/5472" target="_blank" rel="noopener">paper</a>
+    </p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">IEEE Blockchain</span>
+    <span class="pub-year">2018</span>
+    <p class="pub-title">Distributed Data Vending on Blockchain</p>
+    <p class="pub-authors">Jiayu Zhou, Fengyi Tang, <strong>Steve Drew</strong>, Ning Nan, and Ziheng Zhou. <span class="pub-venue-full">IEEE Blockchain</span></p>
+    <p class="pub-links">
+      <a href="https://arxiv.org/abs/1803.05871" target="_blank" rel="noopener">arXiv</a>
+    </p>
+  </li>
+
+  <li class="pub-item">
+    <span class="pub-venue">IEEE NetSoft</span>
+    <span class="pub-year">2018</span>
+    <p class="pub-title">EdgeChain: Blockchain-based Multi-vendor Mobile Edge Application Placement</p>
+    <p class="pub-authors"><strong>Steve Drew</strong>, Changcheng Huang, and Jiayu Zhou. <span class="pub-venue-full">IEEE NetSoft</span></p>
+    <p class="pub-links">
+      <a href="https://arxiv.org/abs/1801.04035" target="_blank" rel="noopener">arXiv</a>
+    </p>
+  </li>
+
+</ul>

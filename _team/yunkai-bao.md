@@ -8,5 +8,5 @@ category: 1
 ---
 
 <br/>
-Areas of Study: Federated Learning
+Federated Learning
 <br/>

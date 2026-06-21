@@ -8,4 +8,4 @@ category: 4
 ---
 
 <br/>
-Areas of Study: Large Language Model Application
+Large Language Model Application

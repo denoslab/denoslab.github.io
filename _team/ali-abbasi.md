@@ -8,4 +8,4 @@ category: 8
 ---
 
 <br/>
-Areas of Study: Federated Learning
+Federated Learning
