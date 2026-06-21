@@ -5,3 +5,6 @@ collections:
 exclude:
   - venv
   - .idea
+  - README.md
+  - AGENTS.md
+  - CLAUDE.md
