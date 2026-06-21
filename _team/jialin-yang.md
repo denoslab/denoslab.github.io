@@ -4,7 +4,6 @@ name: Jialin Yang
 last_name: Yang
 title: PhD Student in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/Jialin-Yang.jpg
-email: jialin.yang@ucalgary.ca
 category: 1
 ---
 
