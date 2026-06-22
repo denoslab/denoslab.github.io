@@ -133,7 +133,7 @@ strong, b { font-weight: 600; }
 
 /* Hero -------------------------------------------------------------------- */
 .hero {
-  text-align: center;
+  text-align: left;
   padding: 6.4rem 0 4rem;
   background:
     radial-gradient(1100px 460px at 50% -10%, var(--surface-2), transparent 70%),
@@ -141,9 +141,9 @@ strong, b { font-weight: 600; }
 }
 .hero-logo {
   width: 100%;
-  max-width: 540px;
+  max-width: 460px;
   height: auto;
-  margin: 0 auto 2.6rem;
+  margin: 0 0 2.6rem;
   display: block;
 }
 .hero-tagline {
@@ -154,7 +154,7 @@ strong, b { font-weight: 600; }
   margin: 0 auto 2.8rem;
 }
 .hero-tagline strong { color: var(--ink); font-weight: 600; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: flex-start; }
 
 /* Sub-page header --------------------------------------------------------- */
 .subheader { border-bottom: 1px solid var(--line); background: #fff; }
