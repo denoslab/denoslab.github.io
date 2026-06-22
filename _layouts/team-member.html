@@ -2,7 +2,7 @@
 <article class="member-card member-card--lead">
   <img class="member-photo" src="{{ page.picture | relative_url }}" alt="{{ page.name }}">
   <div class="member-info">
-    <h3 class="member-name">{{ page.name }}</h3>
+    <h3 class="member-name">{% if page.link %}<a href="{{ page.link }}" target="_blank" rel="noopener">{{ page.name }}</a>{% else %}{{ page.name }}{% endif %}</h3>
     <p class="member-role">{{ page.title }}</p>
     <div class="member-bio">{{ content }}</div>
   </div>
@@ -11,7 +11,7 @@
 <article class="member-card">
   <img class="member-photo" src="{{ page.picture | relative_url }}" alt="{{ page.name }}">
   <div class="member-info">
-    <h3 class="member-name">{{ page.name }}</h3>
+    <h3 class="member-name">{% if page.link %}<a href="{{ page.link }}" target="_blank" rel="noopener">{{ page.name }}</a>{% else %}{{ page.name }}{% endif %}</h3>
     <p class="member-role">{{ page.title }}</p>
     <div class="member-tags">{{ content }}</div>
   </div>

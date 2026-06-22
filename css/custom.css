@@ -451,6 +451,8 @@ strong, b { font-weight: 600; }
   background: var(--surface-2);
 }
 .member-name { font-size: 1.7rem; font-weight: 700; line-height: 1.2; margin: 0 0 .4rem; color: var(--navy-900); }
+.member-name a { color: inherit; }
+.member-name a:hover { color: var(--gold-deep); text-decoration: underline; }
 .member-role { font-size: 1.35rem; line-height: 1.45; color: var(--muted); margin: 0; }
 .member-tags { font-size: 1.3rem; line-height: 1.5; color: var(--muted-soft); margin-top: 1rem; }
 .member-tags br:first-child { display: none; }
