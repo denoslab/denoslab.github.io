@@ -1,0 +1,18 @@
+---
+layout: page
+---
+{% if page.display_date %}<p class="event-date">{{ page.display_date }}</p>{% endif %}
+
+<div class="event-content">
+  {{ content }}
+</div>
+
+{% if page.images %}
+<div class="event-gallery">
+  {% for img in page.images %}
+  <a class="event-photo" href="{{ img | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ img | relative_url }}" alt="{{ page.title }}">
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

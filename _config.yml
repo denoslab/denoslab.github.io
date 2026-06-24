@@ -2,6 +2,9 @@ url: https://denoslab.com
 collections:
   team:
     output: false
+  team_building:
+    output: true
+    permalink: /team-building/:name/
 exclude:
   - venv
   - .idea
