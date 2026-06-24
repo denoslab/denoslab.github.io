@@ -83,6 +83,7 @@ strong, b { font-weight: 600; }
   max-width: 68ch;
   margin: 0 0 3.2rem;
 }
+#research .section-lead { max-width: none; text-align: justify; }
 .subhead {
   font-family: var(--font-sans);
   font-size: 1.3rem;
@@ -236,7 +237,7 @@ strong, b { font-weight: 600; }
 .popover-link:hover { background: var(--surface); color: var(--navy-900); }
 
 /* About copy -------------------------------------------------------------- */
-.copy { max-width: 74ch; }
+.copy { text-align: justify; }
 .copy p { font-size: 1.85rem; line-height: 1.7; color: #2c3543; margin: 0 0 1.8rem; }
 .copy p:last-child { margin-bottom: 0; }
 .copy strong { color: var(--navy-900); font-weight: 600; }
