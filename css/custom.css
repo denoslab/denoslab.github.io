@@ -443,7 +443,7 @@ strong, b { font-weight: 600; }
   color: #fff;
   margin: 0 0 1rem;
 }
-.callout p { font-size: 1.6rem; line-height: 1.6; color: #cdd8ea; margin: 0 0 1.2rem; max-width: 70ch; }
+.callout p { font-size: 1.6rem; line-height: 1.6; color: #cdd8ea; margin: 0 0 1.2rem; text-align: justify; }
 .callout p:last-child { margin-bottom: 0; }
 .callout strong { color: #fff; }
 .callout-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 2rem; }
