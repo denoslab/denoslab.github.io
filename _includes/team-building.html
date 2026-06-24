@@ -1,0 +1,11 @@
+{% assign events = site.team_building | sort: "date" | reverse %}
+{% for event in events %}
+<a class="news-feature" href="{{ event.url | relative_url }}">
+  <img class="news-feature-img" src="{{ event.images | first | relative_url }}" alt="{{ event.title }}">
+  <div class="news-feature-body">
+    <span class="news-date">{{ event.display_date }}</span>
+    <h3 class="news-feature-title">{{ event.title }}</h3>
+    <span class="news-feature-cta">View photos →</span>
+  </div>
+</a>
+{% endfor %}
