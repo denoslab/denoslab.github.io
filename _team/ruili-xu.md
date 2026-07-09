@@ -2,7 +2,7 @@
 layout: team-nonmember
 name: Ruili Xu
 last_name: Xu
-title: Research Intern, University of Calgary
+title: Summer Intern, 2026
 picture: /images/profile/ruili-xu.jpg
 category: 4
 link: https://vimisthebest.org/
