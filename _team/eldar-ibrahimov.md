@@ -4,7 +4,7 @@ name: Eldar Ibrahimov
 last_name: Ibrahimov
 title: Alberta Innovates High School Intern, Summer 2025
 picture: /images/profile/eldar-ibrahimov.jpg
-category: 4
+category: 8
 ---
 
 <br/>
