@@ -415,6 +415,26 @@ strong, b { font-weight: 600; }
 }
 .event-content { max-width: 70ch; }
 .event-content p { font-size: 1.7rem; line-height: 1.7; color: #2c3543; margin: 0 0 1.6rem; }
+.event-figure {
+  margin: 3.4rem 0 0;
+  padding: 0;
+}
+.event-figure > a {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.event-figure > a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.event-figure img { display: block; width: 100%; height: auto; }
+.event-figure figcaption {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 1.2rem;
+}
 .event-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
