@@ -427,7 +427,7 @@ strong, b { font-weight: 600; }
   hyphens: auto;
 }
 .event-figure {
-  margin: 3.4rem 0 0;
+  margin: 3.4rem 0;
   padding: 0;
 }
 .event-figure--hero { margin: 0 0 3.4rem; }
@@ -453,7 +453,6 @@ strong, b { font-weight: 600; }
   gap: 1.6rem;
   margin: 3.2rem 0 1rem;
 }
-.event-gallery--single { grid-template-columns: 1fr; }
 .event-photo {
   display: block;
   border-radius: var(--radius);

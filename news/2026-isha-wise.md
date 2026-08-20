@@ -6,11 +6,10 @@ display_date: Aug 2026
 description: WISE summer intern Isha Goyal built CardiCare, an on-device AI patient assistant for coronary artery disease that answers only from clinician-approved content and refuses everything else.
 hero: /images/news/2026-isha-wise/2026-isha-wise.jpg
 hero_alt: Isha Goyal with DENOS Lab members at the University of Calgary
-poster: /images/news/2026-isha-wise/isha-wise-poster-2026.jpg
-poster_link: /images/news/2026-isha-wise/isha-wise-poster-2026.pdf
-poster_caption: Isha Goyal's WISE research poster, CardiCare, AI Patient Assistant Chatbot for Coronary Artery Disease. Click to open the full poster.
 ---
 Isha Goyal spent her Women in Science and Engineering (WISE) summer internship at DENOS Lab building CardiCare, an artificial intelligence patient assistant for people living with coronary artery disease (CAD). Coronary artery disease is the second leading cause of death in Canada, and the people who live with it manage chronic symptoms, medication, exercise, and a reduced quality of life with very little day to day support. General purpose chatbots fill part of that gap but they invent answers, which is the one failure a patient facing tool cannot afford. Isha presented the work in a poster titled *CardiCare: AI Patient Assistant Chatbot for Coronary Artery Disease (CAD)*, co-authored with Jiajun Wu and Dr. Steve Drew of the Department of Electrical and Software Engineering at the Schulich School of Engineering.
+
+{% include figure.html src="/images/news/2026-isha-wise/isha-wise-poster-2026.jpg" link="/images/news/2026-isha-wise/isha-wise-poster-2026.pdf" alt="Isha Goyal's WISE research poster on CardiCare" caption="Isha Goyal's WISE research poster, CardiCare, AI Patient Assistant Chatbot for Coronary Artery Disease. Click to open the full poster." %}
 
 CardiCare never writes medical content of its own. It answers from a bank of clinician approved questions and answers, and it returns the source alongside every reply. A patient query arrives as text or speech and first passes an emergency check that watches for chest pain, stroke symptoms, and similar descriptions. Anything that looks like an emergency gets an abstention and a referral to the care team or to 911. Everything else is embedded and handed to a small language model, Qwen 3:4b, which verifies whether the query really matches an approved entry. A confirmed match returns the approved answer and its source. A near miss or no match returns an abstention rather than a guess. The whole system runs locally on an NVIDIA Jetson Nano with 8 GB of memory, so patient questions never leave the device.
 
