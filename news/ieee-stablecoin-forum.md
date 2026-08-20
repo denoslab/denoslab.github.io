@@ -4,8 +4,8 @@ title: DENOS Lab organizes the IEEE Stablecoin and Agentic AI Forum in Calgary
 permalink: /news/ieee-stablecoin-forum/
 display_date: Jul 28, 2026
 description: DENOS Lab organized the IEEE Stablecoin and Agentic AI Forum in Calgary on July 28, 2026, gathering industry, regulators, and researchers around stablecoins and agentic AI.
-images:
-  - /images/news/ieee-stablecoin-forum/speakers.jpg
+hero: /images/news/ieee-stablecoin-forum/speakers.jpg
+hero_alt: Speakers at the IEEE Stablecoin and Agentic AI Forum in Calgary
 ---
 DENOS Lab successfully organized the IEEE Stablecoin and Agentic AI Forum on Tuesday, July 28, 2026, in the Indigo Room of the Alt Hotel Calgary University District. Dr. Henry Leung and Dr. Steve Drew of the Schulich School of Engineering led the organizing committee, with sponsorship from the IEEE Systems, Man, and Cybernetics Society, ATB Financial, and the Schulich School of Engineering at the University of Calgary. The forum set out to train talents for the era of stablecoins and agentic AI, bringing practitioners, founders, regulators, and researchers into one room where finance and artificial intelligence meet.
 

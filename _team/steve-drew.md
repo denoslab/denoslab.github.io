@@ -2,7 +2,7 @@
 layout: team-member
 name: Dr. Steve Drew
 last_name: Drew
-title: Lab Director · Assistant Professor, Department of Electrical and Software Engineering, University of Calgary
+title: Lab Director · Associate Professor, Department of Electrical and Software Engineering, University of Calgary
 picture: /images/profile/drew-steve.jpg
 category: 0
 ---

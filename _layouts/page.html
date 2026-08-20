@@ -52,7 +52,7 @@
 
     <main>
       <section class="section">
-        <div class="wrap">
+        <div class="wrap{% if page.layout == 'event' %} wrap--article{% endif %}">
           <div class="section-head">
             <h2 class="section-title">{{ page.title }}</h2>
           </div>
