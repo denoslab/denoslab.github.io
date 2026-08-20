@@ -1,4 +1,4 @@
-The Distributed Learning and Orchestration (DENOS) Lab at the University of Calgary was founded in 2021 by Dr. Steve Drew, Assistant Professor in the Department of Electrical and Software Engineering. We work on distributed learning, agentic simulation and reasoning, building intelligent, sustainable, and privacy-preserving systems that span cloud-edge infrastructures.
+The Distributed Learning and Orchestration (DENOS) Lab at the University of Calgary was founded in 2021 by Dr. Steve Drew, Associate Professor in the Department of Electrical and Software Engineering. We work on distributed learning, agentic simulation and reasoning, building intelligent, sustainable, and privacy-preserving systems that span cloud-edge infrastructures.
 
 Much of our work puts large language model agents to work on real problems in health and public safety. We build multi-agent systems that simulate emergency department operations, grade clinical summaries, share health data under verifiable consent, and model wildfire evacuations. In parallel, we design federated learning methods that keep cloud-edge services resilient and carbon-aware while protecting sensitive data.
 
