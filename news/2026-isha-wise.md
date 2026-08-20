@@ -2,7 +2,7 @@
 layout: event
 title: Isha Goyal builds CardiCare, an on-device AI assistant for coronary artery disease patients
 permalink: /news/2026-isha-wise/
-display_date: Aug 2026
+display_date: Aug 20, 2026
 description: WISE summer intern Isha Goyal built CardiCare, an on-device AI patient assistant for coronary artery disease that answers only from clinician-approved content and refuses everything else.
 hero: /images/news/2026-isha-wise/2026-isha-wise.jpg
 hero_alt: Isha Goyal with DENOS Lab members at the University of Calgary
