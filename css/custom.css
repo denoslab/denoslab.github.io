@@ -464,6 +464,8 @@ strong, b { font-weight: 600; }
 .callout p { font-size: 1.6rem; line-height: 1.6; color: #cdd8ea; margin: 0 0 1.2rem; text-align: justify; }
 .callout p:last-child { margin-bottom: 0; }
 .callout strong { color: #fff; }
+.callout p a:not(.btn) { color: var(--gold); text-decoration: underline; text-underline-offset: .3rem; }
+.callout p a:not(.btn):hover { color: #fff; }
 .callout-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 2rem; }
 .callout .btn { background: var(--gold); border-color: var(--gold); color: var(--navy-900); }
 .callout .btn:hover { background: #fff; border-color: #fff; color: var(--navy-900); }
