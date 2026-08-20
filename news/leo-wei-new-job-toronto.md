@@ -4,9 +4,10 @@ title: Leo Wei joins Citizen Relations as AI Technical Lead in Toronto
 permalink: /news/leo-wei-new-job-toronto/
 display_date: Jul 2026
 description: DENOS Lab alumnus Leo Wei moves to Toronto as AI Technical Lead at Citizen Relations.
+hero: /images/news/leo-wei-new-job-toronto/leo-msc-defense.jpg
+hero_alt: Leo Wei at his MSc thesis defense
 images:
   - /images/news/leo-wei-new-job-toronto/leo-atc-best-paper.jpg
-  - /images/news/leo-wei-new-job-toronto/leo-msc-defense.jpg
 ---
 Leo Wei is moving to Toronto to join Citizen Relations as AI Technical Lead. Citizen Relations is a public relations agency headquartered in Toronto with offices around the world, and Leo will lead the design and delivery of its artificial intelligence work.
 
