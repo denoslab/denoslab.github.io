@@ -8,18 +8,6 @@ category: 8
 summary: |
   <br/>
   Federated Learning for Supply Chain Demand Forecasting
-projects:
-  - name: "Federated learning for supply chain demand forecasting"
-    url: "/news/leo-wei-new-job-toronto/"
-    description: "Privacy preserving demand forecasting across supply chain partners who cannot share their raw sales data."
-publications:
-  - title: "SPEAR: Soft Prompt Enhanced Anomaly Recognition for Time Series Data"
-    authors: "Leo Wei, Jiajun Wu, Jialin Yang, Henry Leung, and **Steve Drew**"
-    venue: "IEEE Smart World Congress"
-    year: 2025
-achievements:
-  - "Part of the DENOS team that received a Best Paper Award at the 2025 IEEE International Conference on Autonomous and Trusted Computing in Calgary."
-  - "Third place in data visualization at the CANIS Hackathon hosted by Schulich Ignite, with Yunkai Bao and Jiajun Wu."
 links:
   linkedin: https://www.linkedin.com/in/leo-wei/
 projects:

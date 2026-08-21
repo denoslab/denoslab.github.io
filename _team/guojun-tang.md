@@ -9,26 +9,6 @@ summary: |
   <br/>
   Federated Learning
   <br/>
-projects:
-  - name: "COLA-GLM"
-    description: "Collaborative one-shot and lossless algorithms of generalized linear models for decentralized observational healthcare data, in press at npj Digital Medicine."
-  - name: "Federated diabetes prediction"
-    url: "https://amia.secure-platform.com/symposium/gallery/rounds/82001/details/10668"
-    description: "Federated prediction of diabetes in Canadian adults using real-world cross-province primary care data."
-publications:
-  - title: "COLA-GLM: Collaborative one-shot and lossless algorithms of generalized linear models for decentralized observational healthcare data"
-    authors: "Qiong Wu, Jenna M. Reps, Lu Li, Guojun Tang, **Steve Drew**, Jiayu Zhou, David A. Asch, and Yong Chen"
-    venue: "npj Digital Medicine"
-    year: 2025
-  - title: "Unlocking efficiency in real-world collaborative studies: a multi-site international study with one-shot lossless GLMM algorithm"
-    authors: "Guojun Tang, et al."
-    venue: "npj Digital Medicine"
-    year: 2025
-    url: "https://www.nature.com/articles/s41746-025-01846-1"
-  - title: "Federated Diabetes Prediction in Canadian Adults Using Real-world Cross-Province Primary Care Data"
-    authors: "Guojun Tang, et al."
-    venue: "AMIA Symposium"
-    url: "https://amia.secure-platform.com/symposium/gallery/rounds/82001/details/10668"
 links:
   linkedin: https://ca.linkedin.com/in/guojuntang
 projects:

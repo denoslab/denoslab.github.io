@@ -8,16 +8,6 @@ category: 8
 summary: |
   <br/>
   Federated Learning
-projects:
-  - name: "FedGreen"
-    url: "https://arxiv.org/abs/2404.15503"
-    description: "Carbon-aware federated learning that adapts the model size shared with each client according to its carbon profile and location."
-publications:
-  - title: "FedGreen: Carbon-aware Federated Learning with Model Size Adaptation"
-    authors: "Ali Abbasi, Fan Dong, Xin Wang, Henry Leung, Jiayu Zhou, and **Steve Drew**"
-    venue: "IEEE ICC-W"
-    year: 2024
-    url: "https://arxiv.org/abs/2404.15503"
 links:
   scholar: https://scholar.google.com/citations?user=dGanmhUAAAAJ&hl=en
   website: https://aliabbasi7798.github.io/aliabbasi/

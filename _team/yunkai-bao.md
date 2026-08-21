@@ -9,29 +9,6 @@ summary: |
   <br/>
   Federated Learning
   <br/>
-projects:
-  - name: "Federated learning under client budgets"
-    description: "Client selection and semi-decentralized training that respect device availability and energy budgets instead of assuming clients are always reachable."
-  - name: "Privacy-preserving trial analysis"
-    description: "Federated analysis that reproduces non-inferiority results from the AcT multicentre stroke trial without pooling patient data."
-publications:
-  - title: "Energy-efficient Federated Learning with Dynamic Model Size Allocation"
-    authors: "M. S. C. Kumar, Yunkai Bao, Xin Wang, and **Steve Drew**"
-    venue: "IEEE BigData"
-    year: 2024
-  - title: "Federated Learning with Client Availability Budgets"
-    authors: "Yunkai Bao, **Steve Drew**, Xin Wang, Jiayu Zhou, and Xiaoguang Niu"
-    venue: "IEEE GLOBECOM"
-    year: 2023
-  - title: "Semi-decentralized Federated Time Series Prediction with Client Availability Budgets"
-    authors: "Yunkai Bao, R. Safarzadeh, Xin Wang, and **Steve Drew**"
-    venue: "IEEE INFOCOM Workshops"
-    year: 2025
-  - title: "Privacy-Preserving Federated Analysis Reproduces Non-Inferiority Results from the AcT Multicentre Stroke Trial"
-    authors: "Yunkai Bao, Zainab Saad, K. Duarte, Farhan Abbas, T. Sajobi, Jessalyn K. Holodinsky, Bijoy K. Menon, et al."
-    venue: "SSRN"
-achievements:
-  - "Third place in data visualization at the CANIS Hackathon hosted by Schulich Ignite, with Leo Wei and Jiajun Wu."
 links:
   scholar: https://scholar.google.com/citations?user=jsUlx6YAAAAJ&hl=en
 projects:
