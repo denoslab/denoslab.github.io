@@ -1,7 +1,8 @@
 url: https://denoslab.com
 collections:
   team:
-    output: false
+    output: true
+    permalink: /team/:name/
   team_building:
     output: true
     permalink: /team-building/:name/

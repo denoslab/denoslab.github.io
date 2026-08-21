@@ -124,56 +124,56 @@
           {% if director.size > 0 %}
             <h3 class="subhead">Director</h3>
             <div class="team-grid team-grid--lead">
-              {% for member in director %}{{ member.output }}{% endfor %}
+              {% for member in director %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
 
           {% if postdocs.size > 0 %}
             <h3 class="subhead">Postdoctoral Researchers</h3>
             <div class="team-grid team-grid--lead">
-              {% for member in postdocs %}{{ member.output }}{% endfor %}
+              {% for member in postdocs %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
 
           {% if phds.size > 0 %}
             <h3 class="subhead">PhD Students</h3>
             <div class="team-grid">
-              {% for member in phds %}{{ member.output }}{% endfor %}
+              {% for member in phds %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
 
           {% if mscs.size > 0 %}
             <h3 class="subhead">MSc Students</h3>
             <div class="team-grid">
-              {% for member in mscs %}{{ member.output }}{% endfor %}
+              {% for member in mscs %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
 
           {% if undergrad.size > 0 %}
             <h3 class="subhead">Undergraduate &amp; Interns</h3>
             <div class="team-grid">
-              {% for member in undergrad %}{{ member.output }}{% endfor %}
+              {% for member in undergrad %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
 
           {% if visitors.size > 0 %}
             <h3 class="subhead">Visitors</h3>
             <div class="team-grid">
-              {% for member in visitors %}{{ member.output }}{% endfor %}
+              {% for member in visitors %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
 
           {% if alumni.size > 0 %}
             <h3 class="subhead">Alumni</h3>
             <div class="team-grid">
-              {% for member in alumni %}{{ member.output }}{% endfor %}
+              {% for member in alumni %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
 
           {% if friends.size > 0 %}
             <h3 class="subhead">Friends</h3>
             <div class="team-grid">
-              {% for member in friends %}{{ member.output }}{% endfor %}
+              {% for member in friends %}{% include team-card.html member=member %}{% endfor %}
             </div>
           {% endif %}
         </div>
