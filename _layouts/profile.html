@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.name }} | DENOS Lab</title>
+    <meta name="author" content="Steve Drew" />
+    <meta name="description" content="{{ page.description | default: page.name | append: ', ' | append: page.title }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="DENOS Lab" />
+    <meta property="og:title" content="{{ page.name }} | DENOS Lab" />
+    <meta property="og:description" content="{{ page.description | default: page.name | append: ', ' | append: page.title }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ page.picture | absolute_url }}" />
+    <meta property="og:image:alt" content="{{ page.name }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="{{ page.picture | absolute_url }}" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/dist/css/normalize.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/dist/css/skeleton.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/custom.css' | relative_url }}">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+  </head>
+
+  <body>
+
+    <!-- Sub-page header -->
+    <header class="subheader">
+      <div class="wrap subheader-inner">
+        <a class="subheader-brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/images/denos-logo.png' | relative_url }}" alt="DENOS Lab, University of Calgary">
+        </a>
+        <a class="subheader-back" href="{{ '/#team' | relative_url }}">← Back to team</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="wrap wrap--profile">
+
+          <header class="profile-head">
+            <img class="profile-photo" src="{{ page.picture | relative_url }}" alt="{{ page.name }}">
+            <div class="profile-ident">
+              <h1 class="profile-name">{{ page.name }}</h1>
+              <p class="profile-role">{{ page.title }}</p>
+              {%- if page.summary and page.category != 0 and page.category != 5 %}
+              <p class="profile-focus">{{ page.summary | markdownify | strip_html | strip }}</p>
+              {%- endif %}
+              {%- if page.links %}
+              <p class="profile-links">
+                {%- if page.links.scholar %}<a href="{{ page.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+                {%- if page.links.orcid %}<a href="{{ page.links.orcid }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+                {%- if page.links.github %}<a href="{{ page.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+                {%- if page.links.website %}<a href="{{ page.links.website }}" target="_blank" rel="noopener">Website</a>{% endif %}
+                {%- if page.links.linkedin %}<a href="{{ page.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+              </p>
+              {%- endif %}
+            </div>
+          </header>
+
+          {%- assign body = content | strip -%}
+          {%- if body != '' %}
+          <section class="profile-section">
+            <h2 class="profile-heading">Biography</h2>
+            <div class="profile-body">{{ content }}</div>
+          </section>
+          {%- elsif page.summary and page.category == 0 or page.category == 5 %}
+          <section class="profile-section">
+            <h2 class="profile-heading">Biography</h2>
+            <div class="profile-body">{{ page.summary | markdownify }}</div>
+          </section>
+          {%- endif %}
+
+          {%- if page.projects %}
+          <section class="profile-section">
+            <h2 class="profile-heading">Projects</h2>
+            <ul class="profile-projects">
+              {%- for project in page.projects %}
+              <li class="profile-project">
+                <h3 class="profile-project-name">{%- if project.url %}<a href="{{ project.url }}"{% if project.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</h3>
+                {%- if project.description %}<p>{{ project.description }}</p>{% endif %}
+              </li>
+              {%- endfor %}
+            </ul>
+          </section>
+          {%- endif %}
+
+          {%- if page.publications %}
+          <section class="profile-section">
+            <h2 class="profile-heading">Publications</h2>
+            <ul class="pub-list">
+              {%- for pub in page.publications %}
+              <li class="pub-item">
+                {%- if pub.venue %}<span class="pub-venue">{{ pub.venue }}</span>{% endif %}
+                {%- if pub.year %}<span class="pub-year">{{ pub.year }}</span>{% endif %}
+                <p class="pub-title">{{ pub.title }}</p>
+                {%- if pub.authors %}<p class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>{% endif %}
+                {%- if pub.url %}
+                <p class="pub-links"><a href="{{ pub.url }}" target="_blank" rel="noopener">paper</a></p>
+                {%- endif %}
+              </li>
+              {%- endfor %}
+            </ul>
+          </section>
+          {%- endif %}
+
+          {%- if page.achievements %}
+          <section class="profile-section">
+            <h2 class="profile-heading">Achievements</h2>
+            <ul class="profile-achievements">
+              {%- for item in page.achievements %}
+              <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+              {%- endfor %}
+            </ul>
+          </section>
+          {%- endif %}
+
+          <p class="profile-back"><a href="{{ '/#team' | relative_url }}">← All team members</a></p>
+
+        </div>
+      </section>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>
