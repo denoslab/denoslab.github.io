@@ -48,7 +48,9 @@ Search visibility is wired into the layouts, not a plugin. `_config.yml` declare
 - **Standalone hub pages:** `team.html` at `/team/` and `news.html` at `/news/`, both linked site-wide from the footer's Explore column. Profile pages link back to `/team/`, news articles back to `/news/`.
 - The homepage `<h1>` is the hero logo wrapped in `h1.hero-title` with a `.visually-hidden` text label. Sub-pages use `h1.section-title` for the page title.
 
-After adding a page, rebuild and check that it appears in `_site/sitemap.xml` and that its JSON-LD parses.
+- **`llms.txt`** at the repo root is the curated index for LLM agents, in the [llms.txt](https://llmstxt.org) format: an `h1`, a blockquote summary, then `h2` sections of markdown links. News, Team, Alumni, and the team-building entry are generated from `site.pages` and the collections, so they never go stale. **The Research section is the one hand-maintained part** and has to be updated alongside `_includes/research.html`. `robots.txt` points at it in a comment. It is a community convention with weak adoption, not a standard, so treat it as low-cost upside rather than something load-bearing.
+
+After adding a page, rebuild and check that it appears in `_site/sitemap.xml`, that its JSON-LD parses, and that `_site/llms.txt` still reads correctly.
 
 ## Writing style for site copy
 

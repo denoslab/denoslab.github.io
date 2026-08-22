@@ -2,6 +2,8 @@
 layout: null
 sitemap: false
 ---
+# AI crawlers are welcome. Curated index for LLM agents: {{ '/llms.txt' | absolute_url }}
+
 User-agent: *
 Allow: /
 
