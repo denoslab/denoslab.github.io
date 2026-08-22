@@ -1,0 +1,35 @@
+{%- assign roster = site.team | sort: "last_name" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "{{ page.url | absolute_url }}#roster",
+  "name": "DENOS Lab team",
+  "numberOfItems": {{ roster.size }},
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "itemListElement": [
+    {%- for m in roster %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "Person",
+        "@id": "{{ m.url | absolute_url }}#person",
+        "name": {{ m.name | jsonify }},
+        "url": "{{ m.url | absolute_url }}",
+        "jobTitle": {{ m.title | strip_newlines | strip | jsonify }},
+        {%- if m.picture %}
+        "image": "{{ m.picture | absolute_url }}",
+        {%- endif %}
+        "affiliation": {
+          "@type": "Organization",
+          "@id": "{{ '/#organization' | absolute_url }}",
+          "name": "DENOS Lab",
+          "url": "{{ '/' | absolute_url }}"
+        }
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

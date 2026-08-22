@@ -1,0 +1,102 @@
+{%- assign actives = site.team | where_exp: "m", "m.category < 8" | sort: "category" -%}
+{%- assign alumni = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" -%}
+{%- assign director = site.team | where_exp: "m", "m.category == 0" | first -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ResearchOrganization", "Organization"],
+      "@id": "{{ '/#organization' | absolute_url }}",
+      "name": "DENOS Lab",
+      "alternateName": [
+        "Distributed Learning and Orchestration Lab",
+        "DENOS Laboratory",
+        "DENOS Lab, University of Calgary"
+      ],
+      "url": "{{ '/' | absolute_url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/images/denos-logo.png' | absolute_url }}"
+      },
+      "image": "{{ '/images/og-image.png' | absolute_url }}",
+      "description": {{ site.description | strip_newlines | strip | jsonify }},
+      "foundingDate": "2021",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Calgary",
+        "url": "https://www.ucalgary.ca/",
+        "department": {
+          "@type": "Organization",
+          "name": "Department of Electrical and Software Engineering, Schulich School of Engineering",
+          "url": "https://schulich.ucalgary.ca/electrical-software"
+        }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ICT 253, 2500 University Drive NW",
+        "addressLocality": "Calgary",
+        "addressRegion": "AB",
+        "postalCode": "T2N 1N4",
+        "addressCountry": "CA"
+      },
+      "sameAs": [
+        "https://github.com/DENOSlab/",
+        "https://scholar.google.com/citations?user=mGMBNN4AAAAJ&hl=en",
+        "https://profiles.ucalgary.ca/steve-drew"
+      ],
+      "knowsAbout": [
+        "Distributed learning",
+        "Federated learning",
+        "Agentic simulation",
+        "Large language model agents",
+        "Edge computing",
+        "Cloud-edge orchestration",
+        "Trustworthy artificial intelligence",
+        "Privacy-preserving machine learning",
+        "Health informatics",
+        "Carbon-aware computing",
+        "Blockchain"
+      ],
+      {%- if director %}
+      "founder": {
+        "@type": "Person",
+        "@id": "{{ director.url | absolute_url }}#person",
+        "name": {{ director.name | jsonify }},
+        "url": "{{ director.url | absolute_url }}"
+      },
+      {%- endif %}
+      "member": [
+        {%- for m in actives %}
+        {
+          "@type": "Person",
+          "@id": "{{ m.url | absolute_url }}#person",
+          "name": {{ m.name | jsonify }},
+          "url": "{{ m.url | absolute_url }}",
+          "jobTitle": {{ m.title | strip_newlines | strip | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
+      "alumni": [
+        {%- for m in alumni %}
+        {
+          "@type": "Person",
+          "@id": "{{ m.url | absolute_url }}#person",
+          "name": {{ m.name | jsonify }},
+          "url": "{{ m.url | absolute_url }}"
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/#website' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "DENOS Lab",
+      "description": {{ site.description | strip_newlines | strip | jsonify }},
+      "inLanguage": "en-CA",
+      "publisher": { "@id": "{{ '/#organization' | absolute_url }}" }
+    }
+  ]
+}
+</script>

@@ -1,0 +1,45 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "{{ page.schema_type | default: 'CollectionPage' }}",
+      "@id": "{{ page.url | absolute_url }}",
+      "url": "{{ page.url | absolute_url }}",
+      "name": {{ page.title | append: " | DENOS Lab" | jsonify }},
+      {%- if page.description %}
+      "description": {{ page.description | strip_newlines | strip | jsonify }},
+      {%- endif %}
+      "inLanguage": "en-CA",
+      "isPartOf": { "@id": "{{ '/#website' | absolute_url }}" },
+      "about": { "@id": "{{ '/#organization' | absolute_url }}" },
+      "breadcrumb": { "@id": "{{ page.url | absolute_url }}#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.url | absolute_url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }} }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ '/#organization' | absolute_url }}",
+      "name": "DENOS Lab",
+      "alternateName": "Distributed Learning and Orchestration Lab",
+      "url": "{{ '/' | absolute_url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/images/denos-logo.png' | absolute_url }}"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/#website' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "DENOS Lab"
+    }
+  ]
+}
+</script>

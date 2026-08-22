@@ -2,6 +2,7 @@
 layout: event
 title: DENOS Lab organizes the IEEE Stablecoin and Agentic AI Forum in Calgary
 permalink: /news/ieee-stablecoin-forum/
+date: 2026-07-28
 display_date: Jul 28, 2026
 description: DENOS Lab organized the IEEE Stablecoin and Agentic AI Forum in Calgary on July 28, 2026, gathering industry, regulators, and researchers around stablecoins and agentic AI.
 hero: /images/news/ieee-stablecoin-forum/speakers.jpg
