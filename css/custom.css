@@ -135,7 +135,7 @@ strong, b { font-weight: 600; }
 /* Hero -------------------------------------------------------------------- */
 .hero {
   text-align: left;
-  padding: 6.4rem 0 4rem;
+  padding: 3.2rem 0 2.8rem;
   background:
     radial-gradient(1100px 460px at 50% -10%, var(--surface-2), transparent 70%),
     var(--bg);
@@ -144,7 +144,7 @@ strong, b { font-weight: 600; }
   width: 100%;
   max-width: 368px;
   height: auto;
-  margin: 0 0 2.6rem;
+  margin: 0;
   display: block;
 }
 .hero-tagline {
@@ -651,7 +651,7 @@ strong, b { font-weight: 600; }
 @media (max-width: 720px) {
   .section { padding: 4.8rem 0; }
   .section-title { font-size: 2.9rem; }
-  .hero { padding: 4rem 0 3rem; }
+  .hero { padding: 2.4rem 0 2rem; }
   .hero-tagline { font-size: 1.8rem; }
   .member-card--lead {
     grid-template-columns: 1fr;
