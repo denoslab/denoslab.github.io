@@ -325,15 +325,6 @@ strong, b { font-weight: 600; }
 .research-points li strong { color: var(--ink); }
 
 /* News -------------------------------------------------------------------- */
-.news-list { list-style: none; margin: 0 0 3.6rem; padding: 0; max-width: 80ch; }
-.news-item {
-  display: grid;
-  grid-template-columns: 11rem 1fr;
-  gap: 1.6rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--line);
-}
-.news-item:first-child { border-top: 0; padding-top: 0; }
 .news-date {
   font-size: 1.3rem;
   font-weight: 700;
@@ -342,8 +333,6 @@ strong, b { font-weight: 600; }
   color: var(--gold-deep);
   padding-top: .2rem;
 }
-.news-text { margin: 0; font-size: 1.65rem; line-height: 1.6; color: #2c3543; }
-.news-text a { font-weight: 600; }
 
 .news-feature {
   display: grid;
@@ -363,6 +352,8 @@ strong, b { font-weight: 600; }
   border-color: #d6deea;
   color: inherit;
 }
+.news-feature--text { grid-template-columns: 1fr; }
+.news-feature--text .news-feature-body { padding: 2.8rem 3rem; }
 .news-feature-img {
   width: 100%;
   height: 100%;
@@ -674,8 +665,6 @@ strong, b { font-weight: 600; }
   .team-grid--lead { grid-template-columns: 1fr; }
   .member-card { padding: 1.4rem; }
   .research-grid { gap: 1.8rem; }
-  .news-item { grid-template-columns: 1fr; gap: .4rem; }
-  .news-date { padding-top: 0; }
   .news-feature { grid-template-columns: 1fr; }
   .news-feature-img { min-height: 180px; max-height: 210px; }
   .news-feature-body { padding: 2.2rem; }
