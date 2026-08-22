@@ -1,0 +1,66 @@
+---
+layout: null
+sitemap: false
+---
+# DENOS Lab
+
+> The Distributed Learning and Orchestration (DENOS) Lab at the University of Calgary, led by Dr. Steve Drew, builds intelligent, sustainable, and privacy-preserving systems for distributed learning, agentic simulation and reasoning across cloud-edge infrastructures, with applications in health informatics and trustworthy AI.
+
+DENOS Lab was founded in 2021 by Dr. Steve Drew, Associate Professor in the Department of Electrical and Software Engineering at the Schulich School of Engineering, University of Calgary. Much of the lab's work puts large language model agents on real problems in health and public safety, including multi-agent systems that simulate emergency department operations, grade clinical summaries, share health data under verifiable consent, and model wildfire evacuations. In parallel the lab designs federated learning methods that keep cloud-edge services resilient and carbon-aware while protecting sensitive data. The lab's work has earned a Best Paper Award at IEEE ATC 2025 and a New Frontiers in Research Fund Exploration grant, and appears in venues across machine learning, systems, and digital medicine.
+
+Canonical site: {{ '/' | absolute_url }}
+
+## Research
+
+- [Agentic Simulation for Emergency Department Operations]({{ '/#research' | absolute_url }}): EDSim is a large language model simulation of an emergency department, with autonomous agents for patients, nurses, and physicians.
+- [Secure, Transactable, Agentic Health Data Sharing]({{ '/#research' | absolute_url }}): STARFISH is a secure, interoperable framework for global health data sharing that lets individuals control their data while enabling compliant research.
+- [Agentic Simulation for Wildfire Evacuations]({{ '/#research' | absolute_url }}): AgentEvac is an agentic simulator for wildfire evacuations that couples SUMO traffic simulation with LLM-driven agents following the Protective Action Decision Model (PADM).
+- [Wearable Stress Detection for Frontline Healthcare Workers]({{ '/#research' | absolute_url }}): SENSE pairs wearable sensor data with machine learning to help nurses and social workers manage stress in real time.
+- [Role-Aware Multi-Agent Grading of Clinical Summaries]({{ '/#research' | absolute_url }}): LENS is a role-aware multi-agent pipeline that grades clinical summaries using open-weight LLMs.
+- [Federated Learning for Edge Service Orchestration]({{ '/#research' | absolute_url }}): Federated learning methods that budget clients by availability and carbon footprint and guide cloud-edge orchestration toward resilient, sustainable deployment.
+
+## News
+{% assign events = site.pages | where: "layout", "event" | sort: "date" | reverse -%}
+{% for p in events -%}
+{% if p.url contains '/news/' %}
+- [{{ p.title }}]({{ p.url | absolute_url }}){% if p.date %} ({{ p.date | date: "%B %-d, %Y" }}){% endif %}{% if p.description %}: {{ p.description }}{% endif %}
+{%- endif -%}
+{%- endfor %}
+- [All news]({{ '/news/' | absolute_url }}): the full list of DENOS Lab stories, awards, and milestones.
+
+## Team
+{% assign director = site.team | where_exp: "m", "m.category == 0" | sort: "last_name" -%}
+{% assign postdocs = site.team | where_exp: "m", "m.category == 5" | sort: "last_name" -%}
+{% assign phds = site.team | where_exp: "m", "m.category == 1" | sort: "last_name" -%}
+{% assign mscs = site.team | where_exp: "m", "m.category == 2" | sort: "last_name" -%}
+{% assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "last_name" -%}
+{% assign visitors = site.team | where_exp: "m", "m.category == 3" | sort: "last_name" -%}
+{% assign roster = director | concat: postdocs | concat: phds | concat: mscs | concat: undergrad | concat: visitors -%}
+{% for m in roster %}
+- [{{ m.name }}]({{ m.url | absolute_url }}): {{ m.title | strip_html | strip_newlines | strip }}
+{%- endfor %}
+- [Team directory]({{ '/team/' | absolute_url }}): every researcher in the lab, grouped by role.
+
+## Alumni and friends
+{% assign alumni = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" -%}
+{% assign friends = site.team | where_exp: "m", "m.category == 9" | sort: "last_name" -%}
+{% assign past = alumni | concat: friends -%}
+{% for m in past %}
+- [{{ m.name }}]({{ m.url | absolute_url }}): {{ m.title | strip_html | strip_newlines | strip }}
+{%- endfor %}
+
+## Publications
+
+- [Selected publications]({{ '/#publications' | absolute_url }}): hand-curated list of the lab's work in npj Digital Medicine, ACM Computing Surveys, AAAI, ICML, IEEE ICC, and other venues.
+- [Google Scholar](https://scholar.google.com/citations?user=mGMBNN4AAAAJ&hl=en): the full and up-to-date publication list for Dr. Steve Drew.
+- Individual researcher pages under {{ '/team/' | absolute_url }} list that person's own publications, projects, and achievements.
+
+## Optional
+
+- [Join the lab]({{ '/#about' | absolute_url }}): DENOS Lab recruits MSc, PhD, and post-doctoral researchers in machine learning, distributed systems, and AI for health.
+- [Partnerships]({{ '/#partnerships' | absolute_url }}): the lab's industry, hospital, and academic collaborators.
+{%- assign social = site.team_building | sort: "date" | reverse -%}
+{%- for p in social %}
+- [{{ p.title }}]({{ p.url | absolute_url }}){% if p.description %}: {{ p.description }}{% endif %}
+{%- endfor %}
+- [GitHub](https://github.com/DENOSlab/): the lab's open source code.
