@@ -5,7 +5,13 @@ sitemap: false
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for p in site.pages %}
-  {%- unless p.sitemap == false or p.url contains '.xml' or p.url contains '.txt' or p.url contains '.json' or p.url contains '404' %}
+  {%- assign last_char = p.url | slice: -1 -%}
+  {%- assign is_page = false -%}
+  {%- if last_char == '/' %}{% assign is_page = true %}{% endif -%}
+  {%- if p.url contains '.html' %}{% assign is_page = true %}{% endif -%}
+  {%- if p.url == '/404.html' %}{% assign is_page = false %}{% endif -%}
+  {%- if p.sitemap == false %}{% assign is_page = false %}{% endif -%}
+  {%- if is_page %}
   <url>
     <loc>{{ p.url | absolute_url }}</loc>
     {%- if p.date %}
@@ -14,7 +20,7 @@ sitemap: false
     <changefreq>{% if p.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
     <priority>{% if p.url == '/' %}1.0{% elsif p.url == '/news/' or p.url == '/team/' %}0.9{% elsif p.url contains '/news/' %}0.8{% else %}0.6{% endif %}</priority>
   </url>
-  {%- endunless %}
+  {%- endif %}
 {%- endfor %}
 {%- for m in site.team %}
   <url>
