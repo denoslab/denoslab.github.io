@@ -1,0 +1,33 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in site.pages %}
+  {%- unless p.sitemap == false or p.url contains '.xml' or p.url contains '.txt' or p.url contains '.json' or p.url contains '404' %}
+  <url>
+    <loc>{{ p.url | absolute_url }}</loc>
+    {%- if p.date %}
+    <lastmod>{{ p.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+    <changefreq>{% if p.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if p.url == '/' %}1.0{% elsif p.url == '/news/' or p.url == '/team/' %}0.9{% elsif p.url contains '/news/' %}0.8{% else %}0.6{% endif %}</priority>
+  </url>
+  {%- endunless %}
+{%- endfor %}
+{%- for m in site.team %}
+  <url>
+    <loc>{{ m.url | absolute_url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+{%- endfor %}
+{%- for e in site.team_building %}
+  <url>
+    <loc>{{ e.url | absolute_url }}</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+{%- endfor %}
+</urlset>

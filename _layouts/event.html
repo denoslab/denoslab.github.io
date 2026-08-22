@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-{% if page.display_date %}<p class="event-date">{{ page.display_date }}</p>{% endif %}
+{% if page.display_date %}<p class="event-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.display_date }}</time></p>{% endif %}
 
 {% if page.hero %}
 {% include figure.html src=page.hero alt=page.hero_alt caption=page.hero_caption class="event-figure--hero" %}
@@ -10,3 +10,5 @@ layout: page
 <div class="event-content">
   {{ content }}
 </div>
+
+<p class="event-back">{% if page.url contains '/team-building/' %}<a href="{{ '/#team-building' | relative_url }}">← All team building events</a>{% else %}<a href="{{ '/news/' | relative_url }}">← All DENOS Lab news</a>{% endif %}</p>

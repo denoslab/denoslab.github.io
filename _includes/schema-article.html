@@ -1,0 +1,70 @@
+{%- if page.url contains '/team-building/' -%}
+{%- assign parent_name = 'Team Building' -%}
+{%- assign parent_url = '/#team-building' | absolute_url -%}
+{%- assign article_type = 'Article' -%}
+{%- else -%}
+{%- assign parent_name = 'News' -%}
+{%- assign parent_url = '/news/' | absolute_url -%}
+{%- assign article_type = 'NewsArticle' -%}
+{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "{{ article_type }}",
+      "@id": "{{ page.url | absolute_url }}#article",
+      "headline": {{ page.title | strip_newlines | strip | jsonify }},
+      "name": {{ page.title | strip_newlines | strip | jsonify }},
+      {%- if page.description %}
+      "description": {{ page.description | strip_newlines | strip | jsonify }},
+      {%- endif %}
+      "url": "{{ page.url | absolute_url }}",
+      "mainEntityOfPage": { "@id": "{{ page.url | absolute_url }}" },
+      {%- if page.hero %}
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ page.hero | absolute_url }}",
+        "caption": {{ page.hero_alt | default: page.title | jsonify }}
+      },
+      {%- endif %}
+      {%- if page.date %}
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.date | date_to_xmlschema }}",
+      {%- endif %}
+      "inLanguage": "en-CA",
+      "isPartOf": { "@id": "{{ '/#website' | absolute_url }}" },
+      "author": { "@id": "{{ '/#organization' | absolute_url }}" },
+      "publisher": { "@id": "{{ '/#organization' | absolute_url }}" },
+      "about": { "@id": "{{ '/#organization' | absolute_url }}" },
+      "breadcrumb": { "@id": "{{ page.url | absolute_url }}#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.url | absolute_url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 2, "name": "{{ parent_name }}", "item": "{{ parent_url }}" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | strip_newlines | strip | jsonify }} }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ '/#organization' | absolute_url }}",
+      "name": "DENOS Lab",
+      "alternateName": "Distributed Learning and Orchestration Lab",
+      "url": "{{ '/' | absolute_url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/images/denos-logo.png' | absolute_url }}"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/#website' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "DENOS Lab"
+    }
+  ]
+}
+</script>

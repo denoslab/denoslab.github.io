@@ -28,13 +28,27 @@ mv Gemfile.bak Gemfile && mv Gemfile.lock.bak Gemfile.lock
 ## Architecture
 
 - **`_layouts/default.html` is the entire homepage.** Every section (About, Research, News, Team, Partnerships, Publications, Calendar), the hero, the sticky nav, and the footer are inlined there, each pulling its content from an `_includes/*` file. `index.html` is just front matter selecting this layout.
-- **`_layouts/page.html`** is the layout for standalone secondary pages. `news.html` (permalink `/news/`) uses it for the older-news archive.
-- **Section content lives in `_includes/`**: `introduction.md` (About), `research.html`, `news.html` (home featured cards) + `news-archive.html` (the `/news/` list), `join.html`, `partnerships.html`, `publications.html`, `calendar.html`, `footer.html`. Publications is a hand-curated HTML list, not a collection.
-- **Team is a Jekyll collection** (`_team/*.md`, `output: false`). Each file is front-matter only (`layout`, `name`, `last_name`, `title`, `picture`, `category`) plus an optional body that becomes a study-area tag. `default.html` selects members per `category`, sorts by `last_name` (surname), and renders each with `{{ member.output }}`.
+- **`_layouts/page.html`** is the layout for standalone secondary pages: `news.html` (`/news/`), `team.html` (`/team/`), and `404.html`. `_layouts/event.html` wraps it for news stories and team-building posts, `_layouts/profile.html` renders `/team/:name/`.
+- **Section content lives in `_includes/`**: `introduction.md` (About), `research.html`, `news-recent.html` (the featured story cards, shared by `news.html` on the home page and `news-archive.html` on `/news/`), `team-list.html` (the grouped team listing, shared by the home page and `/team/`), `join.html`, `partnerships.html`, `publications.html`, `calendar.html`, `footer.html`. Publications is a hand-curated HTML list, not a collection.
+- **Team is a Jekyll collection** (`_team/*.md`, `output: true`, permalink `/team/:name/`). Each file carries `layout`, `name`, `last_name`, `title`, `picture`, `category`, and optional `summary`, `links`, `projects`, `publications`, `achievements` plus a body used as the biography. `team-list.html` selects members per `category` and sorts by `last_name` (surname).
   - **Category scheme:** `0` Director, `5` Postdoc, `1` PhD, `2` MSc, `4` Undergraduate & Interns, `3` Visitors, `8` Alumni, `9` Friends. Empty groups are hidden.
-  - Categories `0` and `5` render as full-width "lead" cards (`team-member.html` lead branch). Everyone else renders the same grid `member-card` — `team-member.html` (non-lead) and `team-nonmember.html` produce identical markup.
+  - Categories `0` and `5` render as full-width "lead" cards (the lead branch of `team-card.html`). Everyone else renders the grid `member-card` from the same include. Each card links to the member's profile page.
 - **Styling:** `css/custom.css` is the design system, loaded after `dist/css/normalize.css` and `dist/css/skeleton.css`. **Skeleton sets `html { font-size: 62.5% }`, so `1rem = 10px`** — size all CSS values with that in mind (e.g. `1.6rem` = 16px). `js/site.js` (jQuery) drives smooth-scroll and the sticky nav.
 - **Assets:** research and partner logos in `images/`, member headshots in `images/profile/`. The favicons (`favicon.ico`, `images/favicon-{16,32}*.png`, `images/apple-touch-icon.png`) were generated from the node mark on the left of `images/denos-logo.png`, cropped and centered on a white square.
+
+## SEO plumbing
+
+Search visibility is wired into the layouts, not a plugin. `_config.yml` declares no plugins on purpose, so everything below is plain Liquid that builds the same on Jekyll 3.10 and 4.
+
+- **`sitemap.xml` and `robots.txt`** are hand-written Liquid templates at the repo root. The sitemap walks `site.pages`, `site.team`, and `site.team_building`, skipping anything with `sitemap: false` in front matter. Any new page is picked up automatically.
+- **Every layout carries** a canonical link, a description, Open Graph and Twitter Card tags, `og:locale`, and a `robots` directive. Set `noindex: true` in front matter to flip a page to `noindex` (used by `404.html`); set `seo_title` to override the `<title>` without changing the visible `page.title`.
+- **JSON-LD lives in `_includes/schema-*.html`**, one per page kind. `schema-organization.html` (homepage) describes the lab and lists every member and alumnus by URL. `schema-person.html` (profile layout) emits `ProfilePage` plus `Person` plus one `ScholarlyArticle` per entry in the member's `publications` front matter. `schema-article.html` (event layout) emits `NewsArticle` for `/news/` and `Article` for `/team-building/`, both with a `BreadcrumbList`. `schema-page.html` covers the remaining standalone pages, `schema-team-list.html` adds the `/team/` roster `ItemList`. All of them share `@id` anchors of `/#organization` and `/#website`, so the graph joins up across pages.
+- **News pages need a machine-readable `date:`** in front matter alongside `display_date`. It feeds `datePublished` and the sitemap `lastmod`.
+- **`_includes/team-list.html`** is the single source of the grouped team listing, included by both `_layouts/default.html` (as `h3` subheads) and `team.html` (as `h2`). `_includes/news-recent.html` is the single source of the featured news cards, included by both `_includes/news.html` (home) and `_includes/news-archive.html` (`/news/`), so recent stories are linked from both without duplicating markup.
+- **Standalone hub pages:** `team.html` at `/team/` and `news.html` at `/news/`, both linked site-wide from the footer's Explore column. Profile pages link back to `/team/`, news articles back to `/news/`.
+- The homepage `<h1>` is the hero logo wrapped in `h1.hero-title` with a `.visually-hidden` text label. Sub-pages use `h1.section-title` for the page title.
+
+After adding a page, rebuild and check that it appears in `_site/sitemap.xml` and that its JSON-LD parses.
 
 ## Writing style for site copy
 

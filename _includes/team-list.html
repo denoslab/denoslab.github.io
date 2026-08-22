@@ -1,0 +1,65 @@
+{%- assign hl = include.heading_level | default: 'h3' -%}
+{%- assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "last_name" -%}
+{%- assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "last_name" -%}
+{%- assign phds      = site.team | where_exp: "m", "m.category == 1" | sort: "last_name" -%}
+{%- assign mscs      = site.team | where_exp: "m", "m.category == 2" | sort: "last_name" -%}
+{%- assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "last_name" -%}
+{%- assign visitors  = site.team | where_exp: "m", "m.category == 3" | sort: "last_name" -%}
+{%- assign alumni    = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" -%}
+{%- assign friends   = site.team | where_exp: "m", "m.category == 9" | sort: "last_name" -%}
+
+{% if director.size > 0 %}
+  <{{ hl }} class="subhead">Director</{{ hl }}>
+  <div class="team-grid team-grid--lead">
+    {% for member in director %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}
+
+{% if postdocs.size > 0 %}
+  <{{ hl }} class="subhead">Postdoctoral Researchers</{{ hl }}>
+  <div class="team-grid team-grid--lead">
+    {% for member in postdocs %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}
+
+{% if phds.size > 0 %}
+  <{{ hl }} class="subhead">PhD Students</{{ hl }}>
+  <div class="team-grid">
+    {% for member in phds %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}
+
+{% if mscs.size > 0 %}
+  <{{ hl }} class="subhead">MSc Students</{{ hl }}>
+  <div class="team-grid">
+    {% for member in mscs %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}
+
+{% if undergrad.size > 0 %}
+  <{{ hl }} class="subhead">Undergraduate &amp; Interns</{{ hl }}>
+  <div class="team-grid">
+    {% for member in undergrad %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}
+
+{% if visitors.size > 0 %}
+  <{{ hl }} class="subhead">Visitors</{{ hl }}>
+  <div class="team-grid">
+    {% for member in visitors %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}
+
+{% if alumni.size > 0 %}
+  <{{ hl }} class="subhead">Alumni</{{ hl }}>
+  <div class="team-grid">
+    {% for member in alumni %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}
+
+{% if friends.size > 0 %}
+  <{{ hl }} class="subhead">Friends</{{ hl }}>
+  <div class="team-grid">
+    {% for member in friends %}{% include team-card.html member=member %}{% endfor %}
+  </div>
+{% endif %}

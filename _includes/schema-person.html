@@ -1,0 +1,103 @@
+{%- assign bio = meta_desc | default: page.description | strip -%}
+{%- assign profile_links = "" | split: "," -%}
+{%- if page.links.scholar %}{% assign profile_links = profile_links | push: page.links.scholar %}{% endif -%}
+{%- if page.links.orcid %}{% assign profile_links = profile_links | push: page.links.orcid %}{% endif -%}
+{%- if page.links.github %}{% assign profile_links = profile_links | push: page.links.github %}{% endif -%}
+{%- if page.links.website %}{% assign profile_links = profile_links | push: page.links.website %}{% endif -%}
+{%- if page.links.linkedin %}{% assign profile_links = profile_links | push: page.links.linkedin %}{% endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "{{ page.url | absolute_url }}",
+      "url": "{{ page.url | absolute_url }}",
+      "name": {{ page.name | append: " | DENOS Lab" | jsonify }},
+      "inLanguage": "en-CA",
+      "isPartOf": { "@id": "{{ '/#website' | absolute_url }}" },
+      "mainEntity": { "@id": "{{ page.url | absolute_url }}#person" },
+      "breadcrumb": { "@id": "{{ page.url | absolute_url }}#breadcrumb" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ page.url | absolute_url }}#person",
+      "name": {{ page.name | jsonify }},
+      "url": "{{ page.url | absolute_url }}",
+      "jobTitle": {{ page.title | strip_newlines | strip | jsonify }},
+      {%- if page.picture %}
+      "image": "{{ page.picture | absolute_url }}",
+      {%- endif %}
+      {%- if bio != "" %}
+      "description": {{ bio | jsonify }},
+      {%- endif %}
+      {%- if profile_links.size > 0 %}
+      "sameAs": {{ profile_links | jsonify }},
+      {%- endif %}
+      {%- if page.category == 8 %}
+      "alumniOf": { "@id": "{{ '/#organization' | absolute_url }}" },
+      {%- else %}
+      "memberOf": { "@id": "{{ '/#organization' | absolute_url }}" },
+      {%- endif %}
+      "worksFor": { "@id": "{{ '/#organization' | absolute_url }}" },
+      "affiliation": [
+        { "@id": "{{ '/#organization' | absolute_url }}" },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Calgary",
+          "url": "https://www.ucalgary.ca/"
+        }
+      ]
+    },
+    {%- if page.publications %}
+    {%- for pub in page.publications %}
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "{{ page.url | absolute_url }}#publication-{{ forloop.index }}",
+      "headline": {{ pub.title | strip_newlines | strip | jsonify }},
+      "name": {{ pub.title | strip_newlines | strip | jsonify }},
+      {%- if pub.year %}
+      "datePublished": "{{ pub.year }}",
+      {%- endif %}
+      {%- if pub.venue %}
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": {{ pub.venue | strip_newlines | strip | jsonify }}
+      },
+      {%- endif %}
+      {%- if pub.url %}
+      "url": {{ pub.url | jsonify }},
+      {%- endif %}
+      {%- if pub.authors %}
+      "creditText": {{ pub.authors | markdownify | strip_html | normalize_whitespace | strip | jsonify }},
+      {%- endif %}
+      "author": { "@id": "{{ page.url | absolute_url }}#person" },
+      "publisher": { "@id": "{{ '/#organization' | absolute_url }}" }
+    },
+    {%- endfor %}
+    {%- endif %}
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.url | absolute_url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 2, "name": "Team", "item": "{{ '/team/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.name | jsonify }} }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ '/#organization' | absolute_url }}",
+      "name": "DENOS Lab",
+      "url": "{{ '/' | absolute_url }}",
+      "logo": "{{ '/images/denos-logo.png' | absolute_url }}"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/#website' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "DENOS Lab"
+    }
+  ]
+}
+</script>

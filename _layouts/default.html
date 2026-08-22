@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DENOS Lab | Distributed Learning and Orchestration | University of Calgary</title>
+    <link rel="canonical" href="{{ '/' | absolute_url }}" />
     <meta name="author" content="Steve Drew" />
     <meta name="description" content="The Distributed Learning and Orchestration (DENOS) Lab at the University of Calgary, led by Dr. Steve Drew, builds intelligent, sustainable, and privacy-preserving systems for distributed learning, agentic simulation and reasoning across cloud-edge infrastructures, with applications in health informatics and trustworthy AI." />
-    <meta name="keywords" content="DENOS Lab, Steve Drew, University of Calgary, distributed learning, agentic simulation, reasoning, edge computing, federated learning, blockchain, health informatics, trustworthy AI" />
+    <meta name="keywords" content="DENOS Lab, Steve Drew, University of Calgary, Schulich School of Engineering, distributed learning, agentic simulation, reasoning, edge computing, federated learning, large language model agents, blockchain, health informatics, trustworthy AI" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DENOS Lab" />
+    <meta property="og:locale" content="en_CA" />
     <meta property="og:title" content="DENOS Lab at the University of Calgary" />
-    <meta property="og:description" content="Distributed Learning and Orchestration (DENOS) Lab, led by Dr. Steve Drew at the University of Calgary." />
-    <meta property="og:url" content="https://denoslab.com" />
-    <meta property="og:image" content="https://denoslab.com/images/og-image.png" />
+    <meta property="og:description" content="Distributed Learning and Orchestration (DENOS) Lab, led by Dr. Steve Drew at the University of Calgary. Research on distributed learning, agentic simulation and reasoning." />
+    <meta property="og:url" content="{{ '/' | absolute_url }}" />
+    <meta property="og:image" content="{{ '/images/og-image.png' | absolute_url }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="DENOS Lab logo" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://denoslab.com/images/og-image.png" />
-
-    <!-- Mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:title" content="DENOS Lab at the University of Calgary" />
+    <meta name="twitter:description" content="Distributed Learning and Orchestration (DENOS) Lab, led by Dr. Steve Drew at the University of Calgary. Research on distributed learning, agentic simulation and reasoning." />
+    <meta name="twitter:image" content="{{ '/images/og-image.png' | absolute_url }}" />
+    <meta name="twitter:image:alt" content="DENOS Lab logo" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,19 +35,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="dist/css/normalize.css">
-    <link rel="stylesheet" href="dist/css/skeleton.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{ '/dist/css/normalize.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/dist/css/skeleton.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/custom.css' | relative_url }}">
 
     <!-- Scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/site.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script defer src="{{ '/js/site.js' | relative_url }}"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+
+    <!-- Structured data -->
+    {% include schema-organization.html %}
   </head>
 
   <body>
@@ -50,7 +58,10 @@
     <!-- Hero -->
     <header class="hero">
       <div class="wrap">
-        <img class="hero-logo" src="images/denos-logo.png" alt="Distributed Learning and Orchestration (DENOS) Lab, University of Calgary">
+        <h1 class="hero-title">
+          <img class="hero-logo" src="{{ '/images/denos-logo.png' | relative_url }}" alt="Distributed Learning and Orchestration (DENOS) Lab, University of Calgary">
+          <span class="visually-hidden">DENOS Lab, the Distributed Learning and Orchestration Lab at the University of Calgary</span>
+        </h1>
       </div>
     </header>
 
@@ -112,70 +123,7 @@
             <h2 class="section-title">Team</h2>
           </div>
 
-          {% assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "last_name" %}
-          {% assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "last_name" %}
-          {% assign phds      = site.team | where_exp: "m", "m.category == 1" | sort: "last_name" %}
-          {% assign mscs      = site.team | where_exp: "m", "m.category == 2" | sort: "last_name" %}
-          {% assign undergrad = site.team | where_exp: "m", "m.category == 4" | sort: "last_name" %}
-          {% assign visitors  = site.team | where_exp: "m", "m.category == 3" | sort: "last_name" %}
-          {% assign alumni    = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" %}
-          {% assign friends   = site.team | where_exp: "m", "m.category == 9" | sort: "last_name" %}
-
-          {% if director.size > 0 %}
-            <h3 class="subhead">Director</h3>
-            <div class="team-grid team-grid--lead">
-              {% for member in director %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
-
-          {% if postdocs.size > 0 %}
-            <h3 class="subhead">Postdoctoral Researchers</h3>
-            <div class="team-grid team-grid--lead">
-              {% for member in postdocs %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
-
-          {% if phds.size > 0 %}
-            <h3 class="subhead">PhD Students</h3>
-            <div class="team-grid">
-              {% for member in phds %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
-
-          {% if mscs.size > 0 %}
-            <h3 class="subhead">MSc Students</h3>
-            <div class="team-grid">
-              {% for member in mscs %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
-
-          {% if undergrad.size > 0 %}
-            <h3 class="subhead">Undergraduate &amp; Interns</h3>
-            <div class="team-grid">
-              {% for member in undergrad %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
-
-          {% if visitors.size > 0 %}
-            <h3 class="subhead">Visitors</h3>
-            <div class="team-grid">
-              {% for member in visitors %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
-
-          {% if alumni.size > 0 %}
-            <h3 class="subhead">Alumni</h3>
-            <div class="team-grid">
-              {% for member in alumni %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
-
-          {% if friends.size > 0 %}
-            <h3 class="subhead">Friends</h3>
-            <div class="team-grid">
-              {% for member in friends %}{% include team-card.html member=member %}{% endfor %}
-            </div>
-          {% endif %}
+          {% include team-list.html heading_level="h3" %}
         </div>
       </section>
 
