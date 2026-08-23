@@ -23,7 +23,34 @@ $(document).ready(function() {
     $popoverLink.on('click', openPopover)
     $document.on('click', closePopover)
     $('a[href^="#"]').on('click', smoothScroll)
+    initNavToggle();
     buildSnippets();
+  }
+
+  // Mobile menu: the drawer is revealed by the button and closes on a link,
+  // on Escape, and whenever the viewport grows back to the full menu.
+  function initNavToggle() {
+    var $nav = $('#site-nav'),
+        $toggle = $nav.find('.navbar-toggle'),
+        $drawer = $nav.find('.navbar-drawer')
+
+    if (!$nav.length || !$toggle.length) return
+
+    function setOpen(open) {
+      $nav.toggleClass('nav-open', open)
+      $toggle.attr('aria-expanded', String(open))
+      $toggle.attr('aria-label', open ? 'Close menu' : 'Open menu')
+      $drawer.attr('aria-hidden', String(!open))
+    }
+
+    $toggle.on('click', function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      setOpen(!$nav.hasClass('nav-open'))
+    })
+    $drawer.on('click', 'a', function () { setOpen(false) })
+    $document.on('keydown', function (e) { if (e.key === 'Escape') setOpen(false) })
+    $window.on('resize', function () { if ($window.width() > 900) setOpen(false) })
   }
 
   function smoothScroll(e) {
@@ -33,11 +60,16 @@ $(document).ready(function() {
         menu = target;
     $target = $(target);
     $('html, body').stop().animate({
-        'scrollTop': $target.offset().top-72
+        'scrollTop': $target.offset().top - navHeight()
     }, 0, 'swing', function () {
         window.location.hash = target;
         $(document).on("scroll", onScroll);
     });
+  }
+
+  // The sticky bar now carries the logo too, so its height varies by breakpoint.
+  function navHeight() {
+    return ($nav.outerHeight() || 0) + 8
   }
 
   function openPopover(e) {
