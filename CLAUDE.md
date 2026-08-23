@@ -34,7 +34,7 @@ mv Gemfile.bak Gemfile && mv Gemfile.lock.bak Gemfile.lock
   - **Category scheme:** `0` Director, `5` Postdoc, `1` PhD, `2` MSc, `4` Undergraduate & Interns, `3` Visitors, `8` Alumni, `9` Friends. Empty groups are hidden.
   - Categories `0` and `5` render as full-width "lead" cards (the lead branch of `team-card.html`). Everyone else renders the grid `member-card` from the same include. Each card links to the member's profile page.
 - **Styling:** `css/custom.css` is the design system, loaded after `dist/css/normalize.css` and `dist/css/skeleton.css`. **Skeleton sets `html { font-size: 62.5% }`, so `1rem = 10px`** — size all CSS values with that in mind (e.g. `1.6rem` = 16px). `js/site.js` (jQuery) drives smooth-scroll and the sticky nav.
-- **Assets:** research and partner logos in `images/`, member headshots in `images/profile/`. The favicons (`favicon.ico`, `images/favicon-{16,32}*.png`, `images/apple-touch-icon.png`) were generated from the node mark on the left of `images/denos-logo.png`, cropped and centered on a white square.
+- **Assets:** research and partner logos in `images/`, member headshots in `images/profile/`. The site logo is `images/denos-lab-logo.png`, the mark plus a two-line "DENOS LAB" wordmark, used in the homepage hero and the sub-page header and as the `logo` in every JSON-LD block. It replaced the wider one-line `images/denos-logo.png`, which is kept only as the source of the favicons (`favicon.ico`, `images/favicon-{16,32}*.png`, `images/apple-touch-icon.png`), generated from the node mark on its left, cropped and centered on a white square. The mark is identical in both, so the favicons still match.
 
 ## SEO plumbing
 
