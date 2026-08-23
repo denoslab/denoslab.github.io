@@ -1,0 +1,12 @@
+# Homepage section menu. Single source for the navbar links and the mobile
+# drawer in _layouts/default.html.
+- id: about
+  label: About
+- id: research
+  label: Research
+- id: news
+  label: News
+- id: team
+  label: Team
+- id: partnerships
+  label: Partnerships

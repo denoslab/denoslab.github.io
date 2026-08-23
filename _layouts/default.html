@@ -55,32 +55,29 @@
 
   <body>
 
-    <!-- Hero -->
-    <header class="hero">
-      <div class="wrap">
-        <h1 class="hero-title">
-          <img class="hero-logo" src="{{ '/images/denos-lab-logo.png' | relative_url }}" alt="Distributed Learning and Orchestration (DENOS) Lab, University of Calgary">
-          <span class="visually-hidden">DENOS Lab, the Distributed Learning and Orchestration Lab at the University of Calgary</span>
-        </h1>
-      </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="wrap">
+    <!-- Navigation: logo and menu share one row, menu collapses to a drawer on small screens -->
+    <nav class="navbar" id="site-nav">
+      <div class="wrap navbar-inner">
+        <a class="navbar-brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/images/denos-lab-logo.png' | relative_url }}" alt="Distributed Learning and Orchestration (DENOS) Lab, University of Calgary">
+        </a>
         <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#research">Research</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#news">News</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#team">Team</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#team-building">Team Building</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#partnerships">Partnerships</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#publications">Publications</a></li>
+          {% for item in site.data.nav %}<li class="navbar-item"><a class="navbar-link" href="#{{ item.id }}">{{ item.label }}</a></li>
+          {% endfor %}
         </ul>
+        <button class="navbar-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="navbar-drawer" id="site-nav-drawer" aria-hidden="true">
+        {% for item in site.data.nav %}<a class="navbar-drawer-link" href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
       </div>
     </nav>
 
     <main>
+
+      <h1 class="visually-hidden">DENOS Lab, the Distributed Learning and Orchestration Lab at the University of Calgary</h1>
 
       <!-- About -->
       <section class="section" id="about">
