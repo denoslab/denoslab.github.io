@@ -17,6 +17,11 @@ projects:
   - name: "Privacy-preserving trial analysis"
     description: "Federated analysis that reproduces non-inferiority results from the AcT multicentre stroke trial without pooling patient data."
 publications:
+  - title: "Starfish-FL: Harnessing Agentic Federated Analytics"
+    authors: "Yunkai Bao, Zainab Saad, Farhan Abbas, Kaue Duarte, Tolulope Sajobi, Bijoy Menon, Jiayu Zhou, and **Steve Drew**"
+    venue: "ACM Transactions on Computing for Healthcare"
+    year: 2026
+    url: "https://doi.org/10.1145/3843774"
   - title: "Energy-efficient Federated Learning with Dynamic Model Size Allocation"
     authors: "M. S. C. Kumar, Yunkai Bao, Xin Wang, and **Steve Drew**"
     venue: "IEEE BigData"
