@@ -14,6 +14,11 @@ projects:
     url: "https://arxiv.org/html/2510.03970v1"
     description: "Federated prediction of workload energy consumption so orchestration platforms such as Kubernetes can schedule for carbon without centralizing operational data."
 publications:
+  - title: "Starfish-FL: Harnessing Agentic Federated Analytics"
+    authors: "Yunkai Bao, Zainab Saad, Farhan Abbas, Kaue Duarte, Tolulope Sajobi, Bijoy Menon, Jiayu Zhou, and **Steve Drew**"
+    venue: "ACM Transactions on Computing for Healthcare"
+    year: 2026
+    url: "https://doi.org/10.1145/3843774"
   - title: "Towards Carbon-Aware Container Orchestration: Predicting Workload Energy Consumption with Federated Learning"
     authors: "Zainab Saad, Jialin Yang, Henry Leung, and **Steve Drew**"
     venue: "IEEE SWC"

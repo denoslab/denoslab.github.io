@@ -13,6 +13,11 @@ projects:
     url: "https://github.com/denoslab/starfish-fl"
     description: "Federated learning component of STARFISH, the lab framework for secure, interoperable, and individually controlled health data sharing."
 publications:
+  - title: "Starfish-FL: Harnessing Agentic Federated Analytics"
+    authors: "Yunkai Bao, Zainab Saad, Farhan Abbas, Kaue Duarte, Tolulope Sajobi, Bijoy Menon, Jiayu Zhou, and **Steve Drew**"
+    venue: "ACM Transactions on Computing for Healthcare"
+    year: 2026
+    url: "https://doi.org/10.1145/3843774"
   - title: "Privacy-Preserving Federated Analysis Reproduces Non-Inferiority Results from the AcT Multicentre Stroke Trial"
     authors: "Yunkai Bao, Zainab Saad, K. Duarte, Farhan Abbas, T. Sajobi, Jessalyn K. Holodinsky, Bijoy K. Menon, et al."
     venue: "SSRN"
