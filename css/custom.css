@@ -439,6 +439,7 @@ strong, b { font-weight: 600; }
   padding: 2.4rem;
   border-right: 1px solid var(--line);
 }
+.news-feature-img--logo { object-fit: contain; }
 .news-feature-body { padding: 2.8rem; align-self: center; }
 .news-feature-body .news-date { display: block; padding-top: 0; }
 .news-feature-title {
