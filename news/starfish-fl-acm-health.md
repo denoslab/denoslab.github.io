@@ -8,6 +8,7 @@ display_date: Aug 25, 2026
 description: DENOS Lab's paper Starfish-FL, Harnessing Agentic Federated Analytics, is published in ACM Transactions on Computing for Healthcare, with the open source framework available on GitHub.
 hero: /images/news/starfish-fl-acm-health/starfish-fl-logo.png
 hero_alt: The Starfish-FL logo, agentic federated learning in Python and R
+hero_link: none
 ---
 DENOS Lab's paper [*Starfish-FL: Harnessing Agentic Federated Analytics*](https://dl.acm.org/doi/10.1145/3843774) has been published in ACM Transactions on Computing for Healthcare. The authors are [Yunkai Bao](/team/yunkai-bao/), [Zainab Saad](/team/zainab-saad/), [Farhan Abbas](/team/farhan-abbas/), Kaue Duarte, Tolulope Sajobi, Bijoy Menon, Jiayu Zhou, and [Dr. Steve Drew](/team/steve-drew/), spanning the Department of Electrical and Software Engineering, the Department of Clinical Neurosciences, and the Department of Community Health Sciences at the University of Calgary together with the School of Information at the University of Michigan. The framework is open source under the Apache 2.0 license at [github.com/denoslab/starfish-fl](https://github.com/denoslab/starfish-fl), and it is the federated learning and analysis component of the lab's STARFISH project for secure and transactable health data sharing.
 
