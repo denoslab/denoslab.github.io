@@ -4,7 +4,7 @@ sitemap: false
 ---
 # DENOS Lab
 
-> The Distributed Learning and Orchestration (DENOS) Lab at the University of Calgary, led by Dr. Steve Drew, builds intelligent, sustainable, and privacy-preserving systems for distributed learning, agentic simulation and reasoning across cloud-edge infrastructures, with applications in health informatics and trustworthy AI.
+> The Distributed Learning and Orchestration (DENOS) Lab at the University of Calgary, led by Dr. Steve Drew, builds intelligent and privacy-preserving systems for distributed learning, agentic simulation and reasoning across cloud-edge infrastructures, with applications in health informatics and trustworthy AI.
 
 DENOS Lab was founded in 2021 by Dr. Steve Drew, Associate Professor in the Department of Electrical and Software Engineering at the Schulich School of Engineering, University of Calgary. Much of the lab's work puts large language model agents on real problems in health and public safety, including multi-agent systems that simulate emergency department operations, grade clinical summaries, share health data under verifiable consent, and model wildfire evacuations. In parallel the lab designs federated learning methods that keep cloud-edge services resilient and carbon-aware while protecting sensitive data. The lab's work has earned a Best Paper Award at IEEE ATC 2025 and a New Frontiers in Research Fund Exploration grant, and appears in venues across machine learning, systems, and digital medicine.
 
@@ -17,7 +17,7 @@ Canonical site: {{ '/' | absolute_url }}
 - [Agentic Simulation for Wildfire Evacuations]({{ '/#research' | absolute_url }}): AgentEvac is an agentic simulator for wildfire evacuations that couples SUMO traffic simulation with LLM-driven agents following the Protective Action Decision Model (PADM).
 - [Wearable Stress Detection for Frontline Healthcare Workers]({{ '/#research' | absolute_url }}): SENSE pairs wearable sensor data with machine learning to help nurses and social workers manage stress in real time.
 - [Role-Aware Multi-Agent Grading of Clinical Summaries]({{ '/#research' | absolute_url }}): LENS is a role-aware multi-agent pipeline that grades clinical summaries using open-weight LLMs.
-- [Federated Learning for Edge Service Orchestration]({{ '/#research' | absolute_url }}): Federated learning methods that budget clients by availability and carbon footprint and guide cloud-edge orchestration toward resilient, sustainable deployment.
+- [Federated Learning for Edge Service Orchestration]({{ '/#research' | absolute_url }}): Federated learning methods that budget clients by availability and carbon footprint and guide cloud-edge orchestration toward resilient deployment.
 
 ## News
 {% assign events = site.pages | where: "layout", "event" | sort: "date" | reverse -%}
@@ -57,7 +57,7 @@ Canonical site: {{ '/' | absolute_url }}
 
 ## Optional
 
-- [Join the lab]({{ '/#about' | absolute_url }}): DENOS Lab recruits MSc, PhD, and post-doctoral researchers in machine learning, distributed systems, and AI for health.
+- [Join the lab]({{ '/#about' | absolute_url }}): DENOS Lab recruits motivated PhD researchers in machine learning, distributed systems, and AI for health.
 - [Partnerships]({{ '/#partnerships' | absolute_url }}): the lab's industry, hospital, and academic collaborators.
 {%- assign social = site.team_building | sort: "date" | reverse -%}
 {%- for p in social %}
