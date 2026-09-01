@@ -502,6 +502,7 @@ strong, b { font-weight: 600; }
 }
 .event-figure > a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .event-figure img { display: block; width: 100%; height: auto; }
+.event-figure--portrait { max-width: 44rem; margin-left: auto; margin-right: auto; }
 .event-figure--pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
