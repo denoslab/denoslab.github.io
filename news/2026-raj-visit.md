@@ -1,6 +1,6 @@
 ---
 layout: event
-title: Cyber security researcher Raj Rajarajan visits UCalgary and DENOS Lab
+title: City St George's Professor Raj Rajarajan visits DENOS
 permalink: /news/2026-raj-visit/
 date: 2026-08-31
 display_date: Aug 31, 2026
