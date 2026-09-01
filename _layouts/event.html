@@ -4,7 +4,8 @@ layout: page
 {% if page.display_date %}<p class="event-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.display_date }}</time></p>{% endif %}
 
 {% if page.hero %}
-{% include figure.html src=page.hero alt=page.hero_alt caption=page.hero_caption link=page.hero_link class="event-figure--hero" %}
+{% capture hero_class %}event-figure--hero{% if page.hero_class %} {{ page.hero_class }}{% endif %}{% endcapture %}
+{% include figure.html src=page.hero alt=page.hero_alt caption=page.hero_caption link=page.hero_link class=hero_class %}
 {% endif %}
 
 <div class="event-content">
