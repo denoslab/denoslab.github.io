@@ -1,0 +1,9 @@
+<figure class="event-figure event-figure--pair{% if include.class %} {{ include.class }}{% endif %}">
+  <a href="{{ include.src_a | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ include.src_a | relative_url }}" alt="{{ include.alt_a }}">
+  </a>
+  <a href="{{ include.src_b | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ include.src_b | relative_url }}" alt="{{ include.alt_b }}">
+  </a>
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

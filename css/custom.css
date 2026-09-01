@@ -502,6 +502,13 @@ strong, b { font-weight: 600; }
 }
 .event-figure > a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .event-figure img { display: block; width: 100%; height: auto; }
+.event-figure--pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  align-items: start;
+}
+.event-figure--pair figcaption { grid-column: 1 / -1; margin-top: 0; }
 .event-figure figcaption {
   font-size: 1.4rem;
   line-height: 1.6;
@@ -869,6 +876,7 @@ img.grayscale:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); }
 .event-back { margin: 3.4rem 0 0; font-size: 1.45rem; font-weight: 500; }
 
 @media (max-width: 600px) {
+  .event-figure--pair { grid-template-columns: 1fr; }
   .profile-head { flex-direction: column; gap: 2rem; }
   .profile-photo { width: 14rem; }
   .profile-name { font-size: 2.8rem; }
