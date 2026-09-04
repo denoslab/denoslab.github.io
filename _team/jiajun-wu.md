@@ -13,7 +13,7 @@ links:
   scholar: https://scholar.google.com/citations?user=Hg2xYIoAAAAJ&hl=en
 projects:
   - name: "EDSim"
-    url: "/#research"
+    url: "/projects/edsim/"
     description: "Large language model simulation of an emergency department with autonomous agents for patients, nurses, and physicians."
   - name: "Patient chart summarization"
     url: "https://arxiv.org/html/2510.06263v1"
@@ -38,6 +38,7 @@ publications:
     authors: "Jiajun Wu, et al."
     venue: "IEEE ATC"
     year: 2025
+    url: https://ieeexplore.ieee.org/abstract/document/11395121/
   - title: "A Survey on Task Scheduling in Carbon-aware Container Orchestration"
     authors: "Jialin Yang, Zainab Saad, Jiajun Wu, Xiaoguang Niu, Henry Leung, and **Steve Drew**"
     venue: "arXiv"

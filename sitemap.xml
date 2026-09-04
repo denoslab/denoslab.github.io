@@ -22,6 +22,13 @@ sitemap: false
   </url>
   {%- endif %}
 {%- endfor %}
+{%- for pr in site.projects %}
+  <url>
+    <loc>{{ pr.url | absolute_url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+{%- endfor %}
 {%- for m in site.team %}
   <url>
     <loc>{{ m.url | absolute_url }}</loc>

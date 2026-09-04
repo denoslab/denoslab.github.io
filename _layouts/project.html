@@ -1,0 +1,127 @@
+---
+layout: page
+---
+<div class="project-head">
+  {%- if page.logo %}
+  <img class="project-logo{% if page.logo_class %} {{ page.logo_class }}{% endif %}" src="{{ page.logo | relative_url }}" alt="{{ page.logo_alt | default: page.title | escape }}">
+  {%- endif %}
+  <div class="project-ident">
+    {%- if page.short_name %}<p class="project-tag">{{ page.short_name }}</p>{% endif %}
+    {%- if page.lead %}<p class="project-lead">{{ page.lead }}</p>{% endif %}
+    {%- if page.links %}
+    <p class="project-links">
+      {%- for link in page.links %}<a href="{{ link.url | relative_url }}"{% if link.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>{% endfor %}
+    </p>
+    {%- endif %}
+  </div>
+</div>
+
+{%- assign body = content | strip %}
+{%- if body != '' %}
+<section class="profile-section">
+  <h2 class="profile-heading">Overview</h2>
+  <div class="profile-body">{{ content }}</div>
+</section>
+{%- endif %}
+
+{%- if page.people %}
+{%- assign roster = '' | split: '' -%}
+{%- for person in page.people -%}
+  {%- assign found = site.team | where: "url", person -%}
+  {%- assign roster = roster | concat: found -%}
+{%- endfor %}
+{%- if roster.size > 0 %}
+<section class="profile-section">
+  <h2 class="profile-heading">Researchers</h2>
+  <ul class="project-people">
+    {%- for m in roster %}
+    <li class="project-person">
+      <a class="project-person-link" href="{{ m.url | relative_url }}">
+        <img class="project-person-photo" loading="lazy" decoding="async" src="{{ m.picture | relative_url }}" alt="{{ m.name | escape }}, DENOS Lab">
+        <span class="project-person-info">
+          <span class="project-person-name">{{ m.name }}</span>
+          <span class="project-person-role">{{ m.title | strip_html | strip_newlines | strip }}</span>
+        </span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+{%- endif %}
+
+{%- if page.capstone_teams %}
+<section class="profile-section">
+  <h2 class="profile-heading">Sponsored capstone teams</h2>
+  {%- assign teams = page.capstone_teams | sort: 'year' | reverse %}
+  {%- for team in teams %}
+  <h3 class="capstone-year">{{ team.year }}</h3>
+  <ul class="project-people">
+    {%- for student in team.students %}
+    <li class="project-person">
+      <span class="project-person-link project-person-link--static">
+        <img class="project-person-photo" loading="lazy" decoding="async" src="{{ student.photo | relative_url }}" alt="{{ student.name | escape }}, EDSim capstone team {{ team.year }}">
+        <span class="project-person-info">
+          <span class="project-person-name">{{ student.name }}</span>
+          {%- if student.role %}<span class="project-person-role">{{ student.role }}</span>{% endif %}
+        </span>
+      </span>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+</section>
+{%- endif %}
+
+{%- if page.collaborators %}
+<section class="profile-section">
+  <h2 class="profile-heading">Collaborators</h2>
+  <ul class="profile-achievements">
+    {%- for item in page.collaborators %}
+    <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if page.publications %}
+<section class="profile-section">
+  <h2 class="profile-heading">Publications</h2>
+  <ul class="pub-list">
+    {%- for pub in page.publications %}
+    <li class="pub-item">
+      {%- if pub.venue %}<span class="pub-venue">{{ pub.venue }}</span>{% endif %}
+      {%- if pub.year %}<span class="pub-year">{{ pub.year }}</span>{% endif %}
+      <p class="pub-title">{{ pub.title }}</p>
+      {%- if pub.authors %}<p class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>{% endif %}
+      {%- if pub.url %}
+      <p class="pub-links"><a href="{{ pub.url }}" target="_blank" rel="noopener">paper</a></p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if page.news %}
+{%- assign stories = '' | split: '' -%}
+{%- for story in page.news -%}
+  {%- assign found = site.pages | where: "url", story -%}
+  {%- assign stories = stories | concat: found -%}
+{%- endfor %}
+{%- if stories.size > 0 %}
+<section class="profile-section">
+  <h2 class="profile-heading">In the news</h2>
+  <ul class="project-news">
+    {%- for s in stories %}
+    <li>
+      {%- if s.display_date %}<span class="project-news-date">{{ s.display_date }}</span>{% endif %}
+      <a href="{{ s.url | relative_url }}">{{ s.title }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+{%- endif %}
+
+<p class="profile-back"><a href="{{ '/#research' | relative_url }}">← All research projects</a></p>

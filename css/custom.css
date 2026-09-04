@@ -360,6 +360,8 @@ strong, b { font-weight: 600; }
   color: var(--navy-900);
   margin: 0 0 1.2rem;
 }
+.research-title a { color: inherit; }
+.research-title a:hover { color: var(--gold-deep); text-decoration: underline; }
 .research-card p { font-size: 1.7rem; line-height: 1.55; color: var(--muted); margin: 0 0 1.4rem; }
 .research-links { display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; margin-top: -.2rem; }
 .research-links a {
@@ -873,6 +875,139 @@ img.grayscale:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); }
   background: var(--gold-deep);
 }
 
+/* ---------- Research project pages ---------- */
+.project-head {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  padding-bottom: 2.8rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--line);
+}
+.project-logo {
+  flex: 0 0 auto;
+  width: 24rem;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+  object-position: center;
+  padding: 1.6rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+.project-logo.research-logo--photo {
+  object-fit: cover;
+  padding: 0;
+  background: none;
+}
+.project-ident { min-width: 0; }
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0 0 1rem;
+}
+.project-lead {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--navy);
+  font-weight: 500;
+  margin: 0;
+}
+.project-links { margin: 1.6rem 0 0; display: flex; flex-wrap: wrap; gap: .8rem; }
+.project-links a {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .5rem 1.4rem;
+  text-decoration: none;
+}
+.project-links a:hover { background: var(--surface-2); color: var(--gold-deep); }
+
+.project-people {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.project-person { margin: 0; }
+.project-person-link {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1.2rem 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+a.project-person-link:hover { background: var(--surface-2); border-color: #d6deea; }
+.project-person-link--static { cursor: default; }
+.project-person-photo {
+  flex: 0 0 auto;
+  width: 5.2rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+.project-person-info { min-width: 0; }
+.project-person-name {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  color: var(--navy-900);
+}
+a.project-person-link:hover .project-person-name { color: var(--gold-deep); }
+.project-person-role {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-top: .3rem;
+}
+
+.capstone-year {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--navy);
+  margin: 0 0 1.2rem;
+}
+.capstone-year + .project-people { margin-bottom: 2.4rem; }
+.project-people + .capstone-year { margin-top: 0; }
+
+.project-news { list-style: none; margin: 0; padding: 0; }
+.project-news li {
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+.project-news li:first-child { border-top: 0; padding-top: 0; }
+.project-news a { font-weight: 600; }
+.project-news-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+  margin-bottom: .4rem;
+}
+
 .profile-back,
 .event-back { margin: 3.4rem 0 0; font-size: 1.45rem; font-weight: 500; }
 
@@ -881,6 +1016,8 @@ img.grayscale:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); }
   .profile-head { flex-direction: column; gap: 2rem; }
   .profile-photo { width: 14rem; }
   .profile-name { font-size: 2.8rem; }
+  .project-head { flex-direction: column; gap: 2rem; }
+  .project-logo { width: 100%; }
 }
 
 .notfound-links { list-style: none; padding-left: 0; margin: 0; font-size: 1.7rem; line-height: 2.2; }

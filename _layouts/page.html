@@ -55,7 +55,7 @@
     <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
 
     <!-- Structured data -->
-    {% unless page.noindex %}{% if page.layout == 'event' %}{% include schema-article.html %}{% else %}{% include schema-page.html %}{% endif %}{% endunless %}
+    {% unless page.noindex %}{% if page.layout == 'event' %}{% include schema-article.html %}{% elsif page.layout == 'project' %}{% include schema-project.html %}{% else %}{% include schema-page.html %}{% endif %}{% endunless %}
   </head>
 
   <body>
@@ -66,13 +66,13 @@
         <a class="subheader-brand" href="{{ '/' | relative_url }}">
           <img src="{{ '/images/denos-lab-logo.png' | relative_url }}" alt="DENOS Lab, University of Calgary">
         </a>
-        {% if page.url contains '/team-building/' %}<a class="subheader-back" href="{{ '/#team-building' | relative_url }}">← Back to team building</a>{% elsif page.layout == 'event' %}<a class="subheader-back" href="{{ '/news/' | relative_url }}">← Back to news</a>{% else %}<a class="subheader-back" href="{{ '/' | relative_url }}">← Back to home</a>{% endif %}
+        {% if page.url contains '/team-building/' %}<a class="subheader-back" href="{{ '/#team-building' | relative_url }}">← Back to team building</a>{% elsif page.layout == 'event' %}<a class="subheader-back" href="{{ '/news/' | relative_url }}">← Back to news</a>{% elsif page.layout == 'project' %}<a class="subheader-back" href="{{ '/#research' | relative_url }}">← Back to research</a>{% else %}<a class="subheader-back" href="{{ '/' | relative_url }}">← Back to home</a>{% endif %}
       </div>
     </header>
 
     <main>
       <section class="section">
-        <div class="wrap{% if page.layout == 'event' %} wrap--article{% endif %}">
+        <div class="wrap{% if page.layout == 'event' %} wrap--article{% elsif page.layout == 'project' %} wrap--profile{% endif %}">
           <div class="section-head">
             <h1 class="section-title">{{ page.title }}</h1>
           </div>
