@@ -11,13 +11,11 @@ DENOS Lab was founded in 2021 by Dr. Steve Drew, Associate Professor in the Depa
 Canonical site: {{ '/' | absolute_url }}
 
 ## Research
-
-- [Agentic Simulation for Emergency Department Operations]({{ '/#research' | absolute_url }}): EDSim is a large language model simulation of an emergency department, with autonomous agents for patients, nurses, and physicians.
-- [Secure, Transactable, Agentic Health Data Sharing]({{ '/#research' | absolute_url }}): STARFISH is a secure, interoperable framework for global health data sharing that lets individuals control their data while enabling compliant research.
-- [Agentic Simulation for Wildfire Evacuations]({{ '/#research' | absolute_url }}): AgentEvac is an agentic simulator for wildfire evacuations that couples SUMO traffic simulation with LLM-driven agents following the Protective Action Decision Model (PADM).
-- [Wearable Stress Detection for Frontline Healthcare Workers]({{ '/#research' | absolute_url }}): SENSE pairs wearable sensor data with machine learning to help nurses and social workers manage stress in real time.
-- [Role-Aware Multi-Agent Grading of Clinical Summaries]({{ '/#research' | absolute_url }}): LENS is a role-aware multi-agent pipeline that grades clinical summaries using open-weight LLMs.
-- [Federated Learning for Edge Service Orchestration]({{ '/#research' | absolute_url }}): Federated learning methods that budget clients by availability and carbon footprint and guide cloud-edge orchestration toward resilient deployment.
+{% assign projects = site.projects | sort: 'order' -%}
+{% for p in projects %}
+- [{{ p.title }}]({{ p.url | absolute_url }}){% if p.description %}: {{ p.description | strip_newlines | strip }}{% endif %}
+{%- endfor %}
+- [Research overview]({{ '/#research' | absolute_url }}): all flagship directions on one page, with links to each project.
 
 ## News
 {% assign events = site.pages | where: "layout", "event" | sort: "date" | reverse -%}

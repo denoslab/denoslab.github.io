@@ -11,7 +11,7 @@ summary: |
   <br/>
 projects:
   - name: "EDSim"
-    url: "/#research"
+    url: "/projects/edsim/"
     description: "Agentic simulator for emergency department operations built on large language model agents for patients, nurses, and physicians."
 ---
 

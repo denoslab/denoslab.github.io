@@ -10,6 +10,9 @@ baseurl: ""
 author: Steve Drew
 lang: en_CA
 collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
   team:
     output: true
     permalink: /team/:name/

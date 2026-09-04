@@ -5,66 +5,18 @@
 </p>
 
 <div class="research-grid">
-
+{% assign projects = site.projects | sort: 'order' %}
+{% for p in projects %}
   <article class="research-card">
-    <img loading="lazy" decoding="async" class="research-logo research-logo--photo" src="{{ '/images/edsim.png' | relative_url }}" alt="EDSim emergency department floor plan">
-    <h3 class="research-title">Agentic Simulation for Emergency Department Operations</h3>
-    <p>
-      EDSim is a large language model simulation of an emergency department,
-      with autonomous agents for patients, nurses, and physicians.
-    </p>
-  </article>
-
-  <article class="research-card">
-    <img loading="lazy" decoding="async" class="research-logo" src="{{ '/images/starfish-logo.png' | relative_url }}" alt="The STARFISH Project">
-    <h3 class="research-title">Secure, Transactable, Agentic Health Data Sharing</h3>
-    <p>
-      STARFISH is a secure, interoperable framework for global health data
-      sharing that lets individuals control their data while enabling compliant research.
-    </p>
+    {% if p.logo %}<img loading="lazy" decoding="async" class="research-logo{% if p.logo_class %} {{ p.logo_class }}{% endif %}" src="{{ p.logo | relative_url }}" alt="{{ p.logo_alt | default: p.title | escape }}">{% endif %}
+    <h3 class="research-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    <p>{{ p.card_description }}</p>
+    {% assign card_links = p.links | where: "card", true %}
     <p class="research-links">
-      <a href="https://github.com/denoslab/starfish-fl" target="_blank" rel="noopener">Starfish-FL on GitHub →</a>
-      <a href="https://dl.acm.org/doi/10.1145/3843774" target="_blank" rel="noopener">Read the paper →</a>
+      <a href="{{ p.url | relative_url }}">Project details →</a>
+      {% for link in card_links %}<a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} →</a>
+      {% endfor %}
     </p>
   </article>
-
-  <article class="research-card">
-    <img loading="lazy" decoding="async" class="research-logo" src="{{ '/images/agent-evac-logo.png' | relative_url }}" alt="AgentEvac">
-    <h3 class="research-title">Agentic Simulation for Wildfire Evacuations</h3>
-    <p>
-      AgentEvac is an agentic simulator for wildfire evacuations that couples
-      SUMO traffic simulation with LLM-driven agents following the Protective Action Decision
-      Model (PADM).
-    </p>
-  </article>
-
-  <article class="research-card">
-    <img loading="lazy" decoding="async" class="research-logo" src="{{ '/images/sense-logo.png' | relative_url }}" alt="SENSE">
-    <h3 class="research-title">Wearable Stress Detection for Frontline Healthcare Workers</h3>
-    <p>
-      SENSE supports the emotional wellness of nurses and social workers,
-      pairing wearable sensor data with machine learning to help frontline staff manage stress
-      in real time.
-    </p>
-  </article>
-
-  <article class="research-card">
-    <img loading="lazy" decoding="async" class="research-logo" src="{{ '/images/lens-logo.png' | relative_url }}" alt="LENS">
-    <h3 class="research-title">Role-Aware Multi-Agent Grading of Clinical Summaries</h3>
-    <p>
-      LENS is a role-aware multi-agent pipeline that grades clinical summaries
-      using open-weight LLMs.
-    </p>
-  </article>
-
-  <article class="research-card">
-    <h3 class="research-title">Federated Learning for Edge Service Orchestration</h3>
-    <p>
-      As federated learning (FL) spreads across heterogeneous infrastructures,
-      slow convergence drives excessive energy use on cloud and battery-powered edge devices. We
-      design FL methods that budget clients by availability and carbon footprint and guide
-      cloud-edge orchestration toward resilient, real-world deployment.
-    </p>
-  </article>
-
+{% endfor %}
 </div>
