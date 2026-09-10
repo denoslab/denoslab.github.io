@@ -13,7 +13,7 @@
 {% endif %}
 
     <!-- Open Graph -->
-    <meta property="og:type" content="{% if page.layout == 'event' %}article{% else %}website{% endif %}" />
+    <meta property="og:type" content="{% if page.layout == 'event' or page.layout == 'post' %}article{% else %}website{% endif %}" />
     <meta property="og:site_name" content="DENOS Lab" />
     <meta property="og:locale" content="en_CA" />
     <meta property="og:title" content="{{ page.title | escape }} | DENOS Lab" />
@@ -55,7 +55,10 @@
     <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
 
     <!-- Structured data -->
-    {% unless page.noindex %}{% if page.layout == 'event' %}{% include schema-article.html %}{% elsif page.layout == 'project' %}{% include schema-project.html %}{% else %}{% include schema-page.html %}{% endif %}{% endunless %}
+    {% unless page.noindex %}{% if page.layout == 'event' or page.layout == 'post' %}{% include schema-article.html %}{% elsif page.layout == 'project' %}{% include schema-project.html %}{% else %}{% include schema-page.html %}{% endif %}{% endunless %}
+
+    <!-- Mermaid, loaded only on pages that declare `mermaid: true` in front matter -->
+    {% if page.mermaid %}{% include mermaid.html %}{% endif %}
   </head>
 
   <body>
@@ -66,13 +69,13 @@
         <a class="subheader-brand" href="{{ '/' | relative_url }}">
           <img src="{{ '/images/denos-lab-logo.png' | relative_url }}" alt="DENOS Lab, University of Calgary">
         </a>
-        {% if page.url contains '/team-building/' %}<a class="subheader-back" href="{{ '/#team-building' | relative_url }}">← Back to team building</a>{% elsif page.layout == 'event' %}<a class="subheader-back" href="{{ '/news/' | relative_url }}">← Back to news</a>{% elsif page.layout == 'project' %}<a class="subheader-back" href="{{ '/#research' | relative_url }}">← Back to research</a>{% else %}<a class="subheader-back" href="{{ '/' | relative_url }}">← Back to home</a>{% endif %}
+        {% if page.url contains '/team-building/' %}<a class="subheader-back" href="{{ '/#team-building' | relative_url }}">← Back to team building</a>{% elsif page.layout == 'post' %}<a class="subheader-back" href="{{ '/blog/' | relative_url }}">← Back to blog</a>{% elsif page.layout == 'event' %}<a class="subheader-back" href="{{ '/news/' | relative_url }}">← Back to news</a>{% elsif page.layout == 'project' %}<a class="subheader-back" href="{{ '/#research' | relative_url }}">← Back to research</a>{% else %}<a class="subheader-back" href="{{ '/' | relative_url }}">← Back to home</a>{% endif %}
       </div>
     </header>
 
     <main>
       <section class="section">
-        <div class="wrap{% if page.layout == 'event' %} wrap--article{% elsif page.layout == 'project' %} wrap--profile{% endif %}">
+        <div class="wrap{% if page.layout == 'event' or page.layout == 'post' %} wrap--article{% elsif page.layout == 'project' %} wrap--profile{% endif %}">
           <div class="section-head">
             <h1 class="section-title">{{ page.title }}</h1>
           </div>

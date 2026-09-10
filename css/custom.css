@@ -1021,3 +1021,187 @@ a.project-person-link:hover .project-person-name { color: var(--gold-deep); }
 }
 
 .notfound-links { list-style: none; padding-left: 0; margin: 0; font-size: 1.7rem; line-height: 2.2; }
+
+/* ---------- Blog ---------- */
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin: 0 0 3.2rem;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.blog-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  height: auto;
+  margin: 0;
+  padding: .9rem 1.6rem;
+  font-family: var(--font-sans);
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -.005em;
+  text-transform: none;
+  color: var(--muted);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.blog-chip:hover { color: var(--navy-900); border-color: #d6deea; background: var(--surface); }
+.blog-chip:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+.blog-chip.is-active { color: #fff; background: var(--navy); border-color: var(--navy); }
+.blog-chip.is-active:hover { color: #fff; background: var(--navy-700); border-color: var(--navy-700); }
+.blog-chip-count {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--muted-soft);
+}
+.blog-chip.is-active .blog-chip-count { color: rgba(255, 255, 255, .7); }
+
+.blog-posts { display: grid; gap: 2rem; }
+.post-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 2.8rem 3rem;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #d6deea; }
+.post-card .news-date { display: block; padding-top: 0; }
+.post-card-title {
+  font-family: var(--font-serif);
+  font-size: 2.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy-900);
+  margin: .9rem 0 1.1rem;
+}
+.post-card-title a { color: inherit; }
+.post-card-title a:hover { color: var(--navy); }
+.post-card-text { font-size: 1.7rem; line-height: 1.55; color: var(--muted); margin: 0 0 1.6rem; }
+.post-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8rem 2.4rem;
+  justify-content: space-between;
+}
+.blog-empty { font-size: 1.7rem; color: var(--muted); margin: 2.4rem 0 0; }
+
+.post-tags { display: inline-flex; flex-wrap: wrap; gap: .6rem; }
+.post-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: .5rem 1.1rem;
+}
+a.post-tag:hover { color: var(--navy-900); background: #e2e8f3; }
+
+/* Blog post detail */
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1.6rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: -.6rem 0 1.8rem;
+}
+.post-author { color: var(--muted-soft); }
+.post-lead {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  line-height: 1.45;
+  color: var(--navy-900);
+  margin: 0 0 1.8rem;
+}
+.post-content > p:first-child { margin-top: 0; }
+.post-content h2 {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--navy-900);
+  margin: 4rem 0 1.4rem;
+}
+.post-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--navy-900);
+  margin: 3rem 0 1.2rem;
+}
+.post-content a { font-weight: 600; }
+.post-content ul, .post-content ol { margin: 0 0 1.6rem 2rem; padding: 0; }
+.post-content li { font-size: 1.7rem; line-height: 1.7; color: #2c3543; margin-bottom: .8rem; }
+.post-content blockquote {
+  margin: 2.4rem 0;
+  padding: 1.6rem 2.2rem;
+  border-left: 3px solid var(--gold);
+  background: var(--surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.post-content blockquote p { margin: 0; text-align: left; }
+.post-content hr { border: 0; border-top: 1px solid var(--line); margin: 3.4rem 0; }
+
+/* Diagrams written as code and rendered in the browser by Mermaid */
+.diagram {
+  margin: 3rem 0;
+  padding: 2.4rem 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+.diagram .mermaid { text-align: center; }
+/* Mermaid 11 wraps every label in a <p>, which would otherwise inherit the
+   justified, hyphenated, dark article paragraph style from .event-content. */
+.diagram .mermaid p {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.35;
+  color: inherit;
+  text-align: center;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+.diagram .mermaid svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+/* Until Mermaid runs (and if it never does) the source shows as a plain code block */
+pre.mermaid {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--muted);
+  white-space: pre;
+  margin: 0;
+  text-align: left;
+}
+.diagram figcaption {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .post-card { padding: 2.2rem; }
+  .post-lead { font-size: 1.9rem; }
+  .diagram { padding: 1.6rem 1rem; }
+}

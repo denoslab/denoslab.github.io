@@ -1,11 +1,14 @@
 # Homepage section menu. Single source for the navbar links and the mobile
-# drawer in _layouts/default.html.
+# drawer in _layouts/default.html. An entry with `id` scrolls to that section
+# of the home page; an entry with `url` links to a standalone page instead.
 - id: about
   label: About
 - id: research
   label: Research
 - id: news
   label: News
+- url: /blog/
+  label: Blog
 - id: team
   label: Team
 - id: partnerships

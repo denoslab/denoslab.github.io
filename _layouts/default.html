@@ -62,7 +62,7 @@
           <img src="{{ '/images/denos-lab-logo.png' | relative_url }}" alt="Distributed Learning and Orchestration (DENOS) Lab, University of Calgary">
         </a>
         <ul class="navbar-list">
-          {% for item in site.data.nav %}<li class="navbar-item"><a class="navbar-link" href="#{{ item.id }}">{{ item.label }}</a></li>
+          {% for item in site.data.nav %}<li class="navbar-item"><a class="navbar-link" href="{% if item.url %}{{ item.url | relative_url }}{% else %}#{{ item.id }}{% endif %}">{{ item.label }}</a></li>
           {% endfor %}
         </ul>
         <button class="navbar-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-drawer">
@@ -70,7 +70,7 @@
         </button>
       </div>
       <div class="navbar-drawer" id="site-nav-drawer" aria-hidden="true">
-        {% for item in site.data.nav %}<a class="navbar-drawer-link" href="#{{ item.id }}">{{ item.label }}</a>
+        {% for item in site.data.nav %}<a class="navbar-drawer-link" href="{% if item.url %}{{ item.url | relative_url }}{% else %}#{{ item.id }}{% endif %}">{{ item.label }}</a>
         {% endfor %}
       </div>
     </nav>

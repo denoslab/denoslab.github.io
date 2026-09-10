@@ -1,0 +1,48 @@
+{%- comment -%}
+  The blog index. Posts come from the `blog` collection, newest first, and the
+  category chips are derived from the posts themselves so the filter bar never
+  drifts from what is published. The bar starts `hidden` and js/blog.js reveals
+  it, so with scripting off the page still lists every post.
+{%- endcomment -%}
+{%- assign posts = site.blog | sort: 'date' | reverse -%}
+{%- assign catbuf = '' -%}
+{%- for post in posts -%}
+  {%- for category in post.categories -%}
+    {%- assign catbuf = catbuf | append: category | append: '||' -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign categories = catbuf | split: '||' | uniq | sort -%}
+
+{%- if categories.size > 0 %}
+<div class="blog-filters" id="blog-filters" role="group" aria-label="Filter posts by category" hidden>
+  <button class="blog-chip is-active" type="button" data-category="all" aria-pressed="true">All posts <span class="blog-chip-count">{{ posts.size }}</span></button>
+  {%- for category in categories %}
+  {%- assign count = 0 -%}
+  {%- for post in posts -%}{%- if post.categories contains category -%}{%- assign count = count | plus: 1 -%}{%- endif -%}{%- endfor %}
+  <button class="blog-chip" type="button" data-category="{{ category | slugify }}" aria-pressed="false">{{ category }} <span class="blog-chip-count">{{ count }}</span></button>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+<div class="blog-posts" id="blog-posts">
+  {%- for post in posts %}
+  {%- capture slugs %}{% for category in post.categories %}{{ category | slugify }} {% endfor %}{% endcapture %}
+  <article class="post-card" data-categories="{{ slugs | strip }}">
+    <span class="news-date">{{ post.display_date | default: post.date | date: "%b %-d, %Y" }}</span>
+    <h3 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    {%- if post.summary or post.description %}
+    <p class="post-card-text">{{ post.summary | default: post.description | strip_newlines | strip }}</p>
+    {%- endif %}
+    <div class="post-card-foot">
+      {%- if post.categories %}
+      <span class="post-tags">
+        {%- for category in post.categories %}<span class="post-tag">{{ category }}</span>{% endfor %}
+      </span>
+      {%- endif %}
+      <a class="news-feature-cta" href="{{ post.url | relative_url }}">Read the post →</a>
+    </div>
+  </article>
+  {%- endfor %}
+</div>
+
+<p class="blog-empty" id="blog-empty" hidden>No posts in that category.</p>

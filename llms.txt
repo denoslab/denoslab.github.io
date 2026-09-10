@@ -26,6 +26,13 @@ Canonical site: {{ '/' | absolute_url }}
 {%- endfor %}
 - [All news]({{ '/news/' | absolute_url }}): the full list of DENOS Lab stories, awards, and milestones.
 
+## Blog
+{% assign blogposts = site.blog | sort: "date" | reverse -%}
+{% for b in blogposts %}
+- [{{ b.title }}]({{ b.url | absolute_url }}){% if b.date %} ({{ b.date | date: "%B %-d, %Y" }}){% endif %}{% if b.description %}: {{ b.description | strip_newlines | strip }}{% endif %}
+{%- endfor %}
+- [All blog posts]({{ '/blog/' | absolute_url }}): notes and guides from the lab, filterable by category.
+
 ## Team
 {% assign director = site.team | where_exp: "m", "m.category == 0" | sort: "last_name" -%}
 {% assign postdocs = site.team | where_exp: "m", "m.category == 5" | sort: "last_name" -%}
