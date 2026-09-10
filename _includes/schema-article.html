@@ -2,6 +2,10 @@
 {%- assign parent_name = 'Team Building' -%}
 {%- assign parent_url = '/#team-building' | absolute_url -%}
 {%- assign article_type = 'Article' -%}
+{%- elsif page.url contains '/blog/' -%}
+{%- assign parent_name = 'Blog' -%}
+{%- assign parent_url = '/blog/' | absolute_url -%}
+{%- assign article_type = 'BlogPosting' -%}
 {%- else -%}
 {%- assign parent_name = 'News' -%}
 {%- assign parent_url = '/news/' | absolute_url -%}

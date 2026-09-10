@@ -1,0 +1,23 @@
+---
+layout: page
+---
+<p class="post-meta">
+  {%- if page.date %}<time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.display_date | default: page.date | date: "%b %-d, %Y" }}</time>{% endif %}
+  {%- if page.author %}<span class="post-author">{{ page.author }}</span>{% endif %}
+</p>
+
+{%- if page.lead %}
+<p class="post-lead">{{ page.lead }}</p>
+{%- endif %}
+
+{%- if page.categories %}
+<p class="post-tags">
+  {%- for category in page.categories %}<a class="post-tag" href="{{ '/blog/' | relative_url }}?category={{ category | slugify }}">{{ category }}</a>{% endfor %}
+</p>
+{%- endif %}
+
+<div class="event-content post-content">
+  {{ content }}
+</div>
+
+<p class="event-back"><a href="{{ '/blog/' | relative_url }}">← All DENOS Lab blog posts</a></p>

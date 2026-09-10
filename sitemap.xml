@@ -18,9 +18,19 @@ sitemap: false
     <lastmod>{{ p.date | date_to_xmlschema }}</lastmod>
     {%- endif %}
     <changefreq>{% if p.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
-    <priority>{% if p.url == '/' %}1.0{% elsif p.url == '/news/' or p.url == '/team/' %}0.9{% elsif p.url contains '/news/' %}0.8{% else %}0.6{% endif %}</priority>
+    <priority>{% if p.url == '/' %}1.0{% elsif p.url == '/news/' or p.url == '/team/' or p.url == '/blog/' %}0.9{% elsif p.url contains '/news/' %}0.8{% else %}0.6{% endif %}</priority>
   </url>
   {%- endif %}
+{%- endfor %}
+{%- for b in site.blog %}
+  <url>
+    <loc>{{ b.url | absolute_url }}</loc>
+    {%- if b.date %}
+    <lastmod>{{ b.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 {%- endfor %}
 {%- for pr in site.projects %}
   <url>

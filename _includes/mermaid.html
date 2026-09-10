@@ -1,0 +1,46 @@
+<!--
+  Mermaid renders the diagram sources on this page. Diagrams are written as code
+  in `<pre class="mermaid">` blocks, so the source stays editable in the markdown
+  and degrades to a readable text block if the script does not load. Pinned to an
+  exact version so a Mermaid release never changes a published diagram.
+-->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.esm.min.mjs';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'base',
+    securityLevel: 'strict',
+    fontFamily: '"Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    themeVariables: {
+      fontSize: '15px',
+      primaryColor: '#f5f7fb',
+      primaryTextColor: '#1b2330',
+      primaryBorderColor: '#16335f',
+      secondaryColor: '#eef2f8',
+      tertiaryColor: '#ffffff',
+      lineColor: '#8a94a3',
+      textColor: '#1b2330',
+      mainBkg: '#f5f7fb',
+      nodeBorder: '#16335f',
+      clusterBkg: '#ffffff',
+      clusterBorder: '#e6e9ef',
+      edgeLabelBackground: '#ffffff'
+    },
+    flowchart: {
+      htmlLabels: true,
+      useMaxWidth: true,
+      curve: 'basis',
+      nodeSpacing: 34,
+      rankSpacing: 44,
+      padding: 12,
+      wrappingWidth: 480
+    }
+  });
+
+  try {
+    await mermaid.run({ querySelector: '.mermaid' });
+  } catch (e) {
+    console.error('Mermaid failed to render a diagram on this page.', e);
+  }
+</script>
