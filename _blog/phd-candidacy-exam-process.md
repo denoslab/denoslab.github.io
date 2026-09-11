@@ -7,7 +7,6 @@ display_date: Sep 9, 2026
 author: Steve Drew
 categories: [Graduate studies, PhD milestones]
 mermaid: true
-lead: The route from initial registration to admission to candidacy in the ENEL doctoral program, drawn as one flow chart.
 summary: The department publishes the doctoral candidacy timeline as a table of steps and deadlines. This chart draws it as one path. Every deadline counts months from initial registration.
 description: The PhD candidacy process in the ENEL graduate program at the University of Calgary, drawn as a flow chart, with each milestone and its deadline in months from initial registration.
 ---
