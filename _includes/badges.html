@@ -16,7 +16,7 @@
 <span class="badges">
 {%- for b in site.data.badges -%}
 {%- if owned contains b.id -%}
-<span class="badge" style="background: {{ b.color }}; color: {{ b.ink }}" role="img" aria-label="{{ b.label }}" title="{{ b.label }}"><svg class="badge-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#bdg-{{ b.id }}"/></svg></span>
+<span class="badge" style="--badge-light: {{ b.light }}; --badge-deep: {{ b.deep }}; color: {{ b.ink }}" role="img" aria-label="{{ b.label }}" title="{{ b.label }}"><svg class="badge-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#bdg-{{ b.id }}"/></svg></span>
 {%- endif -%}
 {%- endfor -%}
 </span>

@@ -2,31 +2,53 @@
 # `_includes/badges.html` renders them next to the member's name in the order
 # below, so the sequence on a card always reads from earliest to latest.
 #
-# `color` is the disc behind the glyph and `ink` is the glyph itself. The ramp
-# runs slate to navy to gold, so a fuller set of badges reads as a progression.
+# The look is a game achievement pin. `light` and `deep` are the two stops of
+# the disc gradient, `ink` is the glyph, and the gloss and rim come from CSS.
+# Colour groups the kind of achievement. Slate to blue to navy is the taught
+# programme ladder, the gold pair is research output, and green and violet are
+# contribution to the lab and the field.
+#
+# The three programme badges mark enrolment, not a finished degree, which is
+# why they say "Program Unlocked".
+#
 # `implies` grants an earlier badge automatically, which is why an accepted
 # paper never needs the submission badge listed by hand.
 #
 # Glyphs live in _includes/badge-sprite.html as `#bdg-<id>` symbols. Adding a
 # badge means adding an entry here and a matching symbol there.
 - id: intern
-  label: Intern Unlocked
-  color: "#8a94a3"
+  label: Intern Program Unlocked
+  light: "#aab3c0"
+  deep: "#6f7a8a"
   ink: "#ffffff"
 - id: msc
-  label: MSc Unlocked
-  color: "#2e5c96"
+  label: MSc Program Unlocked
+  light: "#4d86ca"
+  deep: "#24538f"
   ink: "#ffffff"
 - id: phd
-  label: PhD Unlocked
-  color: "#16335f"
+  label: PhD Program Unlocked
+  light: "#2f5aa8"
+  deep: "#122c58"
   ink: "#ffffff"
 - id: paper-submitted
   label: Paper Submission Unlocked
-  color: "#c79a06"
+  light: "#e6bc46"
+  deep: "#a8820a"
   ink: "#ffffff"
 - id: paper-accepted
   label: Paper Acceptance Unlocked
-  color: "#f2c30f"
+  light: "#ffe071"
+  deep: "#e0a30a"
   ink: "#0a1830"
   implies: paper-submitted
+- id: teaching
+  label: Teaching Unlocked
+  light: "#5fbf86"
+  deep: "#2b7d52"
+  ink: "#ffffff"
+- id: service
+  label: Service Unlocked
+  light: "#9b7ad4"
+  deep: "#5c3f9e"
+  ink: "#ffffff"
