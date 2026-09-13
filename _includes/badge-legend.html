@@ -1,0 +1,13 @@
+{%- comment -%}
+  The badge key, built from _data/badges.yml so it cannot drift from the badges
+  actually rendered on member cards. Pass nothing. Needs badge-sprite.html on
+  the same page.
+{%- endcomment -%}
+<ul class="badge-legend">
+{%- for b in site.data.badges %}
+  <li class="badge-legend-row">
+    <span class="badge" style="--badge-light: {{ b.light }}; --badge-deep: {{ b.deep }}; color: {{ b.ink }}" role="img" aria-label="{{ b.label }}"><svg class="badge-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#bdg-{{ b.id }}"/></svg></span>
+    <span class="badge-legend-text"><b class="badge-legend-name">{{ b.label }}</b><span class="badge-legend-meaning">{{ b.meaning }}</span></span>
+  </li>
+{%- endfor %}
+</ul>
