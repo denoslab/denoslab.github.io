@@ -5,6 +5,7 @@ last_name: Bao
 title: PhD Student in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/Yunkai-Bao.jpg
 category: 1
+badges: [phd, paper-accepted]
 summary: |
   <br/>
   Federated Learning

@@ -5,6 +5,7 @@ last_name: Abbasi
 title: Master Student 2022 - 2024. PhD Student at the University of Southern California
 picture: /images/profile/ali-abbasi.jpeg
 category: 8
+badges: [msc, phd, paper-accepted]
 summary: |
   <br/>
   Federated Learning

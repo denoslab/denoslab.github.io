@@ -1,0 +1,23 @@
+{%- comment -%}
+  Renders one member's badges. Pass `member`. Badge ids come from the member's
+  `badges:` front matter and are matched against _data/badges.yml, so an id that
+  matches nothing is skipped and the order on the page is always the data file's
+  order. `implies` entries are granted here rather than in every member file.
+{%- endcomment -%}
+{%- assign m = include.member -%}
+{%- assign owned = m.badges | join: ' ' -%}
+{%- for b in site.data.badges -%}
+  {%- if b.implies and m.badges contains b.id -%}
+    {%- assign owned = owned | append: ' ' | append: b.implies -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign owned = owned | split: ' ' -%}
+{%- if owned.size > 0 -%}
+<span class="badges">
+{%- for b in site.data.badges -%}
+{%- if owned contains b.id -%}
+<span class="badge" style="background: {{ b.color }}; color: {{ b.ink }}" role="img" aria-label="{{ b.label }}" title="{{ b.label }}"><svg class="badge-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#bdg-{{ b.id }}"/></svg></span>
+{%- endif -%}
+{%- endfor -%}
+</span>
+{%- endif -%}

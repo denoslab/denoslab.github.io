@@ -5,6 +5,7 @@ last_name: Taib
 title: PhD Student in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/musa-taib.jpg
 category: 1
+badges: [phd, paper-accepted]
 projects:
   - name: "Equitable AI for housing and homelessness"
     description: "Federated learning across Housing and Homelessness System of Care agencies in Calgary, reaching performance comparable to fully pooled and linked data."

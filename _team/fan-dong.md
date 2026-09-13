@@ -5,6 +5,7 @@ last_name: Dong
 title: Master Student 2022 - 2024.
 picture: /images/profile/fan-dong.jpg
 category: 8
+badges: [msc, paper-accepted]
 summary: |
   <br/>
   Federated Learning

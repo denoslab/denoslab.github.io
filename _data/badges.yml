@@ -1,0 +1,32 @@
+# Badge system. A member's `badges:` front matter lists ids from this file, and
+# `_includes/badges.html` renders them next to the member's name in the order
+# below, so the sequence on a card always reads from earliest to latest.
+#
+# `color` is the disc behind the glyph and `ink` is the glyph itself. The ramp
+# runs slate to navy to gold, so a fuller set of badges reads as a progression.
+# `implies` grants an earlier badge automatically, which is why an accepted
+# paper never needs the submission badge listed by hand.
+#
+# Glyphs live in _includes/badge-sprite.html as `#bdg-<id>` symbols. Adding a
+# badge means adding an entry here and a matching symbol there.
+- id: intern
+  label: Intern Unlocked
+  color: "#8a94a3"
+  ink: "#ffffff"
+- id: msc
+  label: MSc Unlocked
+  color: "#2e5c96"
+  ink: "#ffffff"
+- id: phd
+  label: PhD Unlocked
+  color: "#16335f"
+  ink: "#ffffff"
+- id: paper-submitted
+  label: Paper Submission Unlocked
+  color: "#c79a06"
+  ink: "#ffffff"
+- id: paper-accepted
+  label: Paper Acceptance Unlocked
+  color: "#f2c30f"
+  ink: "#0a1830"
+  implies: paper-submitted

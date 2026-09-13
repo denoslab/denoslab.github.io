@@ -5,6 +5,7 @@ last_name: Ilnytskyi
 title: Summer Intern, 2026
 picture: /images/profile/kostiantyn-ilnytskyi.png
 category: 4
+badges: [intern]
 summary: |
   <br/>
   Undergraduate Student, Computer Science

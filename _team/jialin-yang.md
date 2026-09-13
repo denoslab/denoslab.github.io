@@ -5,6 +5,7 @@ last_name: Yang
 title: PhD Student in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/Jialin-Yang.jpg
 category: 1
+badges: [phd, paper-accepted]
 summary: |
   <br/>
   Large Language Model Application, Knowledge Distillation, Federated Learning

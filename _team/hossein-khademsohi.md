@@ -5,6 +5,7 @@ last_name: KhademSohi
 title: PhD Candidate in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/Hossein.jpeg
 category: 1
+badges: [phd, paper-accepted]
 summary: |
   <br/>
   Federated Learning

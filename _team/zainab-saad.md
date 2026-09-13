@@ -5,6 +5,7 @@ last_name: Saad
 title: Master Student in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/zainab-saad.jpeg
 category: 2
+badges: [msc, paper-accepted]
 summary: |
   <br/>
   Large Language Model Application, Federated Learning

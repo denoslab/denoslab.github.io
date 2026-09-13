@@ -5,6 +5,7 @@ last_name: Maciszewski
 title: PhD Student in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/bart-maciszewski.jpg
 category: 1
+badges: [phd, paper-accepted]
 summary: |
   <br/>
   Data Science Lead at Imperial Oil

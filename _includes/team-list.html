@@ -1,4 +1,5 @@
 {%- assign hl = include.heading_level | default: 'h3' -%}
+{% include badge-sprite.html %}
 {%- assign director  = site.team | where_exp: "m", "m.category == 0" | sort: "last_name" -%}
 {%- assign postdocs  = site.team | where_exp: "m", "m.category == 5" | sort: "last_name" -%}
 {%- assign phds      = site.team | where_exp: "m", "m.category == 1" | sort: "last_name" -%}
