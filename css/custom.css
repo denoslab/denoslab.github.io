@@ -1221,18 +1221,41 @@ pre.mermaid {
   position: relative;
   top: -.1rem;
 }
+/* The pin look: a two-stop gradient disc, a rim lit from above, a drop
+   shadow, and a gloss highlight sitting under the glyph. */
 .badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 1.6rem;
   height: 1.6rem;
   flex: 0 0 auto;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(16, 37, 69, .08);
+  overflow: hidden;
   cursor: help;
+  background-image: linear-gradient(160deg, var(--badge-light), var(--badge-deep));
+  box-shadow:
+    inset 0 .1rem 0 rgba(255, 255, 255, .5),
+    inset 0 -.1rem 0 rgba(10, 24, 48, .22),
+    0 .1rem .2rem rgba(10, 24, 48, .26);
 }
-.badge-glyph { width: 1.05rem; height: 1.05rem; display: block; fill: currentColor; }
+.badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(120% 78% at 30% -12%, rgba(255, 255, 255, .62), rgba(255, 255, 255, 0) 62%);
+}
+.badge-glyph {
+  position: relative;
+  z-index: 1;
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
+  fill: currentColor;
+  filter: drop-shadow(0 .1rem 0 rgba(10, 24, 48, .22));
+}
 
 /* The lead cards and the profile heading set larger type, so the discs grow
    with the name they sit beside. */
