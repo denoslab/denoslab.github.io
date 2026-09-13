@@ -11,6 +11,8 @@
 # The three programme badges mark enrolment, not a finished degree, which is
 # why they say "Program Unlocked".
 #
+# `meaning` is the one line shown beside the badge in _includes/badge-legend.html.
+#
 # `implies` grants an earlier badge automatically, which is why an accepted
 # paper never needs the submission badge listed by hand.
 #
@@ -18,37 +20,44 @@
 # badge means adding an entry here and a matching symbol there.
 - id: intern
   label: Intern Program Unlocked
+  meaning: Joined the lab on an internship
   light: "#aab3c0"
   deep: "#6f7a8a"
   ink: "#ffffff"
 - id: msc
   label: MSc Program Unlocked
+  meaning: Enrolled in the MSc program
   light: "#4d86ca"
   deep: "#24538f"
   ink: "#ffffff"
 - id: phd
   label: PhD Program Unlocked
+  meaning: Enrolled in the PhD program
   light: "#2f5aa8"
   deep: "#122c58"
   ink: "#ffffff"
 - id: paper-submitted
   label: Paper Submission Unlocked
+  meaning: Sent a paper to a venue
   light: "#e6bc46"
   deep: "#a8820a"
   ink: "#ffffff"
 - id: paper-accepted
   label: Paper Acceptance Unlocked
+  meaning: Had a paper accepted
   light: "#ffe071"
   deep: "#e0a30a"
   ink: "#0a1830"
   implies: paper-submitted
 - id: teaching
   label: Teaching Unlocked
+  meaning: Taught or assisted a course
   light: "#5fbf86"
   deep: "#2b7d52"
   ink: "#ffffff"
 - id: service
   label: Service Unlocked
+  meaning: Reviewed for or helped run a venue
   light: "#9b7ad4"
   deep: "#5c3f9e"
   ink: "#ffffff"
