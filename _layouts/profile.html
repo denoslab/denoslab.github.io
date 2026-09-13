@@ -83,10 +83,11 @@
       <section class="section">
         <div class="wrap wrap--profile">
 
+          {% include badge-sprite.html %}
           <header class="profile-head">
             <img class="profile-photo" src="{{ page.picture | relative_url }}" alt="{{ page.name }}, {{ short_role | escape }}, DENOS Lab">
             <div class="profile-ident">
-              <h1 class="profile-name">{{ page.name }}</h1>
+              <h1 class="profile-name">{{ page.name }}{% include badges.html member=page %}</h1>
               <p class="profile-role">{{ page.title }}</p>
               {%- if page.summary and page.category != 0 and page.category != 5 %}
               <p class="profile-focus">{{ page.summary | markdownify | strip_html | strip }}</p>

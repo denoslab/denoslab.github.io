@@ -5,6 +5,7 @@ last_name: Zaidi
 title: Summer Intern, 2025
 picture: /images/profile/swaleh-zaidi.jpeg
 category: 8
+badges: [intern, paper-accepted]
 summary: |
   <br/>
   Main contributor of [Dual-stage Patient Chart Summarization](https://ieeexplore.ieee.org/document/11416170)

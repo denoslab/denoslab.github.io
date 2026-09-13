@@ -3,7 +3,7 @@
 <article class="member-card member-card--lead">
   <a class="member-photo-link" href="{{ m.url | relative_url }}"><img class="member-photo" loading="lazy" decoding="async" src="{{ m.picture | relative_url }}" alt="{{ m.name }}, {{ m.title | split: ',' | first | strip | escape }}, DENOS Lab"></a>
   <div class="member-info">
-    <h3 class="member-name"><a href="{{ m.url | relative_url }}">{{ m.name }}</a></h3>
+    <h3 class="member-name"><a href="{{ m.url | relative_url }}">{{ m.name }}</a>{% include badges.html member=m %}</h3>
     <p class="member-role">{{ m.title }}</p>
     <div class="member-bio">{{ m.summary | markdownify }}</div>
   </div>
@@ -12,7 +12,7 @@
 <article class="member-card">
   <a class="member-photo-link" href="{{ m.url | relative_url }}"><img class="member-photo" loading="lazy" decoding="async" src="{{ m.picture | relative_url }}" alt="{{ m.name }}, {{ m.title | split: ',' | first | strip | escape }}, DENOS Lab"></a>
   <div class="member-info">
-    <h3 class="member-name"><a href="{{ m.url | relative_url }}">{{ m.name }}</a></h3>
+    <h3 class="member-name"><a href="{{ m.url | relative_url }}">{{ m.name }}</a>{% include badges.html member=m %}</h3>
     <p class="member-role">{{ m.title }}</p>
     <div class="member-tags">{{ m.summary | markdownify }}</div>
   </div>

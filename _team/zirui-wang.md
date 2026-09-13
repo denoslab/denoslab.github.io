@@ -5,6 +5,7 @@ last_name: Wang
 title: Master Student in Electrical and Software Engineering, University of Calgary
 picture: /images/profile/Zirui-Wang.jpg
 category: 2
+badges: [msc]
 summary: |
   <br/>
   Large Language Model Application
