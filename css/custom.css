@@ -533,6 +533,8 @@ strong, b { font-weight: 600; }
 /* News articles share one column so the title, text, and images line up. */
 .wrap--article { max-width: 88rem; }
 .event-content { max-width: none; }
+/* Download buttons at the top of a post, e.g. paper club slides and brochure */
+.event-content .event-downloads { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0 0 2.8rem; }
 .event-content p {
   font-size: 1.7rem;
   line-height: 1.7;
