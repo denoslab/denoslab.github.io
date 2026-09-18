@@ -22,6 +22,9 @@ collections:
   team_building:
     output: true
     permalink: /team-building/:name/
+  paper_club:
+    output: true
+    permalink: /paper-club/:name/
 exclude:
   - venv
   - .idea

@@ -26,6 +26,13 @@ Canonical site: {{ '/' | absolute_url }}
 {%- endfor %}
 - [All news]({{ '/news/' | absolute_url }}): the full list of DENOS Lab stories, awards, and milestones.
 
+## Paper Club
+{% assign sessions = site.paper_club | sort: "date" | reverse -%}
+{% for s in sessions %}
+- [{{ s.title }}]({{ s.url | absolute_url }}){% if s.date %} ({{ s.date | date: "%B %-d, %Y" }}){% endif %}{% if s.description %}: {{ s.description | strip_newlines | strip }}{% endif %}
+{%- endfor %}
+- [Paper club overview]({{ '/#paper-club' | absolute_url }}): recaps of the student-run reading group, one page per session.
+
 ## Blog
 {% assign blogposts = site.blog | sort: "date" | reverse -%}
 {% for b in blogposts %}

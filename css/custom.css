@@ -202,6 +202,59 @@ strong, b { font-weight: 600; }
 }
 .navbar-link:hover { color: var(--navy-900); border-bottom-color: var(--gold); }
 
+/* Hover submenu, for News and its Paper Club and Team Building sections.
+   Opens on hover and on keyboard focus within the item, and stays open while
+   the pointer crosses the gap because the panel sits flush under the link. */
+.navbar-item--has-menu > .navbar-link { padding-right: 2.6rem; }
+.navbar-item--has-menu > .navbar-link::after {
+  content: "";
+  position: absolute;
+  right: 1.2rem;
+  top: calc(50% - .5rem);
+  width: .6rem;
+  height: .6rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  opacity: .7;
+}
+.navbar-submenu {
+  list-style: none;
+  margin: 0;
+  padding: .6rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 18rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-.4rem);
+  transition: opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
+}
+.navbar-item--has-menu:hover > .navbar-submenu,
+.navbar-item--has-menu:focus-within > .navbar-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+.navbar-item--has-menu:hover > .navbar-link { color: var(--navy-900); border-bottom-color: var(--gold); }
+.navbar-submenu li { margin: 0; }
+.navbar-submenu-link {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -.005em;
+  color: var(--muted);
+  padding: .9rem 1.6rem;
+  line-height: 1.2;
+}
+.navbar-submenu-link:hover { color: var(--navy-900); background: var(--surface); }
+
 /* Menu button, shown only once the menu collapses */
 .navbar-toggle {
   display: none;
@@ -257,6 +310,7 @@ strong, b { font-weight: 600; }
   border-bottom: 1px solid var(--line-soft);
 }
 .navbar-drawer-link:last-child { border-bottom: 0; }
+.navbar-drawer-link--sub { padding-left: 2.2rem; font-size: 1.55rem; }
 .navbar-drawer-link:hover { color: var(--navy-900); }
 
 @media (max-width: 900px) {

@@ -12,4 +12,4 @@ layout: page
   {{ content }}
 </div>
 
-<p class="event-back">{% if page.url contains '/team-building/' %}<a href="{{ '/#team-building' | relative_url }}">← All team building events</a>{% else %}<a href="{{ '/news/' | relative_url }}">← All DENOS Lab news</a>{% endif %}</p>
+<p class="event-back">{% if page.url contains '/team-building/' %}<a href="{{ '/#team-building' | relative_url }}">← All team building events</a>{% elsif page.url contains '/paper-club/' %}<a href="{{ '/#paper-club' | relative_url }}">← All paper club sessions</a>{% else %}<a href="{{ '/news/' | relative_url }}">← All DENOS Lab news</a>{% endif %}</p>
