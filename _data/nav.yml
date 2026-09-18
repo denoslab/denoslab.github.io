@@ -1,12 +1,19 @@
 # Homepage section menu. Single source for the navbar links and the mobile
 # drawer in _layouts/default.html. An entry with `id` scrolls to that section
 # of the home page; an entry with `url` links to a standalone page instead.
+# An entry with `children` opens a hover submenu in the bar and an indented
+# group in the mobile drawer; children take the same `id` or `url` keys.
 - id: about
   label: About
 - id: research
   label: Research
 - id: news
   label: News
+  children:
+    - id: paper-club
+      label: Paper Club
+    - id: team-building
+      label: Team Building
 - url: /blog/
   label: Blog
 - id: team

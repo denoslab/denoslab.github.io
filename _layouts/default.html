@@ -62,7 +62,11 @@
           <img src="{{ '/images/denos-lab-logo.png' | relative_url }}" alt="Distributed Learning and Orchestration (DENOS) Lab, University of Calgary">
         </a>
         <ul class="navbar-list">
-          {% for item in site.data.nav %}<li class="navbar-item"><a class="navbar-link" href="{% if item.url %}{{ item.url | relative_url }}{% else %}#{{ item.id }}{% endif %}">{{ item.label }}</a></li>
+          {% for item in site.data.nav %}<li class="navbar-item{% if item.children %} navbar-item--has-menu{% endif %}"><a class="navbar-link" href="{% if item.url %}{{ item.url | relative_url }}{% else %}#{{ item.id }}{% endif %}"{% if item.children %} aria-haspopup="true"{% endif %}>{{ item.label }}</a>{% if item.children %}
+            <ul class="navbar-submenu" aria-label="{{ item.label }} sections">
+              {% for child in item.children %}<li><a class="navbar-submenu-link" href="{% if child.url %}{{ child.url | relative_url }}{% else %}#{{ child.id }}{% endif %}">{{ child.label }}</a></li>
+              {% endfor %}
+            </ul>{% endif %}</li>
           {% endfor %}
         </ul>
         <button class="navbar-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-drawer">
@@ -71,7 +75,8 @@
       </div>
       <div class="navbar-drawer" id="site-nav-drawer" aria-hidden="true">
         {% for item in site.data.nav %}<a class="navbar-drawer-link" href="{% if item.url %}{{ item.url | relative_url }}{% else %}#{{ item.id }}{% endif %}">{{ item.label }}</a>
-        {% endfor %}
+        {% for child in item.children %}<a class="navbar-drawer-link navbar-drawer-link--sub" href="{% if child.url %}{{ child.url | relative_url }}{% else %}#{{ child.id }}{% endif %}">{{ child.label }}</a>
+        {% endfor %}{% endfor %}
       </div>
     </nav>
 
@@ -113,8 +118,18 @@
         </div>
       </section>
 
+      <!-- Paper Club -->
+      <section class="section section--alt" id="paper-club">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="section-title">Paper Club</h2>
+          </div>
+          {% include paper-club.html %}
+        </div>
+      </section>
+
       <!-- Team -->
-      <section class="section section--alt" id="team">
+      <section class="section" id="team">
         <div class="wrap">
           <div class="section-head">
             <h2 class="section-title">Team</h2>
@@ -125,7 +140,7 @@
       </section>
 
       <!-- Team Building -->
-      <section class="section" id="team-building">
+      <section class="section section--alt" id="team-building">
         <div class="wrap">
           <div class="section-head">
             <h2 class="section-title">Team Building</h2>
@@ -135,7 +150,7 @@
       </section>
 
       <!-- Partnerships -->
-      <section class="section section--alt" id="partnerships">
+      <section class="section" id="partnerships">
         <div class="wrap">
           <div class="section-head">
             <h2 class="section-title">Partnerships</h2>
@@ -145,7 +160,7 @@
       </section>
 
       <!-- Publications -->
-      <section class="section" id="publications">
+      <section class="section section--alt" id="publications">
         <div class="wrap">
           <div class="section-head">
             <h2 class="section-title">Publications</h2>
@@ -155,7 +170,7 @@
       </section>
 
       <!-- Calendar -->
-      <section class="section section--alt" id="calendar">
+      <section class="section" id="calendar">
         <div class="wrap">
           <div class="section-head">
             <h2 class="section-title">Calendar</h2>

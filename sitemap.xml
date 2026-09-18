@@ -53,4 +53,14 @@ sitemap: false
     <priority>0.4</priority>
   </url>
 {%- endfor %}
+{%- for s in site.paper_club %}
+  <url>
+    <loc>{{ s.url | absolute_url }}</loc>
+    {%- if s.date %}
+    <lastmod>{{ s.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+{%- endfor %}
 </urlset>

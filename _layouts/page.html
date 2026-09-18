@@ -69,7 +69,7 @@
         <a class="subheader-brand" href="{{ '/' | relative_url }}">
           <img src="{{ '/images/denos-lab-logo.png' | relative_url }}" alt="DENOS Lab, University of Calgary">
         </a>
-        {% if page.url contains '/team-building/' %}<a class="subheader-back" href="{{ '/#team-building' | relative_url }}">← Back to team building</a>{% elsif page.layout == 'post' %}<a class="subheader-back" href="{{ '/blog/' | relative_url }}">← Back to blog</a>{% elsif page.layout == 'event' %}<a class="subheader-back" href="{{ '/news/' | relative_url }}">← Back to news</a>{% elsif page.layout == 'project' %}<a class="subheader-back" href="{{ '/#research' | relative_url }}">← Back to research</a>{% else %}<a class="subheader-back" href="{{ '/' | relative_url }}">← Back to home</a>{% endif %}
+        {% if page.url contains '/team-building/' %}<a class="subheader-back" href="{{ '/#team-building' | relative_url }}">← Back to team building</a>{% elsif page.url contains '/paper-club/' %}<a class="subheader-back" href="{{ '/#paper-club' | relative_url }}">← Back to paper club</a>{% elsif page.layout == 'post' %}<a class="subheader-back" href="{{ '/blog/' | relative_url }}">← Back to blog</a>{% elsif page.layout == 'event' %}<a class="subheader-back" href="{{ '/news/' | relative_url }}">← Back to news</a>{% elsif page.layout == 'project' %}<a class="subheader-back" href="{{ '/#research' | relative_url }}">← Back to research</a>{% else %}<a class="subheader-back" href="{{ '/' | relative_url }}">← Back to home</a>{% endif %}
       </div>
     </header>
 

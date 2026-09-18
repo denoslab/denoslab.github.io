@@ -1,0 +1,18 @@
+<p class="section-lead">
+  The paper club is a student-initiated reading group where DENOS Lab members take turns
+  presenting a recent paper on distributed learning, agentic simulation and reasoning, and
+  the group works through its ideas together. Each session is written up below.
+</p>
+
+{% assign sessions = site.paper_club | sort: "date" | reverse %}
+{% for session in sessions %}
+<a class="news-feature" href="{{ session.url | relative_url }}">
+  <img loading="lazy" decoding="async" class="news-feature-img" src="{{ session.images | first | relative_url }}" alt="{{ session.title | escape }}">
+  <div class="news-feature-body">
+    <span class="news-date">{{ session.display_date }}</span>
+    <h3 class="news-feature-title">{{ session.title }}</h3>
+    {% if session.summary %}<p class="news-feature-text">{{ session.summary }}</p>{% endif %}
+    <span class="news-feature-cta">Read the recap →</span>
+  </div>
+</a>
+{% endfor %}
