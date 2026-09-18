@@ -12,6 +12,11 @@ hero: /images/paper-club/20260918-ai-agent-arch/IMG_3047.jpg
 hero_alt: DENOS Lab members in matching lab caps around the meeting room table, with the title slide AI Agent Co-ordination Across 3 Research Papers on the screen
 hero_caption: The first paper club session, with the lab in matching DENOS caps and Haniya Farhan's title slide on the screen.
 ---
+<p class="event-downloads">
+  <a class="btn btn--ghost" href="/images/paper-club/20260918-ai-agent-arch/slides.pdf" target="_blank" rel="noopener">Download the slides (PDF)</a>
+  <a class="btn btn--ghost" href="/images/paper-club/20260918-ai-agent-arch/brochure.pdf" target="_blank" rel="noopener">Download the brochure (PDF)</a>
+</p>
+
 The DENOS Lab paper club held its first session on September 18, 2026, a student-initiated reading group in which lab members take turns presenting a set of papers and the room works through the ideas together. [Haniya Farhan](/team/haniya-farhan/), a 2026 Mitacs Globalink Research Internship student at the lab, opened the series with a session titled *AI Agent Co-ordination Across 3 Research Papers*. Around a dozen lab members filled the meeting room in matching DENOS Lab caps, with coffee and a box of Timbits on the table, and Haniya handed out a five-page brochure she had prepared so that everyone could follow the three architectures on paper while she walked through them on the screen.
 
 The session opened with a question that set the tone for the morning, did an AI agent do that or is this about me. Haniya described three familiar failures, an agent that retrieves only fragments of a memory, an agent that starts saying random things to a stranger, and an agent that loses the thread of what it was asked, and then argued that all three are infrastructure problems rather than model problems. Large language models fail at sustained multi-agent work because they are missing memory, coordination, and execution structure, and each of the three papers is an architectural response to one of those gaps.
