@@ -1,0 +1,34 @@
+{%- assign item = include.item -%}
+{%- if item.external -%}{%- assign href = item.url -%}{%- assign target = ' target="_blank" rel="noopener"' -%}{%- else -%}{%- assign href = item.url | relative_url -%}{%- assign target = '' -%}{%- endif -%}
+{%- capture img -%}<img loading="lazy" decoding="async" class="news-feature-img{% if item.image_class %} {{ item.image_class }}{% endif %}" src="{{ item.image | relative_url }}" alt="{{ item.alt | escape }}">{%- endcapture -%}
+{%- if item.links -%}
+<div class="news-feature">
+  <a class="news-feature-imglink" href="{{ href }}"{{ target }}>
+    {{ img }}
+  </a>
+  <div class="news-feature-body">
+    <span class="news-date">{{ item.date }}</span>
+    <h3 class="news-feature-title"><a href="{{ href }}"{{ target }}>{{ item.title }}</a></h3>
+    <p class="news-feature-text">
+      {{ item.text }}
+    </p>
+    <span class="news-feature-links">
+      {%- for link in item.links %}
+      <a class="news-feature-cta" href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+      {%- endfor %}
+    </span>
+  </div>
+</div>
+{%- else -%}
+<a class="news-feature" href="{{ href }}"{{ target }}>
+  {{ img }}
+  <div class="news-feature-body">
+    <span class="news-date">{{ item.date }}</span>
+    <h3 class="news-feature-title">{{ item.title }}</h3>
+    <p class="news-feature-text">
+      {{ item.text }}
+    </p>
+    <span class="news-feature-cta">{{ item.cta | default: 'Read the story →' }}</span>
+  </div>
+</a>
+{%- endif %}

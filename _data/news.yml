@@ -1,0 +1,119 @@
+# Featured news cards, newest first. Single source for the home page News
+# section (the first five) and the top of /news/ (all of them), rendered by
+# _includes/news-card.html. `url` is a site path unless `external: true`.
+# An entry with `links` renders its title as a link and one call to action per
+# link, instead of making the whole card one link. `text` may hold inline HTML.
+- url: /news/2026-starfish-npj-health-systems/
+  image: /images/news/20260925-starfish-npj/starfish-fig1.png
+  image_class: news-feature-img--logo
+  alt: Overview of the STARFISH architecture linking Personal Health Agents and Research Agents through a payment network
+  date: Sep 25, 2026
+  title: Patient-governed agentic health data exchange published in npj Health Systems
+  text: >-
+    Dr. Steve Drew, Guojun Tang, Zainab Saad, and collaborators at the University of Michigan,
+    the University of Pennsylvania, and Weill Cornell Medicine set out STARFISH, a framework in
+    which personal health AI agents negotiate, license, and get paid for health data on each
+    patient's terms.
+
+- url: /news/2026-solana-summit/
+  image: /images/news/20260923-solana-summit/loon-cadc.jpg
+  alt: Kevin Zhang of Loon with a Loon team member and Dr. Steve Drew at Solana Summit Canada 2026
+  date: Sep 23, 2026
+  title: Dr. Steve Drew meets Canada's stablecoin builders at Solana Summit Canada 2026
+  text: >-
+    At Solana Summit Canada 2026 in Toronto, Dr. Steve Drew met Kevin Zhang and the Loon team
+    developing the CADC Canadian dollar stablecoin, Felipe Priuli of Tetra, which is developing
+    CADD, and Marc Lijour of the IEEE Blockchain Technical Community.
+
+- url: /news/2026-future-or/
+  image: /images/news/20260915-future-OR/IMG_8696.jpeg
+  alt: Dr. Jessalyn Holodinsky with Calgary Emergency Medicine Data Lab and DENOS Lab members at the CEMDL booth at The Future of the OR
+  date: Sep 15, 2026
+  title: Working with Calgary Emergency Medicine Data Lab to Showcase Our Research
+  text: >-
+    Gerry Wu, Alexander Burn, and Samuel Wang joined the Calgary Emergency Medicine Data Lab,
+    directed by Dr. Jessalyn Holodinsky, at the UCalgary Foothills Campus to show three systems the
+    two labs are building together, the LENS role-aware multi-agent grader for clinical
+    summaries, Priority-Conditioned Clinical Alignment, and the EDSim agentic simulator.
+
+- url: /news/2026-raj-visit/
+  image: /images/news/2026-raj-visit/raj-visit-20260831.jpg
+  alt: Raj Rajarajan and Dr. Steve Drew outside the Schulich School of Engineering
+  date: Aug 31, 2026
+  title: City St George's Professor Raj Rajarajan visits DENOS
+  text: >-
+    Raj Rajarajan, Professor of Security Engineering and Director of the Institute for Cyber
+    Security at City St George's, University of London, visited the University of Calgary and
+    met Dr. Steve Drew at the Schulich School of Engineering to talk through research interests
+    on both sides and future collaborations.
+
+- url: /news/starfish-fl-acm-health/
+  image: /images/news/starfish-fl-acm-health/starfish-fl-logo.png
+  image_class: news-feature-img--logo
+  alt: The Starfish-FL logo, agentic federated learning in Python and R
+  date: Aug 25, 2026
+  title: Starfish-FL paper published in ACM Transactions on Computing for Healthcare
+  text: >-
+    <a href="https://dl.acm.org/doi/10.1145/3843774" target="_blank" rel="noopener">Starfish-FL: Harnessing Agentic Federated Analytics</a>, by Yunkai Bao, Zainab Saad, Farhan
+    Abbas, and collaborators, presents a multi-tier agent harness for cross-silo healthcare
+    analytics in which the language model advises and deterministic guards decide. The open
+    source framework ships 21 federated tasks in Python and R.
+  links:
+    - label: Read the story →
+      url: /news/starfish-fl-acm-health/
+    - label: View on GitHub →
+      url: https://github.com/denoslab/starfish-fl
+      external: true
+
+- url: /news/2026-isha-wise/
+  image: /images/news/2026-isha-wise/2026-isha-wise.jpg
+  alt: Isha Goyal with DENOS Lab members at the University of Calgary
+  date: Aug 20, 2026
+  title: WISE intern Isha Goyal builds CardiCare, an on-device AI patient assistant
+  text: >-
+    Women in Science and Engineering (WISE) intern Isha Goyal built CardiCare, an artificial
+    intelligence assistant for coronary artery disease patients that runs entirely on an
+    8 GB NVIDIA Jetson, answers only from clinician approved content, and refuses everything
+    else. It delivered zero unsafe answers across 270 test cases while a model five times its
+    size made two.
+
+- url: /news/ieee-stablecoin-forum/
+  image: /images/news/ieee-stablecoin-forum/speakers.jpg
+  alt: Speakers at the IEEE Stablecoin and Agentic AI Forum in Calgary
+  date: Jul 28, 2026
+  title: DENOS Lab organizes the IEEE Stablecoin and Agentic AI Forum
+  text: >-
+    DENOS Lab organized the IEEE Stablecoin and Agentic AI Forum in Calgary on July 28,
+    gathering speakers from ATB Financial, the Alberta Securities Commission, the Canadian
+    Blockchain Consortium, and universities across North America to train talents for the
+    era of stablecoins and agentic AI.
+  links:
+    - label: Read the story →
+      url: /news/ieee-stablecoin-forum/
+    - label: Go to event page →
+      url: https://stablecoinyyc.github.io/
+      external: true
+
+- url: /news/leo-wei-new-job-toronto/
+  image: /images/news/leo-wei-new-job-toronto/leo-msc-defense.jpg
+  alt: Leo Wei at his MSc thesis defense
+  date: Jul 9, 2026
+  title: Leo Wei joins Citizen Relations as AI Technical Lead in Toronto
+  text: >-
+    DENOS Lab alumnus Leo Wei is moving to Toronto to lead artificial intelligence work at
+    Citizen Relations, a public relations agency with offices around the world, capping a
+    Master's marked by a Best Paper Award at IEEE ATC 2025 and research on federated learning
+    for supply chain demand forecasting.
+
+- url: https://cumming.ucalgary.ca/focus-impact/harnessing-data-research
+  external: true
+  image: /images/news/harnessing-data-research/cover.jpg
+  alt: Dr. Steve Drew and Dr. Jessalyn Holodinsky at the emergency department
+  date: Jun 2026
+  title: "Harnessing data research: AI in the emergency department"
+  cta: Read the feature →
+  text: >-
+    Dr. Steve Drew and the DENOS Lab are featured by the University of Calgary for ED Sim,
+    an AI simulation platform whose autonomous agents model patients, staff, and workflows
+    so that emergency departments can find bottlenecks and test solutions without
+    disrupting real operations.

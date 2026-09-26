@@ -1,11 +1,5 @@
-{% assign events = site.team_building | sort: "date" | reverse %}
-{% for event in events %}
-<a class="news-feature" href="{{ event.url | relative_url }}">
-  <img loading="lazy" decoding="async" class="news-feature-img" src="{{ event.images | first | relative_url }}" alt="{{ event.title }}">
-  <div class="news-feature-body">
-    <span class="news-date">{{ event.display_date }}</span>
-    <h3 class="news-feature-title">{{ event.title }}</h3>
-    <span class="news-feature-cta">View photos →</span>
-  </div>
-</a>
-{% endfor %}
+{% include team-building-list.html limit=5 %}
+
+<p class="news-more">
+  <a class="btn btn--ghost" href="{{ '/team-building/' | relative_url }}">More team building →</a>
+</p>
