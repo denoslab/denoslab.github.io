@@ -41,6 +41,7 @@ publications:
     authors: "Yunkai Bao, Zainab Saad, K. Duarte, Farhan Abbas, T. Sajobi, Jessalyn K. Holodinsky, Bijoy K. Menon, et al."
     venue: "SSRN"
 news:
+  - /news/2026-starfish-npj-health-systems/
   - /news/starfish-fl-acm-health/
 ---
 
