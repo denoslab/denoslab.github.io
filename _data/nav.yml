@@ -5,8 +5,6 @@
 # group in the mobile drawer; children take the same `id` or `url` keys.
 - id: about
   label: About
-- id: research
-  label: Research
 - id: news
   label: News
   children:
@@ -16,6 +14,8 @@
       label: Paper Club
     - id: team-building
       label: Team Building
+- id: research
+  label: Research
 - url: /blog/
   label: Blog
 - id: team
