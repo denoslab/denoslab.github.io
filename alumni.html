@@ -1,0 +1,18 @@
+---
+layout: page
+title: Alumni
+seo_title: Alumni | DENOS Lab, University of Calgary
+permalink: /alumni/
+description: Former students, interns, and researchers of DENOS Lab at the University of Calgary, who worked with Dr. Steve Drew on distributed learning, agentic simulation and reasoning.
+schema_type: CollectionPage
+---
+<p class="section-lead">
+  Former students, interns, and researchers of DENOS Lab at the University of Calgary.
+  Select a name to read about their time in the lab, their projects, and their publications.
+</p>
+
+{% include badge-sprite.html %}
+{%- assign alumni = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" -%}
+<div class="team-grid">
+  {% for member in alumni %}{% include team-card.html member=member %}{% endfor %}
+</div>
