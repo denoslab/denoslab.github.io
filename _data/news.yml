@@ -3,6 +3,17 @@
 # _includes/news-card.html. `url` is a site path unless `external: true`.
 # An entry with `links` renders its title as a link and one call to action per
 # link, instead of making the whole card one link. `text` may hold inline HTML.
+- url: /news/2026-neurips-d-rpc/
+  image: /images/news/20260928-neurips-accepted/neurips-logo.png
+  image_class: news-feature-img--logo
+  alt: The Neural Information Processing Systems logo
+  date: Sep 28, 2026
+  title: Jialin Yang and Gerry Wu's reasoning distillation paper accepted to NeurIPS 2026
+  text: >-
+    D-RPC, by Jialin Yang, Gerry Wu, and collaborators at the University of Michigan, teaches
+    small language models to reason by having a large teacher explain similar problems the same
+    way, drawing on a compact bank of reusable reasoning paths.
+
 - url: /news/2026-starfish-npj-health-systems/
   image: /images/news/20260925-starfish-npj/starfish-fig1.png
   image_class: news-feature-img--logo

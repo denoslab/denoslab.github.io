@@ -39,8 +39,8 @@ publications:
     venue: "IEEE SWC"
     year: 2025
   - title: "Structural Rationale Distillation via Reasoning Space Compression"
-    authors: "Jialin Yang, J. Wang, Jiajun Wu, Henry Leung, Jiayu Zhou, and **Steve Drew**"
-    venue: "arXiv"
+    authors: "Jialin Yang, Jiankun Wang, Jiajun Wu, Henry Leung, Jiayu Zhou, and **Steve Drew**"
+    venue: "NeurIPS"
     year: 2026
     url: "https://arxiv.org/abs/2605.07139"
 ---
