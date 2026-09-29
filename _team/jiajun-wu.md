@@ -53,6 +53,11 @@ publications:
     authors: "Jiajun Wu, et al."
     venue: "CJEM"
     year: 2026
+  - title: "Structural Rationale Distillation via Reasoning Space Compression"
+    authors: "Jialin Yang, Jiankun Wang, Jiajun Wu, Henry Leung, Jiayu Zhou, and **Steve Drew**"
+    venue: "NeurIPS"
+    year: 2026
+    url: "https://arxiv.org/abs/2605.07139"
 achievements:
   - "Topology-aware Federated Learning in Edge Computing selected for the [ACM Showcase](https://www.growkudos.com/publications/10.1145%25252F3659205/reader)."
   - "Third place in data visualization at the CANIS Hackathon hosted by Schulich Ignite, with Leo Wei and Yunkai Bao."
