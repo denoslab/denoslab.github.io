@@ -7,12 +7,13 @@
   image: /images/news/20260928-neurips-accepted/neurips-logo.png
   image_class: news-feature-img--logo
   alt: The Neural Information Processing Systems logo
-  date: Sep 28, 2026
-  title: Jialin Yang and Gerry Wu's reasoning distillation paper accepted to NeurIPS 2026
+  date: Sep 29, 2026
+  title: Two DENOS Lab papers headed to NeurIPS 2026 and its SLM-Agents workshop
   text: >-
-    D-RPC, by Jialin Yang, Gerry Wu, and collaborators at the University of Michigan, teaches
-    small language models to reason by having a large teacher explain similar problems the same
-    way, drawing on a compact bank of reusable reasoning paths.
+    Jialin Yang and Gerry Wu's D-RPC, which teaches small language models to reason from a compact
+    bank of reusable reasoning paths, is accepted to the main conference, and Gerry Wu's LegitOnEdge
+    benchmark, which shows that the edge device decides whether a small AI agent succeeds, is
+    accepted to the SLM-Agents workshop.
 
 - url: /news/2026-starfish-npj-health-systems/
   image: /images/news/20260925-starfish-npj/starfish-fig1.png

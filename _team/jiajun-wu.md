@@ -58,6 +58,10 @@ publications:
     venue: "NeurIPS"
     year: 2026
     url: "https://arxiv.org/abs/2605.07139"
+  - title: "The Device Decides: Benchmarking the Reliability of Agentic SLMs at the Edge"
+    authors: "Jiajun Wu, Jiayu Zhou, and **Steve Drew**"
+    venue: "NeurIPS SLM-Agents Workshop"
+    year: 2026
 achievements:
   - "Topology-aware Federated Learning in Edge Computing selected for the [ACM Showcase](https://www.growkudos.com/publications/10.1145%25252F3659205/reader)."
   - "Third place in data visualization at the CANIS Hackathon hosted by Schulich Ignite, with Leo Wei and Yunkai Bao."

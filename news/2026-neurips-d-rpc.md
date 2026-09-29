@@ -1,22 +1,23 @@
 ---
 layout: event
-title: DENOS Lab paper on structural rationale distillation accepted to NeurIPS 2026
-seo_title: D-RPC reasoning distillation paper accepted to NeurIPS 2026
+title: Two DENOS Lab papers headed to NeurIPS 2026 and its SLM-Agents workshop
+seo_title: Two DENOS Lab papers at NeurIPS 2026 and the SLM-Agents workshop
 permalink: /news/2026-neurips-d-rpc/
-date: 2026-09-28
-display_date: Sep 28, 2026
-description: Structural Rationale Distillation via Reasoning Space Compression, by DENOS Lab PhD students Jialin Yang and Gerry Wu with collaborators at the University of Michigan, is accepted to NeurIPS 2026. Its D-RPC method teaches small language models to reason by giving them consistent worked solutions built from a compact bank of reusable reasoning paths.
+date: 2026-09-29
+display_date: Sep 29, 2026
+description: DENOS Lab will present two papers at NeurIPS 2026 in Paris. Structural Rationale Distillation via Reasoning Space Compression, by PhD students Jialin Yang and Gerry Wu with collaborators at the University of Michigan, is accepted to the main conference, and Gerry Wu's LegitOnEdge benchmark for the reliability of agentic small language models on edge devices is accepted to the SLM-Agents workshop.
 hero: /images/news/20260928-neurips-accepted/neurips-logo.png
 hero_alt: The Neural Information Processing Systems logo
 hero_link: none
 ---
 <p class="event-downloads">
-  <a class="btn btn--ghost" href="https://arxiv.org/abs/2605.07139" target="_blank" rel="noopener">Read the preprint on arXiv</a>
+  <a class="btn btn--ghost" href="https://arxiv.org/abs/2605.07139" target="_blank" rel="noopener">Read the D-RPC preprint on arXiv</a>
+  <a class="btn btn--ghost" href="https://slmw2026.github.io/" target="_blank" rel="noopener">About the SLM-Agents workshop</a>
 </p>
 
-CALGARY. A small AI model learns to reason better when its teacher explains similar problems the same way every time, and University of Calgary researchers have found a way to make that happen. Their method has been accepted to NeurIPS 2026, the Conference on Neural Information Processing Systems and one of the most competitive venues in artificial intelligence research.
+CALGARY. DENOS Lab researchers will present two papers at NeurIPS 2026, the Conference on Neural Information Processing Systems and one of the most competitive venues in artificial intelligence research, held this December in Paris. Both papers ask how small language models can be made to work well outside the data centre. The first, accepted to the main conference, shows that a small AI model learns to reason better when its teacher explains similar problems the same way every time. The second, accepted to the SLM-Agents workshop, shows that the device a small model runs on can decide whether an AI agent succeeds or fails.
 
-The paper, [*Structural Rationale Distillation via Reasoning Space Compression*](https://arxiv.org/abs/2605.07139), is led by DENOS Lab PhD student [Jialin Yang](/team/jialin-yang/) and co-authored by PhD candidate [Jiajun "Gerry" Wu](/team/jiajun-wu/), Dr. Henry Leung, and lab director [Dr. Steve Drew](/team/steve-drew/) of the Department of Electrical and Software Engineering at the Schulich School of Engineering. They are joined by Jiankun Wang, who shares first authorship with Yang, and Dr. Jiayu Zhou, both of the University of Michigan.
+The first paper, [*Structural Rationale Distillation via Reasoning Space Compression*](https://arxiv.org/abs/2605.07139), is led by DENOS Lab PhD student [Jialin Yang](/team/jialin-yang/) and co-authored by PhD candidate [Jiajun "Gerry" Wu](/team/jiajun-wu/), Dr. Henry Leung, and lab director [Dr. Steve Drew](/team/steve-drew/) of the Department of Electrical and Software Engineering at the Schulich School of Engineering. They are joined by Jiankun Wang, who shares first authorship with Yang, and Dr. Jiayu Zhou, both of the University of Michigan.
 
 The work tackles a problem at the heart of how today's AI gets smaller and cheaper. Frontier large language models (LLMs) reason well but are expensive to run, so developers often distill them, training a compact student model on thousands of worked solutions, or rationales, written by a large teacher. The catch is that the teacher rarely solves two similar problems the same way. The authors compare it to a chef who makes the same dish differently each time. A student fed that inconsistency ends up memorizing one-off tricks rather than learning strategies it can reuse.
 
@@ -28,4 +29,10 @@ The researchers used GPT-5.1 as the teacher and tested two students, Meta's Llam
 
 The authors are candid about the costs and the open questions. Building the bank and guiding the teacher takes about twice the teacher queries of standard chain-of-thought distillation, though that cost is paid once, offline, and does not slow the finished student. All the experiments used one teacher and two students on math and commonsense reasoning, so whether the gains carry over to other teachers, other model sizes, or tasks such as code generation remains to be tested.
 
-For Yang, the paper is the latest step in a research program on compressing the reasoning of large models into smaller ones, and it sits within the lab's wider research on distributed learning, agentic simulation and reasoning. Smaller models that reason well can run on modest hardware, closer to where data lives, which matters for the privacy-sensitive settings such as health care where much of the lab's work takes place.
+The second paper, *The Device Decides: Benchmarking the Reliability of Agentic SLMs at the Edge*, is led by Wu and co-authored by Zhou and Drew. It was accepted to SLM-Agents, the first NeurIPS workshop on small language models for agentic systems, which meets in Paris on December 13.
+
+Small language model (SLM) agents, AI assistants that plan and carry out multi-step tasks, now run directly on phones, robots, and embedded computers. Developers usually pick which model to deploy by its capability, meaning its score on standard benchmarks. Wu argues that this score leaves out what matters once the model is installed. How long the slowest responses take, whether the model gives the same answer twice, and how well its confidence matches its accuracy depend as much on the hardware and software stack as on the model itself. The paper calls this on-device performance reliability, and to the authors' knowledge no capability benchmark reports it.
+
+To measure it, the team built LegitOnEdge, a benchmark that tests an agentic SLM on the edge device where it will actually run. They evaluated five instruction-tuned models of 3.8 to 8 billion parameters on two NVIDIA machines, the compact Jetson Orin Nano and the desktop DGX Spark, across four workloads. The results are striking. The same model completed a very different share of a multi-step agentic task suite depending on which device it ran on, and only part of its output was byte-identical across the two builds. A reliability score built from latency, throughput, and energy showed no detectable association with capability, so a model that tops the leaderboard is no guarantee of dependable behaviour on a given device. The authors conclude that an agentic SLM deployment should be ranked by the reliability of the model measured on its target device, not by the model alone.
+
+Together the two papers trace one research thread. D-RPC is the latest step in Yang's program on compressing the reasoning of large models into smaller ones, and LegitOnEdge builds on Wu's work bringing small language models to emergency department decision support, where models must run on local hardware. Both sit within the lab's wider research on distributed learning, agentic simulation and reasoning. Smaller models that reason well and behave predictably can run on modest hardware, closer to where data lives, which matters for the privacy-sensitive settings such as health care where much of the lab's work takes place.
