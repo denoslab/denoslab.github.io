@@ -56,6 +56,7 @@ Canonical site: {{ '/' | absolute_url }}
 ## Alumni and friends
 {% assign alumni = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" -%}
 {% assign friends = site.team | where_exp: "m", "m.category == 9" | sort: "last_name" -%}
+- [Alumni directory]({{ '/alumni/' | absolute_url }}): former students, interns, and researchers of the lab.
 {% assign past = alumni | concat: friends -%}
 {% for m in past %}
 - [{{ m.name }}]({{ m.url | absolute_url }}): {{ m.title | strip_html | strip_newlines | strip }}

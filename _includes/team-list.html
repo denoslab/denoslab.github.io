@@ -53,9 +53,15 @@
 
 {% if alumni.size > 0 %}
   <{{ hl }} class="subhead">Alumni</{{ hl }}>
+  {% if include.link_alumni %}
+  <p class="news-more">
+    <a class="btn btn--ghost" href="{{ '/alumni/' | relative_url }}">Meet our alumni →</a>
+  </p>
+  {% else %}
   <div class="team-grid">
     {% for member in alumni %}{% include team-card.html member=member %}{% endfor %}
   </div>
+  {% endif %}
 {% endif %}
 
 {% if friends.size > 0 %}
