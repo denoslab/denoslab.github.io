@@ -3,6 +3,18 @@
 # _includes/news-card.html. `url` is a site path unless `external: true`.
 # An entry with `links` renders its title as a link and one call to action per
 # link, instead of making the whole card one link. `text` may hold inline HTML.
+- url: /news/2026-quan-summit/
+  image: /images/news/20260928-quan-summit/summit-banner.jpg
+  image_class: news-feature-img--logo
+  alt: Promotional graphic for the Quan Health Data Analytics Summit at the Banff Centre for Arts and Creativity
+  date: Sep 29, 2026
+  title: DENOS Lab joins the Quan Health Data Analytics Summit in Banff
+  text: >-
+    Dr. Steve Drew and Gerry Wu attended the Quan Health Data Analytics Summit at the Banff Centre,
+    a University of Calgary Discovery Exchange Series program honouring Dr. Hude Quan, with hands-on
+    sessions on administrative health data, comorbidity measurement, risk adjustment, and data
+    governance.
+
 - url: /news/2026-neurips-d-rpc/
   image: /images/news/20260928-neurips-accepted/neurips-logo.png
   image_class: news-feature-img--logo
