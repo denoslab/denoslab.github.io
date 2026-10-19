@@ -51,7 +51,7 @@
   </div>
 {% endif %}
 
-{% if alumni.size > 0 %}
+{% if alumni.size > 0 or site.data.alumni.size > 0 %}
   <{{ hl }} class="subhead">Alumni</{{ hl }}>
   {% if include.link_alumni %}
   <p class="news-more">
@@ -60,6 +60,7 @@
   {% else %}
   <div class="team-grid">
     {% for member in alumni %}{% include team-card.html member=member %}{% endfor %}
+    {% include alumni-static.html %}
   </div>
   {% endif %}
 {% endif %}
