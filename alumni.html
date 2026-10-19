@@ -8,11 +8,12 @@ schema_type: CollectionPage
 ---
 <p class="section-lead">
   Former students, interns, and researchers of DENOS Lab at the University of Calgary.
-  Select a name to read about their time in the lab, their projects, and their publications.
+  Select a name to read about their time in the lab, their projects, and their publications. Some alumni are listed by name and photo only.
 </p>
 
 {% include badge-sprite.html %}
 {%- assign alumni = site.team | where_exp: "m", "m.category == 8" | sort: "last_name" -%}
 <div class="team-grid">
   {% for member in alumni %}{% include team-card.html member=member %}{% endfor %}
+  {% include alumni-static.html %}
 </div>

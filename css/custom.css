@@ -631,6 +631,8 @@ strong, b { font-weight: 600; }
 .member-role { font-size: 1.35rem; line-height: 1.45; color: var(--muted); margin: 0; }
 .member-tags { font-size: 1.3rem; line-height: 1.5; color: var(--muted-soft); margin-top: 1rem; }
 .member-tags br:first-child { display: none; }
+.member-card--static:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--line); }
+.member-card--static .member-name { color: var(--navy); }
 
 /* Lead / director card */
 .member-card--lead {

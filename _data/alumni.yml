@@ -1,0 +1,8 @@
+# Alumni shown by name and photo only, without a profile page. Rendered after
+# the `_team` alumni (category 8) on /team/ and /alumni/ by
+# _includes/alumni-static.html as plain, unlinked cards. Use this for a former
+# member who should stay on the roster without a biography of their own.
+- name: Haniya Farhan
+  last_name: Farhan
+  title: Mitacs Globalink Research Internship (GRI) Student, 2026
+  picture: /images/profile/haniya-farhan.jpg

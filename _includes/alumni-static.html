@@ -1,0 +1,14 @@
+{%- comment -%}
+Plain alumni cards from _data/alumni.yml: name, photo, and role, no link and no
+badges. Appended after the collection alumni inside the same .team-grid.
+{%- endcomment -%}
+{%- assign static_alumni = site.data.alumni | sort: "last_name" -%}
+{%- for m in static_alumni %}
+<article class="member-card member-card--static">
+  <img class="member-photo" loading="lazy" decoding="async" src="{{ m.picture | relative_url }}" alt="{{ m.name | escape }}, {{ m.title | split: ',' | first | strip | escape }}, DENOS Lab">
+  <div class="member-info">
+    <h3 class="member-name">{{ m.name }}</h3>
+    <p class="member-role">{{ m.title }}</p>
+  </div>
+</article>
+{%- endfor %}
