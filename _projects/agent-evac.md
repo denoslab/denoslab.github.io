@@ -13,6 +13,8 @@ description: >-
   AgentEvac is a DENOS Lab agentic simulator for wildfire evacuations, coupling SUMO traffic
   simulation with large language model agents that follow the Protective Action Decision Model
   (PADM).
+news:
+  - /news/2026-ieee-smc/
 lead: >-
   An agentic simulator for wildfire evacuations that couples SUMO traffic simulation with
   large language model agents following the Protective Action Decision Model (PADM).

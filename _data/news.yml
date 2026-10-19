@@ -3,6 +3,17 @@
 # _includes/news-card.html. `url` is a site path unless `external: true`.
 # An entry with `links` renders its title as a link and one call to action per
 # link, instead of making the whole card one link. `text` may hold inline HTML.
+- url: /news/2026-ieee-smc/
+  image: /images/news/20261007-ieee-smc/steve-drew-smc-banner.jpg
+  alt: Dr. Steve Drew in front of the IEEE SMC 2026 banner in Bellevue, Washington
+  date: Oct 7, 2026
+  title: Wildfire evacuation with LLM agents presented at IEEE SMC 2026
+  text: >-
+    Dr. Steve Drew presented an abstract by incoming student Ruili Xu at the IEEE International
+    Conference on Systems, Man, and Cybernetics in Bellevue, Washington. The work connects the lab's
+    AgentEvac wildfire evacuation simulator with the OASIS LLM-agent social simulation framework to
+    study how warnings, peers, and recommendation algorithms shape when residents leave.
+
 - url: /news/2026-quan-summit/
   image: /images/news/20260928-quan-summit/summit-banner.jpg
   image_class: news-feature-img--logo
