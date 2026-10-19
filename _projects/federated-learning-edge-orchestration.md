@@ -11,6 +11,8 @@ description: >-
   DENOS Lab designs federated learning methods that budget clients by availability and carbon
   footprint and guide cloud-edge service orchestration toward resilient, real-world
   deployment.
+news:
+  - /news/2026-ieee-aiot/
 lead: >-
   Federated learning methods that budget clients by availability and carbon footprint and
   guide cloud-edge orchestration toward resilient, real-world deployment.
