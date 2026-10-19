@@ -10,8 +10,6 @@
   children:
     - id: news
       label: Lab News
-    - id: paper-club
-      label: Paper Club
     - id: team-building
       label: Team Building
 - id: research
