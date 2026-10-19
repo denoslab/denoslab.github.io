@@ -1,6 +1,6 @@
 ---
 layout: event
-title: Wildfire evacuation with LLM agents presented at IEEE SMC 2026
+title: "Ruili Xu's work on agentic wildfire evacuation simulation presented at IEEE SMC 2026"
 permalink: /news/2026-ieee-smc/
 date: 2026-10-07
 display_date: Oct 7, 2026
