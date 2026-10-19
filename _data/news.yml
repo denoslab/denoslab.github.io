@@ -62,6 +62,16 @@
     which personal health AI agents negotiate, license, and get paid for health data on each
     patient's terms.
 
+- url: /news/2026-paper-club-ai-agents/
+  image: /images/news/20260918-paper-club/IMG_3047.jpg
+  alt: DENOS Lab members in matching lab caps around the meeting room table at the first paper club session
+  date: Sep 18, 2026
+  title: Paper club opens with a session on coordination in multi-agent systems
+  text: >-
+    A Mitacs GRI intern opened the lab's student-run paper club with three papers on how large
+    language model agents coordinate, from the memory stream of Generative Agents to the SOP
+    pipeline of MetaGPT and the search-based orchestration of HALO.
+
 - url: /news/2026-solana-summit/
   image: /images/news/20260923-solana-summit/loon-cadc.jpg
   alt: Kevin Zhang of Loon with a Loon team member and Dr. Steve Drew at Solana Summit Canada 2026

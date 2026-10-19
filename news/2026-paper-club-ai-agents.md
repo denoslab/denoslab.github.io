@@ -1,20 +1,17 @@
 ---
 layout: event
 title: Paper club opens with a session on coordination in multi-agent systems
+permalink: /news/2026-paper-club-ai-agents/
 date: 2026-09-18
 display_date: Sep 18, 2026
 description: The first DENOS Lab paper club session, led by one of the lab's Mitacs Globalink Research Internship (GRI) students, read Generative Agents, MetaGPT, and HALO side by side to ask how large language model agents remember, hand off work, and search for a plan.
-summary: A Mitacs GRI intern opened the student-run paper club with three papers on how large language model agents coordinate, from the memory stream of Generative Agents to the SOP pipeline of MetaGPT and the search-based orchestration of HALO.
-images:
-  - /images/paper-club/20260918-ai-agent-arch/IMG_3047.jpg
-  - /images/paper-club/20260918-ai-agent-arch/IMG_3055.jpg
-hero: /images/paper-club/20260918-ai-agent-arch/IMG_3047.jpg
+hero: /images/news/20260918-paper-club/IMG_3047.jpg
 hero_alt: DENOS Lab members in matching lab caps around the meeting room table, with the title slide AI Agent Co-ordination Across 3 Research Papers on the screen
 hero_caption: The first paper club session, with the lab in matching DENOS caps and the presenter's title slide on the screen.
 ---
 <p class="event-downloads">
-  <a class="btn btn--ghost" href="/images/paper-club/20260918-ai-agent-arch/slides.pdf" target="_blank" rel="noopener">Download the slides (PDF)</a>
-  <a class="btn btn--ghost" href="/images/paper-club/20260918-ai-agent-arch/brochure.pdf" target="_blank" rel="noopener">Download the brochure (PDF)</a>
+  <a class="btn btn--ghost" href="/images/news/20260918-paper-club/slides.pdf" target="_blank" rel="noopener">Download the slides (PDF)</a>
+  <a class="btn btn--ghost" href="/images/news/20260918-paper-club/brochure.pdf" target="_blank" rel="noopener">Download the brochure (PDF)</a>
 </p>
 
 The DENOS Lab paper club held its first session on September 18, 2026, a student-initiated reading group in which lab members take turns presenting a set of papers and the room works through the ideas together. A 2026 Mitacs Globalink Research Internship (GRI) student at the lab opened the series with a session titled *AI Agent Co-ordination Across 3 Research Papers*. Around a dozen lab members filled the meeting room in matching DENOS Lab caps, with coffee and a box of Timbits on the table, and the presenter handed out a five-page brochure prepared for the session so that everyone could follow the three architectures on paper while they were walked through on the screen.
@@ -25,10 +22,10 @@ The first paper was [*Generative Agents: Interactive Simulacra of Human Behavior
 
 That led into the second paper, [*MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework*](https://arxiv.org/abs/2308.00352). Naively chained models suffer from what the presenter called the telephone game, where small hallucinations compound at every hop until the last agent is working from a distorted picture of the task. MetaGPT encodes human standard operating procedures as roles, a product manager writing a requirements document, an architect producing the system design, a project manager listing tasks per file, an engineer writing code, and a QA engineer writing unit tests. Agents exchange fixed-schema artifacts rather than free-form chat, publish to a shared message pool, and activate only when every prerequisite has arrived, and an executable feedback loop runs the tests and debugs up to three times. The group looked at the comparison against ChatDev, where MetaGPT scored 3.75 against 2.25 on executability, used 124.3 tokens per line against 248.9, and needed 0.83 revisions against 2.5. The point drawn out was that structure is not a constraint on model creativity, it is what makes a multi-agent system reliable enough to ship.
 
-{% include figure.html src="/images/paper-club/20260918-ai-agent-arch/IMG_3055.jpg" alt="The Mitacs GRI intern presenting to the DENOS Lab paper club with the slide Did an AI agent do that or is this about me on the screen" caption="The Mitacs GRI intern opens the session with the question that framed the morning, while the room follows along on the printed brochure." %}
+{% include figure.html src="/images/news/20260918-paper-club/IMG_3055.jpg" alt="The Mitacs GRI intern presenting to the DENOS Lab paper club with the slide Did an AI agent do that or is this about me on the screen" caption="The Mitacs GRI intern opens the session with the question that framed the morning, while the room follows along on the printed brochure." %}
 
 The third paper, [*HALO: Hierarchical Autonomous Logic-Oriented Orchestration for Multi-Agent LLM Systems*](https://arxiv.org/abs/2505.13516), takes aim at the fixed roles that make MetaGPT brittle outside software. A planning agent decomposes the query into subtasks and passes the history forward, a role-design agent generates agent profiles on the fly for each subtask, and a Monte Carlo tree search coordinates the low-level inference agents. The presenter walked through the four steps of the search, selection with the UCB1 rule, expansion by spawning a new agent at the frontier, evaluation by a language model judge that scores each node, and backpropagation of that score to every ancestor, so that good reasoning paths are chosen more often next time. The same architecture handles code generation on HumanEval, general reasoning on MMLU, and arithmetic on MATH without task-specific engineering, and the lesson was to treat a multi-agent workflow as a search problem rather than a fixed pipeline.
 
 The closing comparison in the brochure lined the three systems up by memory, coordination, roles, task execution, domain, and key limit. Generative Agents has persistent memory and emergent coordination but is expensive to run, MetaGPT has structured artifacts and a fixed pipeline but breaks outside software, and HALO has dynamic roles and search but starts every query from scratch. That last row became the discussion for the rest of the session. None of the three systems learn across runs, so performance resets to zero on every new task, and until agents can accumulate and transfer knowledge over time the architecture is sophisticated but the system is still disposable. For a lab that builds agentic simulations of emergency departments and evacuations and puts agent harnesses in front of federated analytics, that gap is close to home, and the conversation ran well past the last slide.
 
-The [slides](/images/paper-club/20260918-ai-agent-arch/slides.pdf) and the [brochure](/images/paper-club/20260918-ai-agent-arch/brochure.pdf) prepared for the session are available to download. Thank you to our Mitacs GRI intern for setting the bar for the sessions to come, and to everyone who turned up to argue about it.
+The [slides](/images/news/20260918-paper-club/slides.pdf) and the [brochure](/images/news/20260918-paper-club/brochure.pdf) prepared for the session are available to download. Thank you to our Mitacs GRI intern for setting the bar for the sessions to come, and to everyone who turned up to argue about it.
