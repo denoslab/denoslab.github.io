@@ -1,7 +1,7 @@
 ---
 layout: event
-title: Calgary and Wuhan stroke researchers look to federated learning to work across borders
-seo_title: DENOS Lab, Calgary Stroke Program and Wuhan Union Hospital discuss federated learning
+title: Calgary and international stroke researchers look to federated learning to work across borders
+seo_title: DENOS Lab, Calgary Stroke Program and international stroke researchers discuss federated learning
 permalink: /news/2026-calgary-stroke-program-visit/
 date: 2026-11-02
 display_date: Nov 2, 2026
