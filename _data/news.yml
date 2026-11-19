@@ -5,12 +5,12 @@
 # link, instead of making the whole card one link. `text` may hold inline HTML.
 - url: /news/2026-calgary-stroke-program-visit/
   image: /images/news/20261102-visit-bijoy/neurosciences-group.jpg
-  alt: Researchers from the Calgary Stroke Program, DENOS Lab, and Huazhong University of Science and Technology under the Department of Neurosciences sign
+  alt: Researchers from the Calgary Stroke Program, DENOS Lab, and Dr. Bo Hu's visiting team from Wuhan under the Department of Neurosciences sign
   date: Nov 2, 2026
   title: Calgary and Wuhan stroke researchers look to federated learning to work across borders
   text: >-
     Dr. Steve Drew visited Dr. Bijoy Menon's team at the Calgary Stroke Program and met Dr. Bo Hu
-    and Dr. Wu Qiu of Huazhong University of Science and Technology to discuss federating stroke
+    of Union Hospital in Wuhan and her team, including Dr. Wu Qiu, to discuss federating stroke
     data across countries, building on a Scientific Reports study in which federated analysis
     reproduced the AcT stroke trial without pooling patient records.
 

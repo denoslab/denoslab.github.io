@@ -5,14 +5,14 @@ seo_title: DENOS Lab, Calgary Stroke Program and Wuhan Union Hospital discuss fe
 permalink: /news/2026-calgary-stroke-program-visit/
 date: 2026-11-02
 display_date: Nov 2, 2026
-description: Dr. Steve Drew visited Dr. Bijoy Menon's team at the Calgary Stroke Program and met Dr. Bo Hu and Dr. Wu Qiu of Huazhong University of Science and Technology to discuss federating stroke data and using federated learning for international collaboration.
+description: Dr. Steve Drew visited Dr. Bijoy Menon's team at the Calgary Stroke Program and met Dr. Bo Hu of Union Hospital in Wuhan and her team, including Dr. Wu Qiu, to discuss federating stroke data and using federated learning for international collaboration.
 hero: /images/news/20261102-visit-bijoy/neurosciences-group.jpg
-hero_alt: Nine researchers from the Calgary Stroke Program, DENOS Lab, and Huazhong University of Science and Technology standing under the Department of Neurosciences sign
+hero_alt: Nine researchers from the Calgary Stroke Program, DENOS Lab, and Dr. Bo Hu's visiting team from Wuhan standing under the Department of Neurosciences sign
 hero_caption: Dr. Steve Drew, Dr. Bijoy Menon, Dr. Bo Hu, Dr. Wu Qiu, and members of the Calgary and Wuhan teams at the Department of Neurosciences.
 ---
 CALGARY. Stroke researchers in Calgary and Wuhan want to learn from each other's patients without either side handing over a single record, and a meeting in Calgary this month looked at how that could work.
 
-[Dr. Steve Drew](/team/steve-drew/), director of DENOS Lab at the University of Calgary, visited Dr. Bijoy Menon's team at the Calgary Stroke Program on Monday, Nov. 2. Also at the table were guests from China led by Dr. Bo Hu, director of the Department of Neurology at Union Hospital, Tongji Medical College, Huazhong University of Science and Technology (HUST) in Wuhan. Her team included Dr. Wu Qiu, a professor of biomedical engineering at HUST.
+[Dr. Steve Drew](/team/steve-drew/), director of DENOS Lab at the University of Calgary, visited Dr. Bijoy Menon's team at the Calgary Stroke Program on Monday, Nov. 2. Also at the table were guests from China led by Dr. Bo Hu, director of the Department of Neurology at Union Hospital, Tongji Medical College in Wuhan. Her team included Dr. Wu Qiu.
 
 Dr. Drew, Dr. Menon, Dr. Hu, and Dr. Qiu talked through federating the data held by their groups and the promise of federated learning (FL) for making international collaboration easier.
 
@@ -30,9 +30,7 @@ The federated result matched the original. It put the difference in patients mak
 
 The paper, [*Privacy-preserving federated analysis reproduces multicentre alteplase compared to tenecteplase (AcT) stroke trial*](https://www.nature.com/articles/s41598-026-79654-0), is written by DENOS Lab PhD student [Yunkai Bao](/team/yunkai-bao/), MSc student [Zainab Saad](/team/zainab-saad/), and [Farhan Abbas](/team/farhan-abbas/), with Kaue Duarte, Dr. Tolulope Sajobi, Dr. Jessalyn Holodinsky, Dr. Menon, and Dr. Drew.
 
-{% include figure-pair.html src_a="/images/news/20261102-visit-bijoy/stroke-program-hallway.jpg" alt_a="Six members of the Calgary and Wuhan groups standing together in a hallway at the Calgary Stroke Program" src_b="/images/news/20261102-visit-bijoy/stroke-program-office.jpg" alt_b="Ten members of the Calgary Stroke Program, DENOS Lab, and the visiting team from Wuhan gathered outside an office" caption="The visiting team from Huazhong University of Science and Technology with members of the Calgary Stroke Program and DENOS Lab." %}
-
-For Dr. Qiu the trip was a return. Before joining HUST in 2021, Dr. Qiu spent six years at the University of Calgary as a research scientist and adjunct assistant professor in radiology and clinical neurosciences, working on artificial intelligence for medical imaging, stroke imaging included.
+{% include figure-pair.html src_a="/images/news/20261102-visit-bijoy/stroke-program-hallway.jpg" alt_a="Six members of the Calgary and Wuhan groups standing together in a hallway at the Calgary Stroke Program" src_b="/images/news/20261102-visit-bijoy/stroke-program-office.jpg" alt_b="Ten members of the Calgary Stroke Program, DENOS Lab, and the visiting team from Wuhan gathered outside an office" caption="Dr. Bo Hu's visiting team from Wuhan with members of the Calgary Stroke Program and DENOS Lab." %}
 
 The AcT work kept every record inside Canada. A collaboration between Calgary and Wuhan would put the same idea to a harder test, across an international border where the rules on moving health data are tighter still.
 
