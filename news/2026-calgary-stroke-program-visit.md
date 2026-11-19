@@ -28,7 +28,7 @@ The team split the records of 1,577 patients by the 21 stroke centres in eight p
 
 The federated result matched the original. It put the difference in patients making an excellent recovery at 2.14 percentage points in favour of tenecteplase, against 2.1 in the published trial, and it reached the same conclusion that tenecteplase is no worse than alteplase. All four outcomes the team checked, including bleeding in the brain and death within 90 days, came out the same as the published figures.
 
-The paper, [*Privacy-preserving federated analysis reproduces multicentre alteplase compared to tenecteplase (AcT) stroke trial*](https://www.nature.com/articles/s41598-026-79654-0), is written by DENOS Lab PhD student [Yunkai Bao](/team/yunkai-bao/), MSc student [Zainab Saad](/team/zainab-saad/), and [Farhan Abbas](/team/farhan-abbas/), with Kaue Duarte, Dr. Tolulope Sajobi, Dr. Jessalyn Holodinsky, Dr. Menon, and Dr. Drew.
+The paper, [*Privacy-preserving federated analysis reproduces multicentre alteplase compared to tenecteplase (AcT) stroke trial*](https://www.nature.com/articles/s41598-026-79654-0), is written by [Yunkai Bao](/team/yunkai-bao/) et al.
 
 {% include figure-pair.html src_a="/images/news/20261102-visit-bijoy/stroke-program-hallway.jpg" alt_a="Six members of the Calgary and Wuhan groups standing together in a hallway at the Calgary Stroke Program" src_b="/images/news/20261102-visit-bijoy/stroke-program-office.jpg" alt_b="Ten members of the Calgary Stroke Program, DENOS Lab, and the visiting team from Wuhan gathered outside an office" caption="Dr. Bo Hu's visiting team from Wuhan with members of the Calgary Stroke Program and DENOS Lab." %}
 
