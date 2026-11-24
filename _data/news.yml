@@ -3,6 +3,16 @@
 # _includes/news-card.html. `url` is a site path unless `external: true`.
 # An entry with `links` renders its title as a link and one call to action per
 # link, instead of making the whole card one link. `text` may hold inline HTML.
+- url: /news/2026-ieee-sas-agm/
+  image: /images/news/20261119-ieee-sas-agm/agm-group-photo.png
+  alt: Attendees of the 2026 IEEE Southern Alberta Section Annual General Meeting waving for a group photo
+  date: Nov 19, 2026
+  title: DENOS Lab members attend the 2026 IEEE Southern Alberta Section AGM
+  text: >-
+    DENOS Lab members joined the IEEE Southern Alberta Section Annual General Meeting in Calgary,
+    an evening of section reports, awards, and a keynote on reliable value creation by Dr. Oleks
+    Osiyevskyy of the Haskayne School of Business.
+
 - url: /news/2026-calgary-stroke-program-visit/
   image: /images/news/20261102-visit-bijoy/neurosciences-group.jpg
   alt: Researchers from the Calgary Stroke Program, DENOS Lab, and Dr. Bo Hu's visiting team from Wuhan under the Department of Neurosciences sign
